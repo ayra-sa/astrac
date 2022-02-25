@@ -1,0 +1,21 @@
+.hero {
+    background-image: url("../../../images/bg-hero.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15% 0 20% 0;
+    color: #fff;
+    /* min-height: 90vh; */
+  }
+  
+  .hero.scnd {
+    padding: 10% 0;
+  }
+  
+  .hero-wrap {
+    text-align: center;
+  }
+  
+  .hero-wrap p {
+    font-weight: 500;
+  }

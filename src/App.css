@@ -1,38 +1,272 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+section {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 3.4375em;
+  line-height: 82px;
+}
+
+.top-menu {
+  color: var(--purple);
+  font-weight: 800;
+  font-size: 1em;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-size: 2.5em;
+  line-height: 60px;
+  margin: 20px 0 10px 0;
+}
+
+.subtitle {
+  color: hsla(0, 0%, 0%, 0.65);
+}
+
+.title-small {
+  font-size: 1.125em;
+  line-height: 21px;
+  margin: 20px 0 10px 0;
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* css variable */
+:root {
+  --gradient: linear-gradient(135deg, #866cf9 0%, #9884f5 100%);
+  --black-primary: #0a0231;
+  --black-secondary: rgba(0, 0, 0, 0.65);
+  --purple: #856bfa;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--black-primary);
+  font-size: 1em;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+}
+
+.btn {
+  padding: 20px 27px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.btn-primary.bg-white {
+  background: #fff;
+  color: var(--purple);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: var(--purple);
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.btn-transparent {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  column-gap: 20px;
+  color: var(--purple);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.btn-transparent:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.white {
+  color: #fff;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.col-wrap {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 100px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.left-content {
+  width: 50%;
+}
+
+.mt-2 {
+  margin-top: 20px !important;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.decor {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+
+.decor.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    max-width: 720px;
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+}
+
+@media screen and (max-width: 1390px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
   }
 }
