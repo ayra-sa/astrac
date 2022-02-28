@@ -1,0 +1,9 @@
+.faq {
+    display: block;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

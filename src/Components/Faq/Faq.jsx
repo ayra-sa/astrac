@@ -1,18 +1,21 @@
 import { useState } from "react"
+import './Faq.css'
 
-const Faq = ({ title, content }) => {
+const Faq = ({faqData}) => {
 
     const [open, setOpen] = useState(false)
 
     return (
         <div className="faq mt-4">
-            <div className="accordion-item">
-                <div className="accordion-title" onClick={() => setOpen(!open)}>
-                    <div>{title}</div>
-                    <div>{ open ? '-' : '+' }</div>
+            {faqData.map(faq => (
+                <div className="accordion-item">
+                    <div className="accordion-title" onClick={() => setOpen(!open)}>
+                        <div>{faq.title}</div>
+                        <div>{ open ? '-' : '+' }</div>
+                    </div>
+                    { open && <div className="accordion-content">{faq.content}</div> }
                 </div>
-                { open && <div className="accordion-content">{content}</div> }
-            </div>
+            ))}
                     {/* <div className="accordion-block">
                         <a className="accordion">
                             Lorem, ipsum.
