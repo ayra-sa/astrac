@@ -1,0 +1,9 @@
+#hc-list .item {
+    background-color: #F7F5FF;
+    text-align: center;
+}
+
+#hc-list a {
+    display: inline-flex;
+    justify-content: center;
+}

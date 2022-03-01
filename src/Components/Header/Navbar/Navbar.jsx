@@ -21,7 +21,7 @@ const Navbar = () => {
                     {/* <button className="dropbtn">
                       Features
                     </button> */}
-                    <Link to='' className='dropbtn link-item'>Features <IoIosArrowDown /></Link>
+                    <Link to='/feature' className='dropbtn link-item'>Features <IoIosArrowDown /></Link>
                     <div className="dropdown-content">
                       <Link to='/link' className='link-item'>Project Management</Link>
                       <Link to='/link' className='link-item'>Chat</Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 </li>
-                <li className="link-item"><Link to=''>Pricing</Link></li>
+                <li className="link-item"><Link to='/pricing'>Pricing</Link></li>
                 <li className="link-item"><Link to='/help-centers'>Help Centers</Link></li>
                 <li>
                   <button href="#" className="btn btn-secondary on-mobo">Contact</button>

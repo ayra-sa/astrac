@@ -1,5 +1,6 @@
 import iconTask from '../../../images/icon/task-square.svg'
-import {MdKeyboardArrowRight} from 'react-icons/md'
+import { useState } from 'react'
+import Grid from '../../../Components/Section/Grid'
 
 const Features = () => {
 
@@ -35,6 +36,9 @@ const Features = () => {
             info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
         },
     ]
+
+    const [data, setData] = useState(dataFeatures)
+
     return (
         <section id="features" className="section">
         <div className="container">
@@ -44,17 +48,8 @@ const Features = () => {
             <p className="subtitle">Features are highlighted here</p>
 
             <div className="row-3 mt-4">
-                {dataFeatures.map(data => (
-                    <div className="feature">
-                        <div className="icon-box">
-                            <img src={data.icon} alt='icon' />
-                        </div>
-                        <h1 className="title-small">{data.title}</h1>
-                        <p className="subtitle">{data.info}</p>
-                        <a href="#" className='btn-transparent mt-4'>
-                            Learn more <MdKeyboardArrowRight />
-                        </a>
-                    </div>
+                {data.map(item => (
+                    <Grid key={item.title} {...item} />
                 ))}
             </div>
           </div>

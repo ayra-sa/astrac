@@ -1,0 +1,13 @@
+#search-hero {
+    background: url('../../images/bg-hero.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8% 0;
+    color: #fff;
+}
+
+.search {
+    max-width: 60%;
+    color: #000;
+}

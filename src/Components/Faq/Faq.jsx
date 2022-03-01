@@ -1,34 +1,25 @@
-import { useState } from "react"
-import './Faq.css'
+import { useState } from "react";
+import "./Faq.css";
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 
-const Faq = ({faqData}) => {
+const Faq = ({ title, content }) => {
+    
+  const [open, setOpen] = useState(false);
 
-    const [open, setOpen] = useState(false)
+  return (
+        <>
+            <div
+            className={open ? "accordion-item active" : "accordion-item"}
+            key={title}
+            >
+            <div className="accordion-title" onClick={() => setOpen(!open)}>
+                <div>{title}</div>
+                <div>{open ? <IoIosArrowDown /> : <IoIosArrowForward />}</div>
+            </div>
+            {open && <div className="accordion-content mt-2">{content}</div>}
+            </div>
+        </>
+  );
+};
 
-    return (
-        <div className="faq mt-4">
-            {faqData.map(faq => (
-                <div className="accordion-item">
-                    <div className="accordion-title" onClick={() => setOpen(!open)}>
-                        <div>{faq.title}</div>
-                        <div>{ open ? '-' : '+' }</div>
-                    </div>
-                    { open && <div className="accordion-content">{faq.content}</div> }
-                </div>
-            ))}
-                    {/* <div className="accordion-block">
-                        <a className="accordion">
-                            Lorem, ipsum.
-                        <img src="assets/images/icon/arrow-right.svg" alt="icon" />
-                        </a>
-                        <div className="panel">
-                        <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div> */}
-
-
-                </div>
-    )
-}
-
-export default Faq
+export default Faq;

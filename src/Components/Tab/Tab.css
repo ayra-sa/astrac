@@ -1,0 +1,70 @@
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    column-gap: 20px;
+}
+
+.tab-card {
+    color: #000;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    position: relative;
+    text-align: left;
+}
+
+.recommend {
+    background-color: var(--purple);
+    color: #fff;
+}
+
+.r-tag {
+    background-color: #10B981;
+    position: absolute;
+    top: -5%;
+    padding: 8px 15px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    font-size: .75em;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    margin: 0 auto;
+}
+
+.price {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.2);
+}
+
+.price-text {
+    font-size: 3.0635em;
+    line-height: 74px;
+    font-weight: 600;
+}
+
+.card-list {
+    margin: 20px 0;
+}
+
+.card-list li {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-card:not(.recommend) li svg {
+    color: var(--purple);
+}
+
+.btn-container {
+    display: flex;
+}

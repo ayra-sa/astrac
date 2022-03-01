@@ -1,9 +1,10 @@
 footer {
-    margin-top: 5%;
+    margin-top: -5%;
     padding-bottom: 2%;
   }
   
   .footer-wrap {
+    margin-top: 80px;
     display: grid;
     grid-template-columns: 0.75fr 1fr;
     justify-content: space-between;
