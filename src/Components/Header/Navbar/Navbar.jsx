@@ -3,8 +3,22 @@ import { Link } from 'react-router-dom'
 import logo from '../../../images/logo.svg'
 import world from '../../../images/world.svg'
 import {IoIosArrowDown} from 'react-icons/io'
+import { useEffect, useState } from 'react'
 
 const Navbar = () => {
+
+  const [navSize, setnavSize] = useState("10rem");
+  const [navColor, setnavColor] = useState("transparent");
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
   
     return (
         <nav className="navbar" data-aos="fade-up">
