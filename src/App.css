@@ -110,8 +110,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-.btn {
-  padding: 20px 27px;
+.btn, .btn-hero {
   display: inline-block;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -121,6 +120,14 @@ body {
   font-weight: 600;
   color: #fff;
   border: none;
+}
+
+.btn {
+  padding: 12px 27px;
+}
+
+.btn-hero {
+  padding: 20px 27px;
 }
 
 .btn-primary {
@@ -286,7 +293,20 @@ body {
 }
 
 .hidden {
-  display: none;
+  /*display: none;
+  */position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: .3s ease;
+  -webkit-transform: translateX(50px);
+  -moz-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
 }
 
 @media screen and (max-width: 767px) {

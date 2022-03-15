@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './AllOfYour.css'
 
 
@@ -12,8 +13,8 @@ const AllOfYour = () => {
             </p>
           </div>
           <div className="aoy-right">
-            <a href="#" className="btn btn-secondary">Contact</a>
-            <a href="#" className="btn btn-primary bg-white">Free Trial</a>
+            <Link to='/'><button className="btn btn-secondary">Contact</button></Link>
+            <Link to='/'><button className="btn btn-primary bg-white">Free Trial</button></Link>
           </div>
         </div>
       </div>

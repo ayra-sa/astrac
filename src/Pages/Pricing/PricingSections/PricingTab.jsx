@@ -57,7 +57,6 @@ const PricingTab = () => {
                         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga rerum odit atque minus libero tempore deserunt dignissimos modi, est neque nihil, rem perferendis consequatur at debitis quibusdam tenetur quaerat ab?</h2>
                     </div>
                 </div>
-
             </div>
         </section>
     )

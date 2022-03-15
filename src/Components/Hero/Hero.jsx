@@ -12,7 +12,7 @@ const Hero = () => {
               We’ve helped Over 25K+ Individuals and <br />Companies to Grow
               Their Business Successfully
             </p>
-            <button href="#" class="btn btn-primary mt-4">Start Free Trial</button>
+            <button href="#" class="btn-hero btn-primary mt-4">Start Free Trial</button>
           </div>
         </div>
       </section>

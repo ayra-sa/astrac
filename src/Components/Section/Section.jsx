@@ -17,7 +17,9 @@ const Section = ({
                     </div>
                     <div className="desc">
                       <h1 className="title-small">{list.title}</h1>
-                      <p className={ light ? 'subtitle white' : 'subtitle' }>{list.description}</p>
+                      <div className="text">
+                        <p className={ light ? 'subtitle white' : 'subtitle' }>{list.description}</p>
+                      </div>
                     </div>
                   </div>
                   ))}
@@ -25,7 +27,7 @@ const Section = ({
                     >Learn more <MdKeyboardArrowRight /> </a>
             </div>
 
-            <div className={ rightImg ? 'right-content img' : 'right-content'  } data-aos="fade-up">
+            <div className={ rightImg ? 'right-content img' : 'right-content'  }>
               <img src={imgContent} alt="project" className={ left ? 'img left' : '' } />
             </div>
           </div>

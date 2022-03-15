@@ -1,0 +1,27 @@
+.form {
+    margin-top: 56px;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form textarea {
+    resize: none;
+}

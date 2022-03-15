@@ -29,7 +29,7 @@ const Navbar = () => {
                 <img src={logo} alt="brand" />
               </Link>
               <ul className="nav-menu">
-                <li className="link-item"><Link to='/'>Product</Link></li>
+                <li className="link-item"><Link to='/product'>Product</Link></li>
                 <li className="">
                   <div className="dropdown">
                     {/* <button className="dropbtn">
@@ -37,19 +37,19 @@ const Navbar = () => {
                     </button> */}
                     <Link to='/feature' className='dropbtn link-item'>Features <IoIosArrowDown /></Link>
                     <div className="dropdown-content">
-                      <Link to='/link' className='link-item'>Project Management</Link>
-                      <Link to='/link' className='link-item'>Chat</Link>
-                      <Link to='/link' className='link-item'>File Manager</Link>
-                      <Link to='/link' className='link-item'>Call & Video Call</Link>
-                      <Link to='/link' className='link-item'>Mail</Link>
-                      <Link to='/link' className='link-item'>Event</Link>
+                      <Link to='/project-management' className='link-item'>Project Management</Link>
+                      <Link to='/chat' className='link-item'>Chat</Link>
+                      <Link to='/file-manager' className='link-item'>File Manager</Link>
+                      <Link to='/video-call' className='link-item'>Call & Video Call</Link>
+                      <Link to='/mail' className='link-item'>Mail</Link>
+                      <Link to='/event' className='link-item'>Event</Link>
                     </div>
                   </div>
                 </li>
                 <li className="link-item"><Link to='/pricing'>Pricing</Link></li>
                 <li className="link-item"><Link to='/help-centers'>Help Centers</Link></li>
                 <li>
-                  <button href="#" className="btn btn-secondary on-mobo">Contact</button>
+                  <Link to='/contact' className="btn btn-secondary on-mobo">Contact</Link>
                 </li>
                 <li>
                   <a href="" className="on-mobo">
@@ -63,8 +63,8 @@ const Navbar = () => {
               <a href="" className="language"
                 ><img src={world} alt="icon"
               /></a>
-              <button href="#" className="btn btn-secondary">Contact</button>
-              <button href="#" className="btn btn-primary">Free Trial</button>
+              <Link to='/contact'><button className="btn btn-secondary">Contact</button></Link>
+              <Link to='/'><button className="btn btn-primary">Free Trial</button></Link>
               <div className="hamburger">
                 <span className="bar"></span>
                 <span className="bar"></span>

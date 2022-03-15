@@ -19,3 +19,21 @@
     -o-border-radius: 12px;
     padding: 8px;
   }
+
+  .text {
+    width: 70%;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .flex .column {
+    flex: 50%;
+  }
+
+  .flex.reverse {
+    flex-direction: row-reverse;
+  }

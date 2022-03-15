@@ -1,0 +1,11 @@
+.contact-wrap {
+    width: 60%;
+    margin-inline: auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 52px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
