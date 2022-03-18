@@ -3,6 +3,14 @@ import { Detail } from './Sections/Detail'
 const ProjectManagement = () => {
     return (
         <>
+        <div className="hero">
+            <div className="container">
+                <div className="center">
+                    <span>Project Mangement</span>
+                    <h1 className="hero-title mt-2">By organizing the projects of each team, you can Visualize the progress of who is doing what and when.</h1>
+                </div>
+            </div>
+        </div>
             <section className="section">
                 <div className="container">
                     <div className="flex">

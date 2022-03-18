@@ -115,7 +115,7 @@ nav {
     background-color: #fff;
   }
   
-  .nav-colored {
+  .navbar.active {
     background-color: #51429b;
     box-shadow: 5px -1px 12px -5px grey;
   }

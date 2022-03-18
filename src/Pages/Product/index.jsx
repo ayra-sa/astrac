@@ -9,6 +9,15 @@ const Product = () => {
     return (
         <>
 
+        <div className="hero">
+            <div className="container">
+                <div className="center">
+                    <span>Product</span>
+                    <h1 className="hero-title mt-2">Many features to make your business communication...</h1>
+                </div>
+            </div>
+        </div>
+
         <div className="container">
             <div className="center">
                 <p>What is Astrac?</p>

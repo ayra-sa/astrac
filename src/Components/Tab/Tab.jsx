@@ -1,4 +1,5 @@
 import { BsCheckCircleFill, BsCheck } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import "./Tab.css";
 
 const Tab = ({ recommended, name, detail, price, list }) => {
@@ -25,12 +26,12 @@ const Tab = ({ recommended, name, detail, price, list }) => {
         ))}
       </ul>
       <div className="btn-container">
-        <button
-            href="#"
+        <Link
+            to='/free-trial-form'
             className={!recommended ? "btn btn-primary" : "btn btn-white"}
         >
             Subscribe now
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import 'aos/dist/aos.css'
 import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
+import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/product' element={<Product />} />
         <Route path='/help-centers' element={<HelpCenter />} />
         <Route path='/free-trial' element={<FreeTrial />} />
+        <Route path='/free-trial-form' element={<FreeTrialForm />} />
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/feature' element={<Feature />} />
         <Route path='/project-management' element={<ProjectManagement />} />

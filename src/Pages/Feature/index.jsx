@@ -10,15 +10,25 @@ import './Feature.css'
 
 const Feature = () => {
     return (
-        <main className="mains">
-            <Section {...pmData} />
-            <Section {...chatData} />
-            <Section {...fmData} />
-            <Section {...cvData} />
-            <Section {...mailData} />
-            <Section {...eventData} />
-            <Section {...dbData} />
-        </main>
+        <>
+            <div className="hero">
+                <div className="container">
+                    <div className="center">
+                        <span>Features</span>
+                        <h1 className="hero-title">Many Features To Make Your Business Communication Smoother</h1>
+                    </div>
+                </div>
+            </div>
+            <main className="mains">
+                <Section {...pmData} />
+                <Section {...chatData} />
+                <Section {...fmData} />
+                <Section {...cvData} />
+                <Section {...mailData} />
+                <Section {...eventData} />
+                <Section {...dbData} />
+            </main>
+        </>
     )
 }
 

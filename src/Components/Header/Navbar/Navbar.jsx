@@ -7,21 +7,19 @@ import { useEffect, useState } from 'react'
 
 const Navbar = () => {
 
-  const [navSize, setnavSize] = useState("10rem");
-  const [navColor, setnavColor] = useState("transparent");
-  const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
-    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
-  };
+  const [navbar, setNavbar] = useState(false)
+
+  const changeNav = () => {
+    {window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)}
+  }
+
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-    return () => {
-      window.removeEventListener("scroll", listenScrollEvent);
-    };
-  }, []);
+    changeNav()
+    window.addEventListener('scroll', changeNav)
+  })
   
     return (
-        <nav className="navbar" data-aos="fade-up">
+        <nav className={navbar ? 'navbar active' : 'navbar'} data-aos="fade-up">
         <div className="container">
           <div className="navbar-wrap">
             <div className="navbar-left">
