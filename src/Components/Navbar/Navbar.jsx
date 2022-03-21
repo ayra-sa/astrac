@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-right">
-              <Link to='/' className="language"
+              <Link to='/modal' className="language"
                 ><img src={world} alt="icon"
               /></Link>
               <Link to='/contact'><button className="btn btn-secondary">Contact</button></Link>

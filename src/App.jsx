@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Footer/Footer';
-// import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Feature from './Pages/Feature';
 import FreeTrial from './Pages/FreeTrial';
@@ -15,6 +14,7 @@ import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
 import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
+import Success from './Components/Modal/Success';
 
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
         <Route path='/feature' element={<Feature />} />
         <Route path='/project-management' element={<ProjectManagement />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/modal' element={<Success />} />
       </Routes>
       <Footer />
     </Router>

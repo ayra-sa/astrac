@@ -1,0 +1,14 @@
+.modal {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 9999;
+    padding: 60px 100px;
+    border-radius: 30px;
+    background-color: #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}

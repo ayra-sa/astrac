@@ -39,16 +39,14 @@
 }
 
 .form input[type="checkbox"]:checked::before {
-    background-color: var(--purple);
-    content: 'v';
-    color: #fff;
+    background: url('../../images/icon/tick.svg') center;
+    background-size: cover;
+    content: '';
     inset: 0;
-    /* width: 24px;
-    height: 24px; */
-    border-radius: 2px;
-    display: flex;
     position: absolute;
-    align-items: center;
-    border: 1px solid var(--purple);
-    justify-content: center;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
