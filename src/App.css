@@ -80,6 +80,11 @@ h6 {
   color: hsla(0, 0%, 0%, 0.65);
 }
 
+.main {
+  position: relative;
+  margin-top: -20%;
+}
+
 .title-small {
   font-size: 1.125em;
   line-height: 21px;
@@ -224,6 +229,10 @@ body {
 
 .left-content {
   width: 50%;
+}
+
+.mb-10 {
+  margin-bottom: -10%;
 }
 
 .w {

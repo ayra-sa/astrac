@@ -12,72 +12,71 @@ const Footer = () => {
       <>
           <footer data-aos="fade-up">
         <AllOfYour />
-          <div class="container">
-            <div class="footer-wrap">
-              <div class="footer-left">
-                <a href="#" class="brand">
+          <div className="container">
+            <div className="footer-wrap">
+              <div className="footer-left">
+                <Link to='/' className="brand">
                   <img src={logo} alt="brand" />
-                </a>
-                <p class="subtitle mt-2">
+                </Link>
+                <p className="subtitle mt-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum varius pharetra mi.
                 </p>
 
-                <div class="lang">
+                <div className="lang">
                   <img src={language} alt="icon" />
                   English
                 </div>
               </div>
-              <div class="footer-right">
-                <ul class="footer-menu">
+              <div className="footer-right">
+                <ul className="footer-menu">
                   <li><h2>Product</h2></li>
-                  <li><a href="#">Product Tour</a></li>
-                  <li><a href="#">Benefit</a></li>
-                  <li><a href="#">Security</a></li>
-                  <li><a href="#">Help Center</a></li>
+                  <li><Link to='/'>Product Tour</Link></li>
+                  <li><Link to='/'>Benefit</Link></li>
+                  <li><Link to='/'>Security</Link></li>
+                  <li><Link to='/'>Help Center</Link></li>
                 </ul>
-                <ul class="footer-menu">
+                <ul className="footer-menu">
                   <li><h2>Feature</h2></li>
-                  <li><a href="#">Project</a></li>
-                  <li><a href="#">Management</a></li>
-                  <li><a href="#">Chat</a></li>
-                  <li><a href="#">File Manager</a></li>
-                  <li><a href="#">Call & Video Call</a></li>
-                  <li><a href="#">Mail</a></li>
-                  <li><a href="#">Event</a></li>
+                  <li><Link to='/'>Project</Link></li>
+                  <li><Link to='/'>Chat</Link></li>
+                  <li><Link to='/'>File Manager</Link></li>
+                  <li><Link to='/'>Call & Video Call</Link></li>
+                  <li><Link to='/'>Mail</Link></li>
+                  <li><Link to='/'>Event</Link></li>
                 </ul>
-                <ul class="footer-menu">
+                <ul className="footer-menu">
                   <li><h2>Pricing</h2></li>
-                  <li><a href="#">Plans</a></li>
-                  <li><a href="#">FaQ</a></li>
+                  <li><Link to='/'>Plans</Link></li>
+                  <li><Link to='/'>FaQ</Link></li>
                 </ul>
-                <ul class="footer-menu">
+                <ul className="footer-menu">
                   <li><h2>Company</h2></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Partner Program</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><Link to='/'>About</Link></li>
+                  <li><Link to='/'>Partner Program</Link></li>
+                  <li><Link to='/'>Contact</Link></li>
                   <li><Link to='/free-trial'>Free Trial</Link></li>
-                  <li><a href="#">Document</a></li>
+                  <li><Link to='/'>Document</Link></li>
                 </ul>
               </div>
             </div>
-            <div class="footer-bottom">
-              <div class="copyright">
+            <div className="footer-bottom">
+              <div className="copyright">
                 <span>© Astrac 2021</span>
-                <a href="#">Security</a>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
+                <Link to='/'>Security</Link>
+                <Link to='/'>Privacy</Link>
+                <Link to='/'>Terms</Link>
               </div>
-              <div class="socmed">
-                <a href="#"
+              <div className="socmed">
+                <Link to='/'
                   ><img src={twitter} alt="socmed"
-                /></a>
-                <a href="#"
+                /></Link>
+                <Link to='/'
                   ><img src={fb} alt="socmed"
-                /></a>
-                <a href="#"
+                /></Link>
+                <Link to='/'
                   ><img src={linkedin} alt="socmed"
-                /></a>
+                /></Link>
               </div>
             </div>
           </div>

@@ -36,9 +36,9 @@ nav {
   
   .nav-menu {
     display: flex;
-    column-gap: 40px;
-    -moz-column-gap: 40px;
-    -webkit-column-gap: 40px;
+    column-gap: 35px;
+    -moz-column-gap: 35px;
+    -webkit-column-gap: 35px;
   }
   
   .nav-menu a {
@@ -50,7 +50,14 @@ nav {
     overflow: hidden;
   }
   
+  .language {
+    display: flex;
+  }
+
   .dropdown .dropbtn {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
     border: none;
     outline: none;
     color: white;
@@ -58,10 +65,6 @@ nav {
     font-family: inherit;
     margin: 0;
     font-size: inherit;
-  }
-  
-  .dropdown .dropbtn::after {
-    /* content: url("../../images/CaretDown.svg"); */
   }
   
   .dropdown-content {

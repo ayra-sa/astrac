@@ -1,9 +1,5 @@
-import Section from "../../../Components/Section/Section"
+export const fileManager =  {
 
-
-const FileManager = () => {
-
-    const projectData = {
         section: false,
         id: 'fm',
         titleSection: 'File Manager',
@@ -12,10 +8,8 @@ const FileManager = () => {
         light: false,
         purple: false,
         rightImg: true,
-        left: false
-    }
-
-    const contentList = [
+        left: false,
+        contentList: [
         {
             icon: require('../../../images/icon/profile-tick.svg').default,
             title: 'Find Better Leads',
@@ -33,9 +27,4 @@ const FileManager = () => {
         },
     ]
 
-    return (
-        <Section contentList={contentList} {...projectData} />
-    )
 }
-
-export default FileManager

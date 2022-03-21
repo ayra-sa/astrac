@@ -1,4 +1,5 @@
 import Section from "../../Components/Section/Section"
+import TopImg from "../../Components/TopImg/TopImg"
 import { cvData } from "./Data/CallVideo"
 import { chatData } from "./Data/Chat"
 import { dbData } from "./Data/Dashboard"
@@ -19,7 +20,8 @@ const Feature = () => {
                     </div>
                 </div>
             </div>
-            <main className="mains">
+            <main className="main">
+                <TopImg topImg={require('../../images/db-img.svg').default} />
                 <Section {...pmData} />
                 <Section {...chatData} />
                 <Section {...fmData} />

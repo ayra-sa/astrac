@@ -1,3 +1,4 @@
+import TopImg from '../../Components/TopImg/TopImg'
 import { Detail } from './Sections/Detail'
 
 const ProjectManagement = () => {
@@ -11,6 +12,9 @@ const ProjectManagement = () => {
                 </div>
             </div>
         </div>
+        <main className="main mb-10">
+            <TopImg topImg={require('../../images/db-img.svg')} />
+
             <section className="section">
                 <div className="container">
                     <div className="flex">
@@ -24,8 +28,9 @@ const ProjectManagement = () => {
                     </div>
                 </div>
             </section>
-
             <Detail />
+        </main>
+
         </>
     )
 }

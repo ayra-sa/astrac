@@ -1,9 +1,4 @@
-import Section from "../../../Components/Section/Section"
-
-
-const CallVideo = () => {
-
-    const projectData = {
+export const callVideo = {
         section: true,
         id: 'true',
         titleSection: 'Call & Video Call',
@@ -12,10 +7,8 @@ const CallVideo = () => {
         light: false,
         purple: false,
         rightImg: false,
-        left: true
-    }
-
-    const contentList = [
+        left: true,
+        contentList: [
         {
             icon: require('../../../images/icon/profile-tick.svg').default,
             title: 'Find Better Leads',
@@ -32,10 +25,4 @@ const CallVideo = () => {
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
     ]
-
-    return (
-        <Section contentList={contentList} {...projectData} />
-    )
 }
-
-export default CallVideo

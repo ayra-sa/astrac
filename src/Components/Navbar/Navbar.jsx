@@ -1,7 +1,7 @@
 import './Navbar.css'
 import { Link } from 'react-router-dom'
-import logo from '../../../images/logo.svg'
-import world from '../../../images/world.svg'
+import logo from '../../images/logo.svg'
+import world from '../../images/world.svg'
 import {IoIosArrowDown} from 'react-icons/io'
 import { useEffect, useState } from 'react'
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
 
   const changeNav = () => {
-    {window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)}
+    window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)
   }
 
   useEffect(() => {
@@ -50,17 +50,17 @@ const Navbar = () => {
                   <Link to='/contact' className="btn btn-secondary on-mobo">Contact</Link>
                 </li>
                 <li>
-                  <a href="" className="on-mobo">
+                  <Link to='/' className="on-mobo">
                     <img src="assets/images/world.svg" alt="icon" /> English
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div className="navbar-right">
-              <a href="" className="language"
+              <Link to='/' className="language"
                 ><img src={world} alt="icon"
-              /></a>
+              /></Link>
               <Link to='/contact'><button className="btn btn-secondary">Contact</button></Link>
               <Link to='/'><button className="btn btn-primary">Free Trial</button></Link>
               <div className="hamburger">

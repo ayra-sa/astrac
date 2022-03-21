@@ -1,9 +1,4 @@
-import Section from "../../../Components/Section/Section"
-
-
-const Chat = () => {
-
-    const projectData = {
+export const chat =  {
         section: true,
         id: 'chat',
         titleSection: 'Chat',
@@ -12,10 +7,8 @@ const Chat = () => {
         light: true,
         purple: true,
         rightImg: false,
-        left: true
-    }
-
-    const contentList = [
+        left: true,
+        contentList: [
         {
             icon: require('../../../images/fm/profile-tick.svg').default,
             title: 'Find Better Leads',
@@ -32,10 +25,4 @@ const Chat = () => {
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
     ]
-
-    return (
-        <Section contentList={contentList} {...projectData} />
-    )
 }
-
-export default Chat

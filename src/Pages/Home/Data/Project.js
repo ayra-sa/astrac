@@ -1,9 +1,4 @@
-import Section from "../../../Components/Section/Section"
-
-
-const Project = () => {
-
-    const projectData = {
+export const project = {
         section: true,
         id: '',
         titleSection: 'Project Management',
@@ -12,10 +7,8 @@ const Project = () => {
         light: false,
         purple: false,
         rightImg: true,
-        left: false
-    }
-
-    const contentList = [
+        left: false,
+        contentList: [
         {
             icon: require('../../../images/icon/video.svg').default,
             title: 'Project',
@@ -33,9 +26,4 @@ const Project = () => {
         },
     ]
 
-    return (
-        <Section contentList={contentList} {...projectData} />
-    )
 }
-
-export default Project

@@ -1,4 +1,5 @@
 import { MdKeyboardArrowRight } from "react-icons/md"
+import { Link } from "react-router-dom"
 
 
 const Section = ({
@@ -23,8 +24,8 @@ const Section = ({
                     </div>
                   </div>
                   ))}
-                  <a href="#" className={ light ? "btn-transparent white mt-4" : 'btn-transparent mt-4' }
-                    >Learn more <MdKeyboardArrowRight /> </a>
+                  <Link to='/' className={ light ? "btn-transparent white mt-4" : 'btn-transparent mt-4' }
+                    >Learn more <MdKeyboardArrowRight /> </Link>
             </div>
 
             <div className={ rightImg ? 'right-content img' : 'right-content'  }>

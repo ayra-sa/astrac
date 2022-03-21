@@ -1,4 +1,5 @@
 import {MdKeyboardArrowRight} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 import './Section.css'
 
 const Grid = ({ title, info, button, icon }) => {
@@ -9,9 +10,9 @@ const Grid = ({ title, info, button, icon }) => {
                         </div>
                         <h1 className="title-small">{title}</h1>
                         <p className="subtitle">{info}</p>
-                        { button ? (<a href="#" className='btn-transparent mt-4'>
+                        { button ? (<Link to='/' className='btn-transparent mt-4'>
                             Learn more <MdKeyboardArrowRight />
-                        </a>) : null  }            
+                        </Link>) : null  }            
                     </div>
     )
 }
