@@ -37,3 +37,9 @@
   .flex.reverse {
     flex-direction: row-reverse;
   }
+
+  @media screen and (max-width: 990px) {
+    .flex, .flex.reverse {
+      flex-direction: column;
+    }
+  }

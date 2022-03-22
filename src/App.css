@@ -63,6 +63,11 @@ h6 {
   line-height: 82px;
 }
 
+.hero-title-secondary {
+  font-size: 2.5em;
+  line-height: 60px;
+}
+
 .top-menu {
   color: var(--purple);
   font-weight: 800;
@@ -232,7 +237,7 @@ body {
 }
 
 .mb-10 {
-  margin-bottom: -10%;
+  margin-bottom: -8%;
 }
 
 .w {
@@ -331,11 +336,26 @@ body {
     max-width: 100%;
   }
 
+  .w, .left-content {
+    width: 100%;
+  }
+
+  .row-3 {
+    display: flex !important;
+    flex-direction: column;
+  }
+  
+
 }
 
 @media screen and (max-width: 990px) {
   .container {
     max-width: 720px;
+  }
+
+  .hero-title {
+    font-size: 2.5em;
+    line-height: 60px;
   }
 
 }

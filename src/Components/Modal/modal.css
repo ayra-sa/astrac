@@ -1,9 +1,17 @@
 .modal {
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
+    background: hsla(0, 0%, 12%, .95);
     position: fixed;
+    inset: 0;
     z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dialog {
+    width: 40%;
+    text-align: center;
+    margin: 2% auto;
     padding: 60px 100px;
     border-radius: 30px;
     background-color: #fff;

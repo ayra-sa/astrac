@@ -19,7 +19,7 @@ const Product = () => {
             </div>
         </div>
 
-        <main className="main mb-10">
+        <main className="main">
             <TopImg topImg={require('../../images/db-img.svg').default} />
 
             <div className="container">

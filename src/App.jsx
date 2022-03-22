@@ -14,8 +14,6 @@ import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
 import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
-import Success from './Components/Modal/Success';
-
 
 function App() {
 
@@ -36,7 +34,6 @@ function App() {
         <Route path='/feature' element={<Feature />} />
         <Route path='/project-management' element={<ProjectManagement />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/modal' element={<Success />} />
       </Routes>
       <Footer />
     </Router>

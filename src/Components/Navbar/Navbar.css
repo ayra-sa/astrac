@@ -103,22 +103,51 @@ nav {
   .on-mobo {
     display: none;
   }
-  
-  .hamburger {
+
+  .navbar-right .hmb {
     display: none;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #fff;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
   }
   
   .navbar.active {
     background-color: #51429b;
     box-shadow: 5px -1px 12px -5px grey;
   }
+
+  @media screen and (max-width: 990px) {
+    .nav-menu {
+      display: none;
+    }
+    
+    .nav-menu#hidden-menu {
+      position: absolute;
+      inset: 80px auto auto 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #51429b;
+      border-radius: 5px;
+      display: flex;
+      row-gap: 20px;
+      padding: 20px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+}
+
+    .navbar-right .hmb {
+      display: flex;
+    }
+
+    .on-mobo {
+      display: inline-flex;
+    }
+
+    .hide-mobo {
+      display: none;
+    }
+  }
+  

@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import logo from '../../images/logo.svg'
 import world from '../../images/world.svg'
 import {IoIosArrowDown} from 'react-icons/io'
+import {CgClose, CgMenuLeft} from 'react-icons/cg'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {
 
   const [navbar, setNavbar] = useState(false)
+  const [navOpen, setNavOpen] = useState(false)
 
   const changeNav = () => {
     window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)
@@ -26,7 +28,7 @@ const Navbar = () => {
               <Link to='/' className='brand'>
                 <img src={logo} alt="brand" />
               </Link>
-              <ul className="nav-menu">
+              <ul className="nav-menu" id={navOpen ? 'hidden-menu' : ''}>
                 <li className="link-item"><Link to='/product'>Product</Link></li>
                 <li className="">
                   <div className="dropdown">
@@ -50,24 +52,20 @@ const Navbar = () => {
                   <Link to='/contact' className="btn btn-secondary on-mobo">Contact</Link>
                 </li>
                 <li>
-                  <Link to='/' className="on-mobo">
-                    <img src="assets/images/world.svg" alt="icon" /> English
+                  <Link to='/' className="language on-mobo">
+                    <img src={world} alt="icon" /> English
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="navbar-right">
-              <Link to='/modal' className="language"
+              <Link to='/' className="language hide-mobo"
                 ><img src={world} alt="icon"
               /></Link>
-              <Link to='/contact'><button className="btn btn-secondary">Contact</button></Link>
+              <Link to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></Link>
               <Link to='/'><button className="btn btn-primary">Free Trial</button></Link>
-              <div className="hamburger">
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-              </div>
+              <button onClick={() => setNavOpen(!navOpen)} className='hmb'>{ navOpen ? (<CgClose />) : (<CgMenuLeft />) }</button>
             </div>
           </div>
         </div>

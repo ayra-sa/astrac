@@ -26,6 +26,10 @@
     resize: none;
 }
 
+.form p {
+    color: red;
+}
+
 .form input[type="checkbox"] {
     width: 24px;
     height: 20px;
@@ -49,4 +53,8 @@
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
+}
+
+.id-form .formInput {
+    width: 85%;
 }
