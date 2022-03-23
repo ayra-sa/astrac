@@ -12,6 +12,7 @@ import { project } from "./Data/Project";
 import Customize from "./HomeSections/Customize";
 import WorkSec from "./HomeSections/Work";
 import TopImg from "../../Components/TopImg/TopImg";
+import CookieConsent from "react-cookie-consent";
 
 const Home = () => {
   return (
@@ -40,6 +41,16 @@ const Home = () => {
         <Customize />
 
         <WorkSec />
+
+        <CookieConsent
+          location="bottom"
+          buttonText="I agree"
+          expires={150}
+          buttonStyle={{ background: '#856bfa', color: '#fff', borderRadius: '5px' }}
+          cookieName='AstracCookie'
+        >
+          We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our Cookie Policy
+        </CookieConsent>
       </main>
     </>
   );

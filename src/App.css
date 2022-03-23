@@ -221,21 +221,6 @@ body {
   padding: 0 20px;
 }
 
-.col-wrap {
-  display: flex;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 100px;
-}
-
-.reverse {
-  flex-direction: row-reverse;
-}
-
-.left-content {
-  width: 50%;
-}
-
 .mb-10 {
   margin-bottom: -8%;
 }
@@ -339,12 +324,6 @@ body {
   .w, .left-content {
     width: 100%;
   }
-
-  .row-3 {
-    display: flex !important;
-    flex-direction: column;
-  }
-  
 
 }
 

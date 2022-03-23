@@ -28,9 +28,9 @@ const ProjectManagement = () => {
                     </div>
                 </div>
             </section>
+
             <Detail />
         </main>
-
         </>
     )
 }

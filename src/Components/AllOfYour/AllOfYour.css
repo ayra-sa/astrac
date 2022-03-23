@@ -20,7 +20,15 @@
   }
 
 @media screen and (max-width: 990px) {  
-    .aoy-right {
+  .all-of-your {
+    justify-content: center;
+  }
+
+  .aoy-left {
+    text-align: center;
+  }
+  
+  .aoy-right {
       margin-top: 40px;
     }
   }

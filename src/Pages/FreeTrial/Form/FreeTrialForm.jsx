@@ -103,10 +103,7 @@ export const FreeTrialForm = () => {
               </div>
 
               <form action="" className="form" onSubmit={handleSubmit}>
-                <div
-                  className="flex id-form"
-                  style={{ justifyContent: "space-between" }}
-                >
+                <div className="id-form">
                   <div className="formInput">
                     <label htmlFor="fid">
                       ID<span className="star">*</span>

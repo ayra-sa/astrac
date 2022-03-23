@@ -14,7 +14,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .form label {
@@ -28,6 +28,7 @@
 
 .form p {
     color: red;
+    margin-bottom: 20px;
 }
 
 .form input[type="checkbox"] {
@@ -55,6 +56,23 @@
     -o-border-radius: 0;
 }
 
+.id-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .id-form .formInput {
     width: 85%;
+}
+
+.id-form span {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .form input[type="checkbox"] {
+        width: unset;
+        height: unset;
+    }
 }

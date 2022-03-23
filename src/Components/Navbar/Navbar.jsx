@@ -32,9 +32,6 @@ const Navbar = () => {
                 <li className="link-item"><Link to='/product'>Product</Link></li>
                 <li className="">
                   <div className="dropdown">
-                    {/* <button className="dropbtn">
-                      Features
-                    </button> */}
                     <Link to='/feature' className='dropbtn link-item'>Features <IoIosArrowDown /></Link>
                     <div className="dropdown-content">
                       <Link to='/project-management' className='link-item'>Project Management</Link>

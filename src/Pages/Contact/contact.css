@@ -41,3 +41,16 @@
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
 }
+
+@media screen and (max-width: 767px) {
+    .contact-wrap {
+        padding: 50px 30px;
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    .contact-wrap {
+        width: 100%;
+    }
+}
