@@ -2,7 +2,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 import logo from '../../images/logo.svg'
 import world from '../../images/world.svg'
-import {IoIosArrowDown} from 'react-icons/io'
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
 import { useEffect, useState } from 'react'
 
@@ -10,6 +10,8 @@ const Navbar = () => {
 
   const [navbar, setNavbar] = useState(false)
   const [navOpen, setNavOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const [dropdown, setDropdown] = useState(false)
 
   const changeNav = () => {
     window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)
@@ -18,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     changeNav()
     window.addEventListener('scroll', changeNav)
-  })
+  }, [])
   
     return (
         <nav className={navbar ? 'navbar active' : 'navbar'} data-aos="fade-up">
@@ -32,8 +34,9 @@ const Navbar = () => {
                 <li className="link-item"><Link to='/product'>Product</Link></li>
                 <li className="">
                   <div className="dropdown">
-                    <Link to='/feature' className='dropbtn link-item'>Features <IoIosArrowDown /></Link>
-                    <div className="dropdown-content">
+                    <Link to='/feature' className='dropbtn link-item'>Features</Link>
+                    <span onClick={() => setDropdown(!dropdown)}>{ dropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
+                    <div className={ dropdown ? 'dropdown-content' : 'hide' } onClick={() => setDropdown(false)} >
                       <Link to='/project-management' className='link-item'>Project Management</Link>
                       <Link to='/chat' className='link-item'>Chat</Link>
                       <Link to='/file-manager' className='link-item'>File Manager</Link>
@@ -57,9 +60,13 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-right">
-              <Link to='/' className="language hide-mobo"
-                ><img src={world} alt="icon"
-              /></Link>
+              <div className="lang-dd" onClick={() => setLangOpen(!langOpen)}>
+                <img src={world} alt="icon" />
+                <div className={ langOpen ? 'language' : 'hide' }>
+                  <Link to='/' className='link-item'>English</Link>
+                  <Link to='/' className='link-item'>日本語</Link>
+                </div>
+              </div>
               <Link to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></Link>
               <Link to='/'><button className="btn btn-primary">Free Trial</button></Link>
               <button onClick={() => setNavOpen(!navOpen)} className='hmb'>{ navOpen ? (<CgClose />) : (<CgMenuLeft />) }</button>
