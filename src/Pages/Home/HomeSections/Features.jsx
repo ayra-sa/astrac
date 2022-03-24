@@ -8,32 +8,38 @@ const Features = () => {
         {
             icon: iconTask,
             title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            button: true,
         },
         {
             icon: iconTask,
-            title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
+            title: "Management",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            button: true,
         },
         {
             icon: iconTask,
-            title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
+            title: "Data Management",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            button: true,
         },
         {
             icon: iconTask,
-            title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
+            title: "Project",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            button: true,
         },
         {
             icon: iconTask,
-            title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
+            title: "Product",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            button: true,
         },
         {
             icon: iconTask,
-            title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere."
+            title: "Data",
+            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            button: true,
         },
     ]
 

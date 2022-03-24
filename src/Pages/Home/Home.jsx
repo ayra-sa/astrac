@@ -14,10 +14,10 @@ import WorkSec from "./HomeSections/Work";
 import TopImg from "../../Components/TopImg/TopImg";
 import CookieConsent from "react-cookie-consent";
 
-const Home = () => {
+const Home = ({t}) => {
   return (
     <>
-      <Hero />
+      <Hero t={t} />
       <main className="main mb-10">
         
         <TopImg topImg={topImg} />

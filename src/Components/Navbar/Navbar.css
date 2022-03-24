@@ -68,6 +68,13 @@ nav {
     -o-border-radius: 10px;
 }
 
+.language button {
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  padding: 10px;
+}
+
 .dropdown {
   display: flex;
   align-items: center;

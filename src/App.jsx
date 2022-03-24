@@ -14,8 +14,50 @@ import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
 import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
+import i18next from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import tEn from './locales/en/translation.json'
+import tJa from './locales/ja/translation.json'
+import { useTranslation } from 'react-i18next';
+
+i18next
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translation:tEn
+      },
+      ja: {
+        translation:tJa
+      },
+    },
+    lng: "en",
+    fallbackLng: "en",
+
+    interpolation: {
+      escapeValue: false
+    }
+  })
+
+  const changeLang = (l) => {
+    return () => {
+      i18next.changeLanguage(l)
+      console.log(l)
+
+      localStorage.setItem('lang', l)
+    }
+  }
 
 function App() {
+
+  const { t } = useTranslation()
+
+  useEffect(() => {
+    let currentLang = localStorage.getItem('lang')
+    i18next.changeLanguage(currentLang)
+    console.log(currentLang)
+  }, [])
+  
 
   useEffect(() => {
     Aos.init()
@@ -23,9 +65,9 @@ function App() {
   
   return (
     <Router>
-      <Navbar />
+      <Navbar changeLang={changeLang} />
       <Routes>
-        <Route path='/' exact element={<Home />} />
+        <Route path='/' exact element={<Home t={t} />} />
         <Route path='/product' element={<Product />} />
         <Route path='/help-centers' element={<HelpCenter />} />
         <Route path='/free-trial' element={<FreeTrial />} />

@@ -4,14 +4,16 @@ import logo from '../../images/logo.svg'
 import world from '../../images/world.svg'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
-const Navbar = () => {
+const Navbar = ({changeLang}) => {
 
   const [navbar, setNavbar] = useState(false)
   const [navOpen, setNavOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const [dropdown, setDropdown] = useState(false)
+
+  const ref = useRef()
 
   const changeNav = () => {
     window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)
@@ -21,10 +23,29 @@ const Navbar = () => {
     changeNav()
     window.addEventListener('scroll', changeNav)
   }, [])
+
+  useEffect(() => {
+    const handleOutside = (e) => {
+
+      if (langOpen && ref.current && !ref.current.contains(e.target)) {
+        setLangOpen(false)
+      } else if (dropdown && ref.current && !ref.current.contains(e.target)) {
+        setDropdown(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutside)
+    }
+  }, [langOpen, dropdown])
+  
+
   
     return (
         <nav className={navbar ? 'navbar active' : 'navbar'} data-aos="fade-up">
-        <div className="container">
+        <div className="container" ref={ref}>
           <div className="navbar-wrap">
             <div className="navbar-left">
               <Link to='/' className='brand'>
@@ -63,8 +84,10 @@ const Navbar = () => {
               <div className="lang-dd" onClick={() => setLangOpen(!langOpen)}>
                 <img src={world} alt="icon" />
                 <div className={ langOpen ? 'language' : 'hide' }>
-                  <Link to='/' className='link-item'>English</Link>
-                  <Link to='/' className='link-item'>日本語</Link>
+                  {/* <Link to='/' className='link-item'>English</Link>
+                  <Link to='/' className='link-item'>日本語</Link> */}
+                  <button onClick={ changeLang('en') }>English</button>
+                  <button onClick={ changeLang('ja') }>日本語</button>
                 </div>
               </div>
               <Link to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></Link>

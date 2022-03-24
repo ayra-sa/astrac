@@ -1,0 +1,43 @@
+{
+    "hero_title": "Introducing The Only Tool that You'll Ever Need",
+    "hero_p": "We've helped Over 25K+ Individuals and Companies to Grow Their Business Successfully",
+    "button_text": "Start free trial",
+    "dataFeatures": [
+        {
+            "icon": "./images/icon/tick.svg",
+            "title": "Project Management",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "Management",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "Data Management",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "Project",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "Product",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "Data",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true
+        }
+    ]
+}
