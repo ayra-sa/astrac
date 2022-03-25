@@ -1,0 +1,55 @@
+{
+    "hero_title": "あなたが今までに必要とする唯一のツールをご紹介します",
+    "hero_p": "私たちは25,000人以上の個人や企業がビジネスを成功させるのを支援してきました",
+    "button_text": "無料トライアルを開始",
+    "product_home": {
+        "title": "製品",
+        "description": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
+        "reverse": false
+    },
+    "btn_text": "もっと詳しく知る",
+    "dataFeatures": [
+        {
+            "icon": "./images/icon/tick.svg",
+            "title": "プロジェクト管理",
+            "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること",
+            "button": true,
+            "btn_text": "もっと詳しく知る"
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "管理",
+            "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
+            "button": true,
+            "btn_text": "もっと詳しく知る"
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "データ管理",
+            "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
+            "button": true,
+            "btn_text": "もっと詳しく知る"
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "計画",
+            "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
+            "button": true,
+            "btn_text": "もっと詳しく知る"
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "製品",
+            "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
+            "button": true,
+            "btn_text": "もっと詳しく知る"
+        },
+        {
+            "icon": "images/icon/tick.svg",
+            "title": "データ",
+            "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
+            "button": true,
+            "btn_text": "もっと詳しく知る"
+        }
+    ]
+}

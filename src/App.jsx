@@ -14,49 +14,37 @@ import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
 import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
-import i18next from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import tEn from './locales/en/translation.json'
-import tJa from './locales/ja/translation.json'
 import { useTranslation } from 'react-i18next';
+import cookie from 'js-cookie'
+import i18next from "i18next";
+import Cookies from 'js-cookie';
 
-i18next
-  .use(initReactI18next)
-  .init({
-    resources: {
-      en: {
-        translation:tEn
-      },
-      ja: {
-        translation:tJa
-      },
-    },
-    lng: "en",
-    fallbackLng: "en",
 
-    interpolation: {
-      escapeValue: false
-    }
-  })
-
-  const changeLang = (l) => {
-    return () => {
-      i18next.changeLanguage(l)
-      console.log(l)
-
-      localStorage.setItem('lang', l)
-    }
-  }
+const langs = [
+  {
+    code: 'ja',
+    name: '日本語',
+    country_code: 'ja'
+  },
+  {
+    code: 'en',
+    name: 'English',
+    country_code: 'gb'
+  },
+]
 
 function App() {
 
-  const { t } = useTranslation()
+  const currentLanguageCodes = Cookies.get('i18next')
+  const currentLanguageCode = cookie.get('i18next')
+  // const currentLanguage = langs.find(l => l.code === currentLanguageCode)
+  const {t} = useTranslation()
 
-  useEffect(() => {
-    let currentLang = localStorage.getItem('lang')
-    i18next.changeLanguage(currentLang)
-    console.log(currentLang)
-  }, [])
+  console.log(currentLanguageCodes)
+
+  // useEffect(() => {
+  //   document.body.dir = currentLanguage. || 'ltr'
+  // }, [currentLanguage])
   
 
   useEffect(() => {
@@ -65,7 +53,7 @@ function App() {
   
   return (
     <Router>
-      <Navbar changeLang={changeLang} />
+      <Navbar langs={langs} currentLanguageCode={currentLanguageCode} />
       <Routes>
         <Route path='/' exact element={<Home t={t} />} />
         <Route path='/product' element={<Product />} />

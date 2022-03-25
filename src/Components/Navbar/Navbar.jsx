@@ -5,8 +5,9 @@ import world from '../../images/world.svg'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
 import { useEffect, useState, useRef } from 'react'
+import i18next from 'i18next'
 
-const Navbar = ({changeLang}) => {
+const Navbar = ({langs, currentLanguageCode}) => {
 
   const [navbar, setNavbar] = useState(false)
   const [navOpen, setNavOpen] = useState(false)
@@ -84,10 +85,16 @@ const Navbar = ({changeLang}) => {
               <div className="lang-dd" onClick={() => setLangOpen(!langOpen)}>
                 <img src={world} alt="icon" />
                 <div className={ langOpen ? 'language' : 'hide' }>
-                  {/* <Link to='/' className='link-item'>English</Link>
-                  <Link to='/' className='link-item'>日本語</Link> */}
-                  <button onClick={ changeLang('en') }>English</button>
-                  <button onClick={ changeLang('ja') }>日本語</button>
+                  {langs.map(({code, name}) => (
+                    <button 
+                      onClick={() => i18next.changeLanguage(code) }
+                      disabled={code === currentLanguageCode}
+                      key={code}
+                      // style={{ color: code === currentLanguageCode ? 'red' : 'green' }}
+                    >
+                      {name}
+                    </button>
+                  ))}
                 </div>
               </div>
               <Link to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></Link>

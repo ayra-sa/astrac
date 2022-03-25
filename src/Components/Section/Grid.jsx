@@ -2,7 +2,7 @@ import {MdKeyboardArrowRight} from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import './Section.css'
 
-const Grid = ({ title, info, button, icon }) => {
+const Grid = ({ title, info, button, icon, btn_text }) => {
     return (
                     <div className="item" data-aos='fade-up'>
                         <div className="icon-box">
@@ -11,7 +11,7 @@ const Grid = ({ title, info, button, icon }) => {
                         <h1 className="title-small">{title}</h1>
                         <p className="subtitle">{info}</p>
                         { button ? (<Link to='/' className='btn-transparent mt-4'>
-                            Learn more <MdKeyboardArrowRight />
+                            {btn_text} <MdKeyboardArrowRight />
                         </Link>) : null  }            
                     </div>
     )

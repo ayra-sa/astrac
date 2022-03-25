@@ -1,7 +1,7 @@
 import "./Home.css";
 import Features from "./HomeSections/Features";
 import topImg from "../../images/db-img.svg";
-import { productData } from "./Data/Product";
+// import { productData } from "./Data/Product";
 import Hero from "../../Components/Hero/Hero";
 import { Flex } from "../../Components/Section/Flex";
 import Section from "../../Components/Section/Section";
@@ -15,6 +15,9 @@ import TopImg from "../../Components/TopImg/TopImg";
 import CookieConsent from "react-cookie-consent";
 
 const Home = ({t}) => {
+
+  const productData = t('product_home', {returnObjects: true})
+  console.log(productData.title)
   return (
     <>
       <Hero t={t} />
@@ -28,7 +31,7 @@ const Home = ({t}) => {
           </div>
         </section>
 
-        <Features />
+        <Features t={t} />
 
         <Section {...project} />
 

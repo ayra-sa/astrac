@@ -1,49 +1,20 @@
-import iconTask from '../../../images/icon/task-square.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Grid from '../../../Components/Section/Grid'
 
-const Features = () => {
+const Features = ({t}) => {
 
-    const dataFeatures = [
-        {
-            icon: iconTask,
-            title: "Project Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-            button: true,
-        },
-        {
-            icon: iconTask,
-            title: "Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-            button: true,
-        },
-        {
-            icon: iconTask,
-            title: "Data Management",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-            button: true,
-        },
-        {
-            icon: iconTask,
-            title: "Project",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-            button: true,
-        },
-        {
-            icon: iconTask,
-            title: "Product",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-            button: true,
-        },
-        {
-            icon: iconTask,
-            title: "Data",
-            info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-            button: true,
-        },
-    ]
+    const mdata = t(`dataFeatures`, {returnObjects: true})
+    // const [data, setData] = useState(mdata)
 
-    const [data, setData] = useState(dataFeatures)
+    // console.log(data)
+
+    // useEffect(() => {
+    //   setData(mdata)
+    
+    // }, [])
+    
+    // console.log(data, mdata)
+    console.log(Array.isArray(mdata))
 
     return (
         <section id="features" className="section">
@@ -54,7 +25,7 @@ const Features = () => {
             <p className="subtitle">Features are highlighted here</p>
 
             <div className="row-3 mt-4">
-                {data.map(item => (
+                { Array.isArray(mdata) && mdata.map(item => (
                     <Grid key={item.title} {...item} />
                 ))}
             </div>
