@@ -10,7 +10,7 @@
     "btn_text": "Learn More",
     "dataFeatures": [
         {
-            "icon": "./images/icon/tick.svg",
+            "icon": "./src/images/icon/tick.svg",
             "title": "Project Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
