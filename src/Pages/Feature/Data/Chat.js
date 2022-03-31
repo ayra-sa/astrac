@@ -2,7 +2,7 @@ export const chatData = {
     section: true,
     id: "chat",
     titleSection: "Chat",
-    imgContent: require("../../../images/chat.svg").default,
+    imgContent: "/images/chat.svg",
     reverse: true,
     light: true,
     purple: true,
@@ -10,17 +10,17 @@ export const chatData = {
     left: true,
     contentList: [
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },

@@ -1,15 +1,33 @@
-.hero {
-    background-image: url("../../images/bg-hero.svg");
+.hero, .hero-home {
+    background-image: url("../../../public/images/bg-hero.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 15% 0 20% 0;
     color: #fff;
     /* min-height: 90vh; */
   }
   
+  .hero {
+    padding: 15% 0 20% 0;
+  }
+
+  .hero-home {
+    padding-top: 10%;
+  }
+
+  .hero-home img {
+    position: relative;
+    margin-bottom: -18%;
+  }
+
   .hero.scnd {
     padding: 10% 0;
+  }
+
+  .hero-wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    column-gap: 30px;
   }
   
   .hero-wrap {

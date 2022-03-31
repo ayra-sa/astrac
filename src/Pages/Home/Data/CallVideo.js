@@ -2,7 +2,7 @@ export const callVideo = {
         section: true,
         id: 'true',
         titleSection: 'Call & Video Call',
-        imgContent: require('../../../images/call-vidcal.svg').default,
+        imgContent: '/images/call-vidcal.svg',
         reverse: true,
         light: false,
         purple: false,
@@ -10,17 +10,17 @@ export const callVideo = {
         left: true,
         contentList: [
         {
-            icon: require('../../../images/icon/profile-tick.svg').default,
+            icon: '/images/icon/profile-tick.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: require('../../../images/icon/profile-tick.svg').default,
+            icon: '/images/icon/profile-tick.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: require('../../../images/icon/profile-tick.svg').default,
+            icon: '/images/icon/profile-tick.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },

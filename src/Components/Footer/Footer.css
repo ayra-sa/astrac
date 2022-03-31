@@ -21,6 +21,16 @@ footer {
     margin-top: 40px;
     font-weight: 300;
   }
+
+  .lang-dd span {
+    margin-left: 10px;
+  }
+
+  .language.btm {
+    bottom: 0;
+    margin-left: 30px;
+    box-shadow: 0px 0px 5px -3px hsl(0deg 0% 12% / 95%);
+  }
   
   .footer-right {
     display: grid;

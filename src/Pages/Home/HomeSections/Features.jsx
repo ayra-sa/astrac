@@ -1,7 +1,8 @@
+import { t } from 'i18next'
 import { useEffect, useState } from 'react'
 import Grid from '../../../Components/Section/Grid'
 
-const Features = ({t}) => {
+const Features = () => {
 
     const mdata = t(`dataFeatures`, {returnObjects: true})
     // const [data, setData] = useState(mdata)

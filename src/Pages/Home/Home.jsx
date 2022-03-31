@@ -1,6 +1,5 @@
 import "./Home.css";
 import Features from "./HomeSections/Features";
-import topImg from "../../images/db-img.svg";
 // import { productData } from "./Data/Product";
 import Hero from "../../Components/Hero/Hero";
 import { Flex } from "../../Components/Section/Flex";
@@ -13,25 +12,26 @@ import Customize from "./HomeSections/Customize";
 import WorkSec from "./HomeSections/Work";
 import TopImg from "../../Components/TopImg/TopImg";
 import CookieConsent from "react-cookie-consent";
+import { t } from "i18next";
 
-const Home = ({t}) => {
+const Home = () => {
 
   const productData = t('product_home', {returnObjects: true})
   console.log(productData.title)
   return (
     <>
-      <Hero t={t} />
-      <main className="main mb-10">
+      <Hero />
+      <main className="mb-10">
         
-        <TopImg topImg={topImg} />
+        {/* <TopImg topImg={topImg} /> */}
 
-        <section className="section">
+        <section className="section-2">
           <div className="container">
             <Flex {...productData} />
           </div>
         </section>
 
-        <Features t={t} />
+        <Features />
 
         <Section {...project} />
 

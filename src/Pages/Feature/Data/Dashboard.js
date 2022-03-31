@@ -2,7 +2,7 @@ export const dbData = {
     section: true,
     id: "db",
     titleSection: "Dashboard",
-    imgContent: require("../../../images/file-manager.svg").default,
+    imgContent: "/images/file-manager.svg",
     reverse: false,
     light: true,
     purple: true,
@@ -10,17 +10,17 @@ export const dbData = {
     left: false,
     contentList: [
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },

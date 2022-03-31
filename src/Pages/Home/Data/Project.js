@@ -2,7 +2,7 @@ export const project = {
         section: true,
         id: '',
         titleSection: 'Project Management',
-        imgContent: require('../../../images/project-management.svg').default,
+        imgContent: '/images/project-management.svg',
         reverse: false,
         light: false,
         purple: false,
@@ -10,17 +10,17 @@ export const project = {
         left: false,
         contentList: [
         {
-            icon: require('../../../images/icon/video.svg').default,
+            icon: '/images/icon/video.svg',
             title: 'Project',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: require('../../../images/icon/video.svg').default,
+            icon: '/images/icon/video.svg',
             title: 'Project',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: require('../../../images/icon/video.svg').default,
+            icon: '/images/icon/video.svg',
             title: 'Project',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },

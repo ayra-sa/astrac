@@ -19,16 +19,6 @@
     -o-border-radius: 16px;
   }
   
-  .icon-box {
-    background-color: var(--purple);
-    display: inline-flex;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
-    padding: 8px;
-  }
   
   #features .subtitle,
   #chat .subtitle {

@@ -1,51 +1,53 @@
 {
+    "language": "English",
     "hero_title": "Introducing The Only Tool that You'll Ever Need",
     "hero_p": "We've helped Over 25K+ Individuals and Companies to Grow Their Business Successfully",
     "button_text": "Start free trial",
     "product_home": {
         "title": "Product",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
-        "reverse": false
+        "reverse": false,
+        "img": "/images/product.svg"
     },
     "btn_text": "Learn More",
     "dataFeatures": [
         {
-            "icon": "./src/images/icon/tick.svg",
+            "icon": "/images/icon/task-square.svg",
             "title": "Project Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
             "btn_text": "Learn More"
         },
         {
-            "icon": "images/icon/tick.svg",
+            "icon": "/images/icon/task-square.svg",
             "title": "Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
             "btn_text": "Learn More"
         },
         {
-            "icon": "images/icon/tick.svg",
+            "icon": "/images/icon/task-square.svg",
             "title": "Data Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
             "btn_text": "Learn More"
         },
         {
-            "icon": "images/icon/tick.svg",
+            "icon": "/images/icon/task-square.svg",
             "title": "Project",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
             "btn_text": "Learn More"
         },
         {
-            "icon": "images/icon/tick.svg",
+            "icon": "/images/icon/task-square.svg",
             "title": "Product",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
             "btn_text": "Learn More"
         },
         {
-            "icon": "images/icon/tick.svg",
+            "icon": "/images/icon/task-square.svg",
             "title": "Data",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,

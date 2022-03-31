@@ -1,6 +1,5 @@
 import './Navbar.css'
 import { Link } from 'react-router-dom'
-import logo from '../../images/logo.svg'
 import world from '../../images/world.svg'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
@@ -50,7 +49,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
           <div className="navbar-wrap">
             <div className="navbar-left">
               <Link to='/' className='brand'>
-                <img src={logo} alt="brand" />
+                <img src='/images/logo.svg' alt="brand" />
               </Link>
               <ul className="nav-menu" id={navOpen ? 'hidden-menu' : ''}>
                 <li className="link-item"><Link to='/product'>Product</Link></li>

@@ -13,7 +13,7 @@ const ProjectManagement = () => {
             </div>
         </div>
         <main className="main mb-10">
-            <TopImg topImg={require('../../images/db-img.svg').default} />
+            <TopImg topImg='/images/db-img.svg' />
 
             <section className="section">
                 <div className="container">
@@ -25,7 +25,7 @@ const ProjectManagement = () => {
                             </div>
                         </div>
                         <div className="column">
-                            <img src={require('../../images/project.svg').default} alt="project" />
+                            <img src='/images/project.svg' alt="project" />
                         </div>
                     </div>
                 </div>

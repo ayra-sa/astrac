@@ -3,7 +3,7 @@ export const fileManager =  {
         section: false,
         id: 'fm',
         titleSection: 'File Manager',
-        imgContent: require('../../../images/file-manager.svg').default,
+        imgContent: '/images/file-manager.svg',
         reverse: false,
         light: false,
         purple: false,
@@ -11,17 +11,17 @@ export const fileManager =  {
         left: false,
         contentList: [
         {
-            icon: require('../../../images/icon/profile-tick.svg').default,
+            icon: '/images/icon/profile-tick.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: require('../../../images/icon/profile-tick.svg').default,
+            icon: '/images/icon/profile-tick.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: require('../../../images/icon/profile-tick.svg').default,
+            icon: '/images/icon/profile-tick.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },

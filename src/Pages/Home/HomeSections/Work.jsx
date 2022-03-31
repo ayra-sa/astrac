@@ -5,7 +5,7 @@ const WorkSec = () => {
         <section id="work">
           <div className="container">
             <img
-              src={require("../../../images/better-fit.svg").default}
+              src="/images/better-fit.svg"
               className="img-work"
               alt="work"
               data-aos="fade-up"

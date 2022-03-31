@@ -21,7 +21,7 @@ const Feature = () => {
                 </div>
             </div>
             <main className="main">
-                <TopImg topImg={require('../../images/db-img.svg').default} />
+                <TopImg topImg='../../images/db-img.svg' />
                 <Section {...pmData} />
                 <Section {...chatData} />
                 <Section {...fmData} />

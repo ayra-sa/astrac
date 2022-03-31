@@ -6,13 +6,13 @@ import '../pm.css'
 export const Detail = () => {
   const detailData = [
     {
-      photo: require("../../../images/detail.svg").default,
+      photo: "/images/detail.svg",
     },
     {
-      photo: require("../../../images/detail.svg").default,
+      photo: "/images/detail.svg",
     },
     {
-      photo: require("../../../images/detail.svg").default,
+      photo: "/images/detail.svg",
     },
   ];
 

@@ -5,37 +5,37 @@ import { RiSearch2Line } from "react-icons/ri";
 const HelpCenterList = () => {
   const dataList = [
     {
-      icon: require("../../../images/icon/task-square.svg").default,
+      icon: "/images/icon/task-square.svg",
       title: "Start Guid",
       info: "dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: require("../../../images/icon/task-square.svg").default,
+      icon: "/images/icon/task-square.svg",
       title: "Features",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: require("../../../images/icon/task-square.svg").default,
+      icon: "/images/icon/task-square.svg",
       title: "Settings",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: require("../../../images/icon/task-square.svg").default,
+      icon: "/images/icon/task-square.svg",
       title: "Contract and Payment",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: require("../../../images/icon/task-square.svg").default,
+      icon: "/images/icon/task-square.svg",
       title: "FAQ",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: require("../../../images/icon/task-square.svg").default,
+      icon: "/images/icon/task-square.svg",
       title: "Tutorial",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,

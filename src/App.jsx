@@ -55,7 +55,7 @@ function App() {
     <Router>
       <Navbar langs={langs} currentLanguageCode={currentLanguageCode} />
       <Routes>
-        <Route path='/' exact element={<Home t={t} />} />
+        <Route path='/' exact element={<Home />} />
         <Route path='/product' element={<Product />} />
         <Route path='/help-centers' element={<HelpCenter />} />
         <Route path='/free-trial' element={<FreeTrial />} />
@@ -65,7 +65,7 @@ function App() {
         <Route path='/project-management' element={<ProjectManagement />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer langs={langs} currentLanguageCode={currentLanguageCode} />
     </Router>
   );
 }

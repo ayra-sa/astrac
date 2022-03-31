@@ -2,7 +2,7 @@ export const cvData = {
     section: true,
     id: "cv",
     titleSection: "Call & Video Call",
-    imgContent: require("../../../images/project-management.svg").default,
+    imgContent: "/images/project-management.svg",
     reverse: true,
     light: false,
     purple: false,
@@ -10,17 +10,17 @@ export const cvData = {
     left: true,
     contentList: [
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: require('../../../images/fm/profile-tick.svg').default,
+          icon: '/images/fm/profile-tick.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
