@@ -44,7 +44,7 @@
 }
 
 .form input[type="checkbox"]:checked::before {
-    background: url('../../images/icon/tick.svg') center;
+    background: url('../../../public/images/icon/tick.svg') center;
     background-size: cover;
     content: '';
     inset: 0;

@@ -1,7 +1,6 @@
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import photo from "../../images/photo.svg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,19 +11,19 @@ import "./Slider.css";
 const Slider = () => {
   const dataSlider = [
     {
-      photo: photo,
+      photo: '/images/photo.svg',
       name: "John Doe",
       position: "Sales Manager at Company Name",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere massa eu lobortis. Maecenas maximus vel tellus eu pharetra. Mauris in finibus est, eget volutpat nulla. Sed id felissed urna rutrum cursus. Curabitur tincidunt orci.",
     },
     {
-      photo: photo,
+      photo: '/images/photo.svg',
       name: "John Doe",
       position: "Sales Manager at Company Name",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere massa eu lobortis. Maecenas maximus vel tellus eu pharetra. Mauris in finibus est, eget volutpat nulla. Sed id felissed urna rutrum cursus. Curabitur tincidunt orci.",
     },
     {
-      photo: photo,
+      photo: '/images/photo.svg',
       name: "John Doe",
       position: "Sales Manager at Company Name",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere massa eu lobortis. Maecenas maximus vel tellus eu pharetra. Mauris in finibus est, eget volutpat nulla. Sed id felissed urna rutrum cursus. Curabitur tincidunt orci.",

@@ -146,13 +146,13 @@ const Footer = ({langs, currentLanguageCode}) => {
             </div>
             <div className="socmed">
               <Link to="/">
-                <img src={twitter} alt="socmed" />
+                <img src='images/socmed/twitter.svg' alt="socmed" />
               </Link>
               <Link to="/">
-                <img src={fb} alt="socmed" />
+                <img src='images/socmed/fb.svg' alt="socmed" />
               </Link>
               <Link to="/">
-                <img src={linkedin} alt="socmed" />
+                <img src='images/socmed/linkedin.svg' alt="socmed" />
               </Link>
             </div>
           </div>

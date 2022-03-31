@@ -74,7 +74,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
                 </li>
                 <li>
                   <Link to='/' className="language on-mobo">
-                    <img src={world} alt="icon" /> English
+                    <img src='images/world.svg' alt="icon" /> English
                   </Link>
                 </li>
               </ul>
@@ -82,7 +82,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
 
             <div className="navbar-right">
               <div className="lang-dd" onClick={() => setLangOpen(!langOpen)}>
-                <img src={world} alt="icon" />
+                <img src='images/world.svg' alt="icon" />
                 <div className={ langOpen ? 'language' : 'hide' }>
                   {langs.map(({code, name}) => (
                     <button 

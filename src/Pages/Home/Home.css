@@ -59,7 +59,7 @@
   
   /* Chat */
   #chat {
-    background-image: url("../../images/chat-bg.svg");
+    background-image: url("../../../public/images/chat-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5% 0;
@@ -87,7 +87,7 @@
   /* Work */
   
   #work {
-    background-image: url("../../images/bg-slider.svg");
+    background-image: url("../../../public/images/bg-slider.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,7 +105,7 @@
   } */
   
   .slider-content .desc::before {
-    content: url("../../images/quotes.svg");
+    content: url("../../../public/images/quotes.svg");
     display: block;
     margin-bottom: 30px;
   }

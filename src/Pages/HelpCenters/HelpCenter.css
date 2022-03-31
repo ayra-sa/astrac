@@ -9,7 +9,7 @@
 }
 
 #search-hero {
-    background: url('../../images/bg-hero.svg');
+    background: url('../../../public/images/bg-hero.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

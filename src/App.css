@@ -272,7 +272,7 @@ body {
 /* Tab */
 
 #free-trial, #pricing {
-  background-image: url('./images/bg-hero.svg');
+  background-image: url('../public/images/bg-hero.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

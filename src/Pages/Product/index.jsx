@@ -20,7 +20,7 @@ const Product = () => {
         </div>
 
         <main className="main">
-            <TopImg topImg={require('../../images/db-img.svg').default} />
+            <TopImg topImg='/images/db-img.svg' />
 
             <div className="container">
                 <div className="center">
