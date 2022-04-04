@@ -7,16 +7,22 @@ export const Detail = () => {
   const detailData = [
     {
       photo: "/images/detail.svg",
+      detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam consequatur et error porro cum mollitia repellat praesentium ducimus sequi quod nobis doloribus, labore eligendi corrupti eveniet rerum modi veniam. Tempora!",
     },
     {
       photo: "/images/detail.svg",
+      detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam consequatur et error.",
     },
     {
       photo: "/images/detail.svg",
+      detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     },
   ];
 
-  const [switchActive, setSwitchActive] = useState(0)
+  const detailTitle = ['Task Mangement', 'Visualize', 'Comment', 'Timeline']
+
+  const [switchActive, setSwitchActive] = useState(detailTitle[0])
+  const [contentActive, setContentActive] = useState(detailData[0])
 
   return (
     <section className="section" id="detail">
@@ -24,13 +30,16 @@ export const Detail = () => {
         <h2 className="center">Detail Features</h2>
 
         <div className="tab-menu mt-4">
-          <div
-            className={switchActive === 0 ? "menu active" : "menu"}
-            onClick={() => setSwitchActive(0)}
-          >
-            Task Management
-          </div>
-          <div
+          {detailTitle.map(title => (
+            <div
+              key={title}
+              className={switchActive === title ? "menu active" : "menu"}
+              onClick={() => setSwitchActive(title) }
+            >
+              {title}
+            </div>
+          ))}
+          {/* <div
             className={switchActive === 1 ? "menu active" : "menu"}
             onClick={() => setSwitchActive(1)}
           >
@@ -47,17 +56,23 @@ export const Detail = () => {
             onClick={() => setSwitchActive(3)}
           >
             Visualize
-          </div>
+          </div> */}
         </div>
 
         <div>
-          <div className={switchActive === 0 ? "open" : "hidden"}>
             <div className="text center mt-4" style={{ marginInline: "auto" }}>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
-                impedit, accusamus voluptatem placeat saepe quisquam!
-              </p>
+              
+              {detailData.map(data => (
+                <div className='open mt-4'>
+                  <p>{data.detail}</p>
+                  <div className="center mt-4">
+                    <img src={data.photo} alt='project' />
+                  </div>
+                </div>
+
+              ))}
             </div>
+          {/* <div className="open">
             <Swiper
               cssMode={true}
               navigation={true}
@@ -66,18 +81,12 @@ export const Detail = () => {
               modules={[Navigation, Mousewheel, Keyboard]}
               className="mySwiper"
             >
-              {detailData.map((data) => (
+              
                 <SwiperSlide>
-                  <div className="swiper-slide mt-4">
-                    <div className="center">
-                      <img src={data.photo} alt='project' />
-                    </div>
-                  </div>
                 </SwiperSlide>
-              ))}
             </Swiper>
-          </div>
-          <div className={switchActive === 1 ? "open" : "hidden"}>
+          </div> */}
+          {/* <div className={switchActive === 1 ? "open" : "hidden"}>
             <div className="text center mt-4" style={{ marginInline: "auto" }}>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
@@ -152,7 +161,7 @@ export const Detail = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </div> */}
           
         </div>
       </div>

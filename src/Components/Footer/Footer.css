@@ -56,6 +56,11 @@ footer {
     justify-content: space-between;
     margin-top: 20px;
   }
+
+  .socmed {
+    display: flex;
+    gap: 15px;
+  }
   
   .copyright {
     display: flex;

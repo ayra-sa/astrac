@@ -109,7 +109,7 @@ const Footer = ({langs, currentLanguageCode}) => {
                   <Link to="/">Plans</Link>
                 </li>
                 <li>
-                  <Link to="/">FaQ</Link>
+                  <Link to="/">FAQ</Link>
                 </li>
               </ul>
               <ul className="footer-menu">
