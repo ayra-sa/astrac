@@ -3,6 +3,7 @@ import Success from "../../../Components/Modal/Success";
 import '../../../Components/Form/form.css'
 
 export const FreeTrialForm = () => {
+  // console.log(props)
   const initialValues = {
     fid: "",
     company: "",
@@ -76,7 +77,7 @@ export const FreeTrialForm = () => {
       {Object.keys(formErrors).length === 0 && isSubmit && isOpen ? (
         <Success setIsOpen={setIsOpen} />
       ) : null}
-      <div className="hero">
+      <div className="hero-2">
         <div className="container">
           <div className="center">
             <span>Free Trial</span>
@@ -96,7 +97,7 @@ export const FreeTrialForm = () => {
           <div className="container">
             <div className="contact-wrap">
               <div className="center">
-                <h1 className="title">Premium plan</h1>
+                {/* <h1 className="title">{name}</h1> */}
                 <p className="subtitle">
                   Start for free for 30 days. No payment information required
                 </p>

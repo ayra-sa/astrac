@@ -2,9 +2,12 @@ import { BsCheckCircleFill, BsCheck } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./Tab.css";
 
-const Tab = ({ recommended, name, detail, price, list }) => {
+const Tab = ({ active, recommended, name, detail, month, year, list, img }) => {
+
+  const prc = active === 'Month' ? (`${month}`) : (`${year}`)
+
   return (
-    <div className={recommended ? "tab-card recommend" : "tab-card"} key={name}>
+    <div className={recommended ? "tab-card recommend" : "tab-card"}>
       {recommended && (
         <div className="r-tag">
           <BsCheck /> RECOMMENDED
@@ -13,8 +16,8 @@ const Tab = ({ recommended, name, detail, price, list }) => {
       <h2>{name}</h2>
       <div className="price mt-2">
         <div>
-          <span className="price-text">${price}</span>
-          <span>/mo</span>
+          { img ? (<img src={img} alt="img" />) : (<span className="price-text">${prc}</span>) }
+          { img ? (<span></span>) : (<span>/mo</span>) }
         </div>
         <p>{detail}</p>
       </div>

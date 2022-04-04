@@ -1,6 +1,5 @@
 import "./Home.css";
 import Features from "./HomeSections/Features";
-// import { productData } from "./Data/Product";
 import Hero from "../../Components/Hero/Hero";
 import { Flex } from "../../Components/Section/Flex";
 import Section from "../../Components/Section/Section";
@@ -10,14 +9,15 @@ import { callVideo } from "./Data/CallVideo";
 import { project } from "./Data/Project";
 import Customize from "./HomeSections/Customize";
 import WorkSec from "./HomeSections/Work";
-import TopImg from "../../Components/TopImg/TopImg";
+// import TopImg from "../../Components/TopImg/TopImg";
 import CookieConsent from "react-cookie-consent";
 import { t } from "i18next";
 
 const Home = () => {
 
   const productData = t('product_home', {returnObjects: true})
-  console.log(productData.title)
+  console.log(productData)
+  
   return (
     <>
       <Hero />

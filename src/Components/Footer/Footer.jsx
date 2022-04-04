@@ -1,7 +1,4 @@
 import "./Footer.css";
-import fb from "../../images/socmed/fb.svg";
-import twitter from "../../images/socmed/twitter.svg";
-import linkedin from "../../images/socmed/linkedin.svg";
 import { Link } from "react-router-dom";
 import AllOfYour from "../AllOfYour/AllOfYour";
 import { useEffect, useRef, useState } from "react";
@@ -30,7 +27,7 @@ const Footer = ({langs, currentLanguageCode}) => {
 
   return (
     <>
-      <footer data-aos="fade-up">
+      <footer>
         <AllOfYour />
         <div className="container" ref={ref}>
           <div className="footer-wrap">

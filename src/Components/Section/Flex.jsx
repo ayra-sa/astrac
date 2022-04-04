@@ -16,7 +16,7 @@ export const Flex = ({reverse, title, description, img}) => {
                     </Link>
                 </div>
 
-                <div className="column">
+                <div className="column" data-aos="zoom-in">
                     <img src={img} alt={title} />
                 </div>
             </div>

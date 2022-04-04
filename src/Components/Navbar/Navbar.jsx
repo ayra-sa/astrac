@@ -1,6 +1,5 @@
 import './Navbar.css'
 import { Link } from 'react-router-dom'
-import world from '../../images/world.svg'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
 import { useEffect, useState, useRef } from 'react'
@@ -40,7 +39,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
       document.removeEventListener('mousedown', handleOutside)
     }
   }, [langOpen, dropdown])
-  
+
 
   
     return (

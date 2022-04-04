@@ -14,10 +14,10 @@ import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
 import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import cookie from 'js-cookie'
-import i18next from "i18next";
 import Cookies from 'js-cookie';
+import { useTranslation } from 'react-i18next';
 
 
 const langs = [
@@ -39,6 +39,8 @@ function App() {
   const currentLanguageCode = cookie.get('i18next')
   // const currentLanguage = langs.find(l => l.code === currentLanguageCode)
   const {t} = useTranslation()
+
+  console.log(t)
 
   console.log(currentLanguageCodes)
 

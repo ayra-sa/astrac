@@ -60,7 +60,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="hero">
+      <div className="hero-2">
         <div className="container">
           <div className="center">
             <span>Contact</span>

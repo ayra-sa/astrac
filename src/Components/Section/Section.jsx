@@ -28,8 +28,8 @@ const Section = ({
                     >Learn more <MdKeyboardArrowRight /> </Link>
             </div>
 
-            <div className={ rightImg ? 'right-content img' : 'right-content'  }>
-              <img src={imgContent} alt="project" className={ left ? 'img left' : '' } />
+            <div className={ rightImg ? 'right-content img' : 'right-content' }>
+              <img src={imgContent} alt="project" className={ left ? 'img left' : '' } data-aos="zoom-in" />
             </div>
           </div>
         </div>
