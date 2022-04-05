@@ -14,10 +14,10 @@ import Product from './Pages/Product';
 import ProjectManagement from './Pages/Project Management';
 import Contact from './Pages/Contact';
 import { FreeTrialForm } from './Pages/FreeTrial/Form/FreeTrialForm';
-// import { useTranslation } from 'react-i18next';
 import cookie from 'js-cookie'
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
+import CookieConsent from 'react-cookie-consent';
 
 
 const langs = [
@@ -35,14 +35,11 @@ const langs = [
 
 function App() {
 
-  const currentLanguageCodes = Cookies.get('i18next')
+  // const currentLanguageCodes = Cookies.get('i18next')
   const currentLanguageCode = cookie.get('i18next')
   // const currentLanguage = langs.find(l => l.code === currentLanguageCode)
   const {t} = useTranslation()
 
-  console.log(t)
-
-  console.log(currentLanguageCodes)
 
   // useEffect(() => {
   //   document.body.dir = currentLanguage. || 'ltr'
@@ -61,12 +58,21 @@ function App() {
         <Route path='/product' element={<Product />} />
         <Route path='/help-centers' element={<HelpCenter />} />
         <Route path='/free-trial' element={<FreeTrial />} />
-        <Route path='/free-trial-form' element={<FreeTrialForm />} />
+        <Route path='/free-trial-form/:id' element={<FreeTrialForm />} />
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/feature' element={<Feature />} />
         <Route path='/project-management' element={<ProjectManagement />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+      <CookieConsent
+          location="bottom"
+          buttonText="I agree"
+          expires={150}
+          buttonStyle={{ background: '#856bfa', color: '#fff', borderRadius: '5px' }}
+          cookieName='AstracCookie'
+        >
+          We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our Cookie Policy
+        </CookieConsent>
       <Footer langs={langs} currentLanguageCode={currentLanguageCode} />
     </Router>
   );

@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import Success from "../../../Components/Modal/Success";
 import '../../../Components/Form/form.css'
+import { useLocation } from "react-router-dom";
 
-export const FreeTrialForm = () => {
-  // console.log(props)
+export const FreeTrialForm = ({match, location}) => {
+  const {state} = useLocation()
+  console.log(match,location)
+  
   const initialValues = {
     fid: "",
     company: "",
@@ -33,7 +36,9 @@ export const FreeTrialForm = () => {
       console.log(formValues);
       setIsOpen(true);
     }
+    // eslint-disable-next-line
   }, [formErrors]);
+  
 
   useEffect(() => {
     if (!isOpen) {
@@ -97,7 +102,7 @@ export const FreeTrialForm = () => {
           <div className="container">
             <div className="contact-wrap">
               <div className="center">
-                {/* <h1 className="title">{name}</h1> */}
+                {/* <h1 className="title">{id}</h1> */}
                 <p className="subtitle">
                   Start for free for 30 days. No payment information required
                 </p>

@@ -8,6 +8,7 @@ export const callVideo = {
         purple: false,
         rightImg: false,
         left: true,
+        decor: true,
         contentList: [
         {
             icon: '/images/icon/profile-tick.svg',

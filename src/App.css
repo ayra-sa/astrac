@@ -152,7 +152,7 @@ body {
   -o-transition: .3s ease;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-white:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -214,6 +214,11 @@ body {
 .btn-white {
   background-color: #fff;
   color: var(--purple);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
 }
 
 .white {

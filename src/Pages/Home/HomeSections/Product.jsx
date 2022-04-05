@@ -2,11 +2,12 @@ import { t } from "i18next"
 import { MdKeyboardArrowRight } from "react-icons/md"
 import { Link } from "react-router-dom"
 
-export const Flex = ({reverse, title, description, img}) => {
+const ProductSec = ({ reverse, sub_title, title, description, img }) => {
     return (
         <section className="section">
-            <div className={ `flex ${reverse ? 'reverse' : ''}`}>
+            <div className={ `flex ${reverse ? 'reverse' : ''}`} >
                 <div className="column">
+                    <span className="top-menu">{sub_title}</span>
                     <h1 className="title">{title}</h1>
                     <div className="text">
                         <p className="subtitle">{description}</p>
@@ -23,3 +24,5 @@ export const Flex = ({reverse, title, description, img}) => {
         </section>
     )
 }
+
+export default ProductSec

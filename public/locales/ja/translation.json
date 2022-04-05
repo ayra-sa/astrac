@@ -4,7 +4,8 @@
     "hero_p": "私たちは25,000人以上の個人や企業がビジネスを成功させるのを支援してきました",
     "button_text": "無料トライアルを開始",
     "product_home": {
-        "title": "製品",
+        "sub_title": "製品",
+        "title": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること。私の矢筒悲しくなること。私の矢筒悲しくなること",
         "description": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
         "reverse": false,
         "img": "/images/product.svg"
@@ -19,35 +20,35 @@
             "btn_text": "もっと詳しく知る"
         },
         {
-            "icon": "/images/icon/task-square.svg",
+            "icon": "/images/icon/messages.svg",
             "title": "管理",
             "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
             "button": true,
             "btn_text": "もっと詳しく知る"
         },
         {
-            "icon": "/images/icon/task-square.svg",
+            "icon": "/images/icon/folder-open.svg",
             "title": "データ管理",
             "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
             "button": true,
             "btn_text": "もっと詳しく知る"
         },
         {
-            "icon": "/images/icon/task-square.svg",
+            "icon": "/images/icon/call-calling.svg",
             "title": "計画",
             "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
             "button": true,
             "btn_text": "もっと詳しく知る"
         },
         {
-            "icon": "/images/icon/task-square.svg",
+            "icon": "/images/icon/sms-tracking.svg",
             "title": "製品",
             "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
             "button": true,
             "btn_text": "もっと詳しく知る"
         },
         {
-            "icon": "/images/icon/task-square.svg",
+            "icon": "/images/icon/star.svg",
             "title": "データ",
             "info": "痛み自体は愛、主な記憶システムです。私の矢筒悲しくなること.",
             "button": true,

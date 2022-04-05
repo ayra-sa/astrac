@@ -32,6 +32,7 @@ const Contact = () => {
       console.log(formValues);
       setIsOpen(true);
     }
+    // eslint-disable-next-line
   }, [formErrors]);
 
   const validate = (values) => {

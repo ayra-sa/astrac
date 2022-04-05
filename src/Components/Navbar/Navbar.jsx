@@ -43,7 +43,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
 
   
     return (
-        <nav className={navbar ? 'navbar active' : 'navbar'} data-aos="fade-up">
+        <nav className={ `navbar ${navbar ? 'active' : ''}` } data-aos="fade-up">
         <div className="container" ref={ref}>
           <div className="navbar-wrap">
             <div className="navbar-left">
@@ -73,7 +73,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
                 </li>
                 <li>
                   <Link to='/' className="language on-mobo">
-                    <img src='images/world.svg' alt="icon" /> English
+                    <img src='/images/world.svg' alt="icon" /> English
                   </Link>
                 </li>
               </ul>
@@ -81,7 +81,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
 
             <div className="navbar-right">
               <div className="lang-dd" onClick={() => setLangOpen(!langOpen)}>
-                <img src='images/world.svg' alt="icon" />
+                <img src='/images/world.svg' alt="icon" />
                 <div className={ langOpen ? 'language' : 'hide' }>
                   {langs.map(({code, name}) => (
                     <button 

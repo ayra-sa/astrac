@@ -1,5 +1,5 @@
 import { t } from 'i18next'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import Grid from '../../../Components/Section/Grid'
 
 const Features = () => {
@@ -15,7 +15,6 @@ const Features = () => {
     // }, [])
     
     // console.log(data, mdata)
-    console.log(Array.isArray(mdata))
 
     return (
         <section id="features" className="section">
