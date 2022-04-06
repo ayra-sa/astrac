@@ -40,6 +40,8 @@ function App() {
   // const currentLanguage = langs.find(l => l.code === currentLanguageCode)
   const {t} = useTranslation()
 
+  console.log(t)
+
 
   // useEffect(() => {
   //   document.body.dir = currentLanguage. || 'ltr'
