@@ -96,7 +96,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
                 </div>
               </div>
               <Link to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></Link>
-              <Link to='/'><button className="btn btn-primary">Free Trial</button></Link>
+              <Link to='/pricing'><button className="btn btn-primary">Free Trial</button></Link>
               <button onClick={() => setNavOpen(!navOpen)} className='hmb'>{ navOpen ? (<CgClose />) : (<CgMenuLeft />) }</button>
             </div>
           </div>

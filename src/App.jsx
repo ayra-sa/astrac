@@ -55,14 +55,14 @@ function App() {
       <Navbar langs={langs} currentLanguageCode={currentLanguageCode} />
       <Routes>
         <Route path='/' exact element={<Home />} />
-        <Route path='/product' element={<Product />} />
-        <Route path='/help-centers' element={<HelpCenter />} />
-        <Route path='/free-trial' element={<FreeTrial />} />
-        <Route path='/free-trial-form/:id' element={<FreeTrialForm />} />
-        <Route path='/pricing' element={<Pricing />} />
-        <Route path='/feature' element={<Feature />} />
-        <Route path='/project-management' element={<ProjectManagement />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='product' element={<Product />} />
+        <Route path='help-centers' element={<HelpCenter />} />
+        <Route path='free-trial' element={<FreeTrial />} />
+        <Route path='free-trial-form/:id' element={<FreeTrialForm />} />
+        <Route path='pricing' element={<Pricing />} />
+        <Route path='feature' element={<Feature />} />
+        <Route path='project-management' element={<ProjectManagement />} />
+        <Route path='contact' element={<Contact />} />
       </Routes>
       <CookieConsent
           location="bottom"

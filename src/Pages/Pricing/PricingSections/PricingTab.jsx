@@ -63,9 +63,7 @@ const PricingTab = () => {
           <div className="tab">
             {tabItem.map((item, index) => {
 
-                const { active, recommended, name, detail, month, year, list, img } = item
-
-                const prc = active === 'Month' ? (`${month}`) : (`${year}`)
+                const { recommended, name, detail, month, year, list, img } = item
 
               return (
 
@@ -81,7 +79,9 @@ const PricingTab = () => {
                     {img ? (
                       <img src={img} alt="img" />
                     ) : (
-                      <span className="price-text">${prc}</span>
+                      <span className="price-text">
+                        {switchActive === 'Month' ? `${month}` : `${year}`}
+                      </span>
                     )}
                     {img ? <span></span> : <span>/mo</span>}
                   </div>
@@ -96,7 +96,7 @@ const PricingTab = () => {
                 </ul>
                 <div className="btn-container">
                   <Link
-                    to={`/free-trial-form/${index}`}
+                    to={`/free-trial-form/${index}`} state={tabItem}
                     className={`btn ${!recommended ? "btn-primary" : "btn-white"}`}
                   >
                     Subscribe now

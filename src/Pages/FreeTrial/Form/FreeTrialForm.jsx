@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import Success from "../../../Components/Modal/Success";
 import '../../../Components/Form/form.css'
-import { useLocation } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 
-export const FreeTrialForm = ({match, location}) => {
-  const {state} = useLocation()
-  console.log(match,location)
+export const FreeTrialForm = () => {
+  const location = useLocation()
+  const {id} = useParams()
+  const plan = location.state
   
   const initialValues = {
     fid: "",
@@ -102,10 +103,12 @@ export const FreeTrialForm = ({match, location}) => {
           <div className="container">
             <div className="contact-wrap">
               <div className="center">
-                {/* <h1 className="title">{id}</h1> */}
+                <Outlet />
+                <h1 className="title">{plan[id].name} plan</h1>
                 <p className="subtitle">
                   Start for free for 30 days. No payment information required
                 </p>
+                <p className="mt-2">Plan: {plan[id].name} Plan</p>
               </div>
 
               <form action="" className="form" onSubmit={handleSubmit}>

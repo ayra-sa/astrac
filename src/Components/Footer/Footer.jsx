@@ -33,7 +33,7 @@ const Footer = ({langs, currentLanguageCode}) => {
           <div className="footer-wrap">
             <div className="footer-left">
               <Link to="/" className="brand">
-                <img src="images/logo.svg" alt="brand" />
+                <img src="/images/logo.svg" alt="brand" />
               </Link>
               <p className="subtitle mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -45,7 +45,7 @@ const Footer = ({langs, currentLanguageCode}) => {
                 English
               </div> */}
               <div className="lang-dd mt-4" onClick={() => setLangBtm(!langBtm)}>
-                <img src="images/world-black.svg" alt="icon" /> <span>{ t('language') }</span>
+                <img src="/images/world-black.svg" alt="icon" /> <span>{ t('language') }</span>
                 <div className={ langBtm ? 'language btm' : 'hide' }>
                   {langs.map(({code, name}) => (
                     <button 
@@ -143,13 +143,13 @@ const Footer = ({langs, currentLanguageCode}) => {
             </div>
             <div className="socmed">
               <Link to="/">
-                <img src='images/socmed/twitter.svg' alt="socmed" />
+                <img src='/images/socmed/twitter.svg' alt="socmed" />
               </Link>
               <Link to="/">
-                <img src='images/socmed/fb.svg' alt="socmed" />
+                <img src='/images/socmed/fb.svg' alt="socmed" />
               </Link>
               <Link to="/">
-                <img src='images/socmed/linkedin.svg' alt="socmed" />
+                <img src='/images/socmed/linkedin.svg' alt="socmed" />
               </Link>
             </div>
           </div>
