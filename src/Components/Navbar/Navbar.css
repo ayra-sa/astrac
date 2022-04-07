@@ -163,6 +163,21 @@ nav {
     box-shadow: 5px -1px 12px -5px grey;
   }
 
+  .active-page::before {
+    /* border-bottom: 1px solid #fff; */
+    content: '';
+    background-color: #fff;
+    width: 100%;
+    inset: auto auto 0 0;
+    height: 1px;
+    position: absolute;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+
   @media screen and (max-width: 990px) {
     .nav-menu {
       display: none;

@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
 import { useEffect, useState, useRef } from 'react'
@@ -47,34 +47,36 @@ const Navbar = ({langs, currentLanguageCode}) => {
         <div className="container" ref={ref}>
           <div className="navbar-wrap">
             <div className="navbar-left">
-              <Link to='/' className='brand'>
+              <NavLink to='/' className='brand'>
                 <img src='/images/logo.svg' alt="brand" />
-              </Link>
+              </NavLink>
               <ul className="nav-menu" id={navOpen ? 'hidden-menu' : ''}>
-                <li className="link-item"><Link to='/product'>Product</Link></li>
+                <li className="link-item"><NavLink to='/product' className={({isActive}) => (isActive ? 'active-page' : '')} >Product</NavLink></li>
                 <li className="">
                   <div className="dropdown">
-                    <Link to='/feature' className='dropbtn link-item'>Features</Link>
+                    <div className="dropbtn link-item">
+                      <NavLink to='/feature' className={({isActive}) => (isActive ? 'active-page' : '' )}>Features</NavLink>
+                    </div>
                     <span onClick={() => setDropdown(!dropdown)}>{ dropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
                     <div className={ dropdown ? 'dropdown-content' : 'hide' } onClick={() => setDropdown(false)} >
-                      <Link to='/project-management' className='link-item'>Project Management</Link>
-                      <Link to='/chat' className='link-item'>Chat</Link>
-                      <Link to='/file-manager' className='link-item'>File Manager</Link>
-                      <Link to='/video-call' className='link-item'>Call & Video Call</Link>
-                      <Link to='/mail' className='link-item'>Mail</Link>
-                      <Link to='/event' className='link-item'>Event</Link>
+                      <NavLink to='/project-management'>Project Management</NavLink>
+                      <NavLink to='/chat' className='link-item'>Chat</NavLink>
+                      <NavLink to='/file-manager' className='link-item'>File Manager</NavLink>
+                      <NavLink to='/video-call' className='link-item'>Call & Video Call</NavLink>
+                      <NavLink to='/mail' className='link-item'>Mail</NavLink>
+                      <NavLink to='/event' className='link-item'>Event</NavLink>
                     </div>
                   </div>
                 </li>
-                <li className="link-item"><Link to='/pricing'>Pricing</Link></li>
-                <li className="link-item"><Link to='/help-centers'>Help Centers</Link></li>
+                <li className="link-item"><NavLink to='/pricing' className={({isActive}) => (isActive ? 'active-page' : '' )}>Pricing</NavLink></li>
+                <li className="link-item"><NavLink to='/help-centers' className={({isActive}) => (isActive ? 'active-page' : '' )}>Help Centers</NavLink></li>
                 <li>
-                  <Link to='/contact' className="btn btn-secondary on-mobo">Contact</Link>
+                  <NavLink to='/contact' className="btn btn-secondary on-mobo">Contact</NavLink>
                 </li>
                 <li>
-                  <Link to='/' className="language on-mobo">
+                  <NavLink to='/' className="language on-mobo">
                     <img src='/images/world.svg' alt="icon" /> English
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -95,8 +97,8 @@ const Navbar = ({langs, currentLanguageCode}) => {
                   ))}
                 </div>
               </div>
-              <Link to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></Link>
-              <Link to='/pricing'><button className="btn btn-primary">Free Trial</button></Link>
+              <NavLink to='/contact'><button className="btn btn-secondary hide-mobo">Contact</button></NavLink>
+              <NavLink to='/pricing'><button className="btn btn-primary">Free Trial</button></NavLink>
               <button onClick={() => setNavOpen(!navOpen)} className='hmb'>{ navOpen ? (<CgClose />) : (<CgMenuLeft />) }</button>
             </div>
           </div>

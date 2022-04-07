@@ -1,38 +1,45 @@
 import { useState } from "react";
-// import { Keyboard, Mousewheel, Navigation } from "swiper";
-// import { Swiper, SwiperSlide } from "swiper/react";
-import '../pm.css'
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import "../pm.css";
 
 export const Detail = () => {
   const detailData = [
     {
-      title: 'Task Management',
+      id: 0,
+      title: "Task Management",
       photo: "/images/detail.svg",
-      detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam consequatur et error porro cum mollitia repellat praesentium ducimus sequi quod nobis doloribus, labore eligendi corrupti eveniet rerum modi veniam. Tempora!",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam consequatur et error porro cum mollitia repellat praesentium ducimus sequi quod nobis doloribus, labore eligendi corrupti eveniet rerum modi veniam. Tempora!",
     },
     {
-      title: 'Visualize',
+      id: 1,
+      title: "Visualize",
       photo: "/images/detail.svg",
-      detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam consequatur et error.",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam consequatur et error.",
     },
     {
-      title: 'Comment',
+      id: 2,
+      title: "Comment",
       photo: "/images/detail.svg",
       detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     },
     {
-      title: 'Timeline',
+      id: 3,
+      title: "Timeline",
       photo: "/images/detail.svg",
-      detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. lorem dolor amet",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. lorem dolor amet",
     },
   ];
 
+  const [value, setValue] = useState(0);
 
-  const [value, setValue] = useState(0)
+  const { id, title, photo, detail } = detailData[value];
 
-  const { title, photo, detail } = detailData[value]
+  const next = detailData.length - 1;
 
-  console.log(title)
+  console.log(id.length, value);
 
   return (
     <section className="section" id="detail">
@@ -41,41 +48,42 @@ export const Detail = () => {
 
         <div className="tab-menu mt-4">
           {detailData.map((data, index) => (
-            <div
-              key={data.title}
-              className={ `menu ${index === value ? "active" : "" }` }
-              onClick={() => setValue(index)}
-            >
-              {data.title}
-            </div>
+            <>
+              <div
+                key={data.title}
+                className={`menu ${index === value ? "active" : ""}`}
+                onClick={() => setValue(index)}
+              >
+                {data.title}
+              </div>
+            </>
           ))}
-          </div>
+        </div>
 
-        <div>
-            <div className="text center mt-4" style={{ marginInline: "auto" }}>
-              
-                <div className='mt-4'>
-                  <p>{detail}</p>
-                  <div className="center mt-4">
-                    <img src={photo} alt='project' />
-                  </div>
-                </div>
-            </div>
-          {/* <div className="open">
-            <Swiper
-              cssMode={true}
-              navigation={true}
-              mousewheel={true}
-              keyboard={true}
-              modules={[Navigation, Mousewheel, Keyboard]}
-              className="mySwiper"
+        <div style={{ position: 'relative' }}>
+          <div className="text center" style={{ marginInline: "auto" }}>
+            <button
+              onClick={() => setValue(id - 1)}
+              disabled={value === 0 ? true : false}
+              className="btn-arrow btn-prev"
             >
-              
-                <SwiperSlide>
-                </SwiperSlide>
-            </Swiper>
-          </div> */}
-          
+              <IoIosArrowBack />
+            </button>
+
+            <button
+              onClick={() => setValue(id + 1)}
+              disabled={value === next ? true : false}
+              className="btn-arrow btn-next"
+            >
+              <IoIosArrowForward />
+            </button>
+            <div className="mt-4">
+              <p>{detail}</p>
+              <div className="center mt-4">
+                <img src={photo} alt="project" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
