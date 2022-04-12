@@ -88,8 +88,8 @@ const PricingTab = () => {
                   <p>{detail}</p>
                 </div>
                 <ul className="card-list">
-                  {list.map((l) => (
-                    <li>
+                  {list.map((l, index) => (
+                    <li key={index}>
                       <BsCheckCircleFill /> {l}
                     </li>
                   ))}

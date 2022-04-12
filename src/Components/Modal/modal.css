@@ -9,14 +9,22 @@
 }
 
 .dialog {
-    width: 40%;
+    width: 50%;
     text-align: center;
     margin: 2% auto;
-    padding: 60px 100px;
+    padding: 60px 80px;
     border-radius: 30px;
     background-color: #fff;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+
+@media screen and (max-width: 990px) {
+    .dialog {
+        width: 80%;
+        padding: 40px;
+        font-size: .85em;
+    }
 }

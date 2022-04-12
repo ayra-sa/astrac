@@ -3,6 +3,7 @@ import Success from "../../../Components/Modal/Success";
 import '../../../Components/Form/form.css'
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import db from '../../../db/db.json'
+import { send } from "emailjs-com";
 
 export const FreeTrialForm = () => {
   const location = useLocation()
@@ -25,21 +26,40 @@ export const FreeTrialForm = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [toSend, setToSend] = useState({
+    plan: plan[id].name,
+    fname: '',
+    email: '',
+    message: ''
+  })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+    setToSend({ ...toSend, [e.target.name]: e.target.value })
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    send(
+      'service_50ic9i6',
+      'template_qznn0ls',
+      toSend,
+      'oosYjcKm5TLaE8Hp0'
+    )
+    .then((response) => {
+      console.log(response.status, response.text)
+    })
+    .catch(err => {
+      console.log(err)
+    })
   };
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
+      // console.log(formValues);
       setIsOpen(true);
     }
     // eslint-disable-next-line

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
+import { send } from "emailjs-com";
 import "./contact.css";
 
 const Contact = () => {
@@ -15,21 +16,39 @@ const Contact = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [toSend, setToSend] = useState({
+    fname: '',
+    email: '',
+    message: '',
+  })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+    setToSend({ ...toSend, [e.target.name]: e.target.value })
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    send(
+      'service_50ic9i6',
+      'template_qznn0ls',
+      toSend,
+      'oosYjcKm5TLaE8Hp0'
+    )
+    .then((response) => {
+      console.log(response.status, response.text)
+    })
+    .catch(err => {
+      console.log(err)
+    })
   };
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
+      // console.log(formValues);
       setIsOpen(true);
     }
     // eslint-disable-next-line
