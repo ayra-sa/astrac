@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -68,12 +69,13 @@ function App() {
       </Routes>
       <CookieConsent
           location="bottom"
-          buttonText="I agree"
+          buttonText="x"
           expires={150}
-          buttonStyle={{ background: '#856bfa', color: '#fff', borderRadius: '5px' }}
+          buttonStyle={{ background: '#F0EEFC', color: '#856bfa', borderRadius: '50px', fontWeight: '500' }}
+          containerClasses="cookie-wrap"
           cookieName='AstracCookie'
         >
-          We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our Cookie Policy
+          We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our <a href="#" style={{ color: '#856bfa' }}>Cookie Policy</a>
         </CookieConsent>
       <Footer langs={langs} currentLanguageCode={currentLanguageCode} />
     </Router>

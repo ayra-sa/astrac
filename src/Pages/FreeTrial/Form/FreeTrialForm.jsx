@@ -2,12 +2,17 @@ import { useState, useEffect } from "react";
 import Success from "../../../Components/Modal/Success";
 import '../../../Components/Form/form.css'
 import { Outlet, useLocation, useParams } from "react-router-dom";
+import db from '../../../db/db.json'
 
 export const FreeTrialForm = () => {
   const location = useLocation()
   const {id} = useParams()
   const plan = location.state
   
+  const idd = db.map(d => {
+    return d.id
+  })
+   
   const initialValues = {
     fid: "",
     company: "",
@@ -53,9 +58,15 @@ export const FreeTrialForm = () => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
-    if (!values.fid) {
-      errors.fid = "ID is required";
+    for (let i = 0; i < idd.length; i++) {
+      const element = idd[i];
+      if (!values.fid) {
+        errors.fid = "ID is required, try 'exampleA'";
+      } else if (values.fid === element) {
+        errors.fid = "ID already used"
+      }
     }
+
     if (!values.company) {
       errors.company = "Company is required";
     }

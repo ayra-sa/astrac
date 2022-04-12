@@ -185,22 +185,32 @@ nav {
     
     .nav-menu#hidden-menu {
       position: absolute;
-      inset: 80px auto auto 0;
+      inset: 0 auto auto 0;
       width: 100%;
       flex-direction: column;
       background-color: #51429b;
       border-radius: 5px;
       display: flex;
       row-gap: 20px;
-      padding: 20px;
+      z-index: 2;
+      padding: 20% 20px 20px 20px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       -ms-border-radius: 5px;
       -o-border-radius: 5px;
 }
 
+.navbar-right {
+  column-gap: 5px;
+}
+
+.nav-menu .link-item {
+  width: fit-content;
+}
+
     .navbar-right .hmb {
       display: flex;
+      z-index: 9;
     }
 
     .on-mobo {

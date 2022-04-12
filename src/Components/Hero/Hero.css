@@ -46,4 +46,25 @@
   .hero {
     padding-top: 25%;
   }
+
+  .hero-home {
+    padding-top: 25%;
+  }
+
+  .hero-wrapper {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .hero-2 {
+    padding-top: 20%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-home {
+    padding-bottom: 10%;
+  }
 }

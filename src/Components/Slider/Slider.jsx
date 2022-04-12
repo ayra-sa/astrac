@@ -40,8 +40,8 @@ const Slider = () => {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
       >
-        {dataSlider.map((data) => (
-          <SwiperSlide>
+        {dataSlider.map((data,index) => (
+          <SwiperSlide key={index}>
             <div className="swiper-slide">
               <div className="slider-content">
                 <img src={data.photo} alt={data.name} />

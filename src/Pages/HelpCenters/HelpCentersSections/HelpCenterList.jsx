@@ -47,7 +47,7 @@ const HelpCenterList = () => {
 
   return (
     <>
-      <div id="search-hero">
+      <div id="search-hero" className="p-20">
         <h2 className="center">Help Center</h2>
         <div className="search">
           <RiSearch2Line />

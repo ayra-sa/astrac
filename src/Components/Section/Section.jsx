@@ -11,8 +11,8 @@ const Section = ({
           <div className={ `col-wrap ${reverse ? 'reverse' : ''}` }>
             <div className="left-content">
               <h1 className="title">{titleSection}</h1>
-              {contentList.map(list => (
-                  <div className="content-list">
+              {contentList.map((list,index) => (
+                  <div className="content-list" key={index}>
                     <div className={ `icon-box-large ${purple ? 'purp' : ''}` }>
                       <img src={list.icon} alt="icon" />
                     </div>
