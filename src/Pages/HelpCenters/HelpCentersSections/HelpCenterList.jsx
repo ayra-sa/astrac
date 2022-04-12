@@ -42,7 +42,7 @@ const HelpCenterList = () => {
     },
   ];
 
-  const [data, setData] = useState(dataList);
+  // const [data, setData] = useState(dataList);
   const [value, setValue] = useState("");
 
   return (
@@ -69,11 +69,11 @@ const HelpCenterList = () => {
                   return d;
                 } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
                   return d;
-                } else if (
-                  d.title.toLowerCase().includes(value.toLowerCase())
-                ) {
+                } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
                   return d;
                 }
+
+                return false
               })
               .map((item) => {
                 return <Grid key={item.title} {...item} />;
