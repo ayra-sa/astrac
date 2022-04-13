@@ -18,6 +18,8 @@ const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toSend, setToSend] = useState({
     fname: '',
+    lname: '',
+    company: '',
     email: '',
     message: '',
   })
@@ -30,20 +32,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-    send(
-      'service_50ic9i6',
-      'template_qznn0ls',
-      toSend,
-      'oosYjcKm5TLaE8Hp0'
-    )
-    .then((response) => {
-      console.log(response.status, response.text)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    if (formValues.company.trim() === '' || formValues.email.trim() === '' || formValues.fname.trim() === '' || formValues.lname.trim() === '') {
+      setFormErrors(validate(formValues))
+    } else {
+      send(
+        'service_hsga08l',
+        'template_felt79m',
+        toSend,
+        '-ih-AP-Hbrl5XOh1S'
+      )
+      .then((response) => {
+        console.log(response.status, response.text)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+      setIsSubmit(true);
+      setFormErrors({})
+    }
   };
 
   useEffect(() => {

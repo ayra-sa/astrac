@@ -1,6 +1,6 @@
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
-import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
+import {IoIosArrowDown} from 'react-icons/io'
 import {CgClose, CgMenuLeft} from 'react-icons/cg'
 import { useEffect, useState, useRef } from 'react'
 import i18next from 'i18next'
@@ -59,14 +59,17 @@ const Navbar = ({langs, currentLanguageCode}) => {
                     <div className="dropbtn link-item">
                       <NavLink to='/feature' className={({isActive}) => (isActive ? 'active-page' : '' )} onClick={() => setNavOpen(false)}>Features</NavLink>
                     </div>
-                    <span onClick={() => setDropdown(!dropdown)}>{ dropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
-                    <div className={ dropdown ? 'dropdown-content' : 'hide' } onClick={() => setDropdown(false)} >
-                      <NavLink to='/project-management' onClick={() => setNavOpen(false)}>Project Management</NavLink>
-                      <NavLink to='/chat' className='link-item' onClick={() => setNavOpen(false)}>Chat</NavLink>
-                      <NavLink to='/file-manager' className='link-item' onClick={() => setNavOpen(false)}>File Manager</NavLink>
-                      <NavLink to='/video-call' className='link-item' onClick={() => setNavOpen(false)}>Call & Video Call</NavLink>
-                      <NavLink to='/mail' className='link-item' onClick={() => setNavOpen(false)}>Mail</NavLink>
-                      <NavLink to='/event' className='link-item' onClick={() => setNavOpen(false)}>Event</NavLink>
+                    <span><IoIosArrowDown /></span>
+                    {/* <span onClick={() => setDropdown(!dropdown)}>{ dropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}</span> */}
+                    <div className="ddown">
+                      <div className='dropdown-content'>
+                        <NavLink to='/project-management' className='link-item' onClick={() => setNavOpen(false)}>Project Management</NavLink>
+                        <NavLink to='/chat' className='link-item' onClick={() => setNavOpen(false)}>Chat</NavLink>
+                        <NavLink to='/file-manager' className='link-item' onClick={() => setNavOpen(false)}>File Manager</NavLink>
+                        <NavLink to='/video-call' className='link-item' onClick={() => setNavOpen(false)}>Call & Video Call</NavLink>
+                        <NavLink to='/mail' className='link-item' onClick={() => setNavOpen(false)}>Mail</NavLink>
+                        <NavLink to='/event' className='link-item' onClick={() => setNavOpen(false)}>Event</NavLink>
+                      </div>
                     </div>
                   </div>
                 </li>

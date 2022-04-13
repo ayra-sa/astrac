@@ -28,7 +28,10 @@ export const FreeTrialForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toSend, setToSend] = useState({
     plan: plan[id].name,
+    fid: '',
     fname: '',
+    lname: '',
+    company: '',
     email: '',
     message: ''
   })
@@ -41,20 +44,26 @@ export const FreeTrialForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-    send(
-      'service_50ic9i6',
-      'template_qznn0ls',
-      toSend,
-      'oosYjcKm5TLaE8Hp0'
-    )
-    .then((response) => {
-      console.log(response.status, response.text)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    if (formValues.company.trim() === '' || formValues.email.trim() === '' || formValues.fname.trim() === '' || formValues.lname.trim() === '' || formValues.password.trim() === '') {
+      setFormErrors(validate(formValues))
+      // console.log(formErrors.fid)
+    }
+    else {
+      send(
+        'service_hsga08l',
+        'template_9276jrj',
+        toSend,
+        '-ih-AP-Hbrl5XOh1S'
+      )
+      .then((response) => {
+        console.log(response.status, response.text)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+      setIsSubmit(true);
+      setFormErrors({})
+    }
   };
 
   useEffect(() => {
@@ -80,9 +89,10 @@ export const FreeTrialForm = () => {
 
     for (let i = 0; i < idd.length; i++) {
       const element = idd[i];
+      console.log(element.toLocaleLowerCase())
       if (!values.fid) {
         errors.fid = "ID is required, try 'exampleA'";
-      } else if (values.fid === element) {
+      } else if (values.fid === element.toLocaleLowerCase()) {
         errors.fid = "ID already used"
       }
     }
@@ -245,6 +255,7 @@ export const FreeTrialForm = () => {
                     newsletters and promotions...etc
                   </span>
                 </div>
+                  <span style={{ marginTop: '20px', fontSize: '14px', opacity: '.5' }}>By signing up for a free trial, you agree to Astrac Terms of Service and Privacy Policy.</span>
 
                 <div className="mt-4 center">
                   <button type="submit" className="btn btn-primary">

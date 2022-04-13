@@ -35,7 +35,7 @@ export const Detail = () => {
 
   const [value, setValue] = useState(0);
 
-  const { id, title, photo, detail } = detailData[value];
+  const { id, photo, detail } = detailData[value];
 
   const next = detailData.length - 1;
 
