@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Flex } from "../../Components/Section/Flex"
 import TopImg from "../../Components/TopImg/TopImg"
 import { Clarification } from "./SectionData/Clarification"
@@ -15,12 +16,15 @@ const Product = () => {
                 <div className="center">
                     <span>Product</span>
                     <h1 className="hero-title mt-2">Many features to make your business communication...</h1>
+
+                    <Link to='/'><button className="btn btn-secondary">Polo</button></Link>
+
                 </div>
             </div>
         </div>
 
         <main className="main">
-            <TopImg topImg='/images/db-img.svg' />
+            <TopImg topImg='/images/product-topimg.svg' />
 
             <div className="container">
                 <div className="center">

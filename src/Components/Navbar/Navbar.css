@@ -189,11 +189,6 @@ nav {
   font-size: 1.2em;
 }
 
-.navbar.active {
-  background-color: #51429b;
-  box-shadow: 5px -1px 12px -5px grey;
-}
-
 .active-page::before {
   content: "";
   background-color: #fff;
@@ -206,6 +201,40 @@ nav {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+}
+
+/* navbar scroll */
+
+.navbar.active {
+  background-color: #fff;
+  box-shadow: 5px -1px 12px -5px grey;
+}
+
+.navbar.active .nav-menu .link-item a {
+  color: #000;
+}
+
+.navbar.active .navbar-right .lang-icon {
+  filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
+  -webkit-filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
+}
+
+.navbar.active .nav-menu .link-item::before {
+  background-color: #000;
+}
+
+.navbar.active .active-page::before {
+  background-color: #000;
+}
+
+.navbar.active .dropdown span {
+  filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
+  -webkit-filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
+}
+
+.navbar.active .navbar-right .btn-secondary {
+  color: var(--purple);
+  border: 1px solid var(--purple);
 }
 
 @media screen and (max-width: 990px) {

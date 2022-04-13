@@ -2,7 +2,7 @@ export const eventData = {
     section: true,
     id: "event",
     titleSection: "Event",
-    imgContent: "/images/file-manager.svg",
+    imgContent: "/images/call-vidcal.svg",
     reverse: true,
     light: false,
     purple: true,

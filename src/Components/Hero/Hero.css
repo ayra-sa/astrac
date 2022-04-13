@@ -16,7 +16,7 @@
   }
 
   .hero-home {
-    padding-top: 10%;
+    padding-top: 5%;
   }
 
   .hero-home img {
@@ -30,7 +30,7 @@
 
   .hero-wrapper {
     display: flex;
-    /* flex-wrap: wrap; */
+    align-items: center;
     column-gap: 30px;
   }
   

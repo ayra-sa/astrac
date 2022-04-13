@@ -20,7 +20,7 @@ const Feature = () => {
                     </div>
                 </div>
             </div>
-            <main className="main">
+            <main className="main mb-10">
                 <TopImg topImg='../../images/db-img.svg' />
                 <Section {...pmData} />
                 <Section {...chatData} />

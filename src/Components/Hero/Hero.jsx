@@ -10,7 +10,7 @@ const Hero = () => {
             <div style={{ flex: '40%' }}>
               <h1 className="hero-title" data-aos="zoom-in" data-aos-duration="1000">{ t('hero_title') }</h1>
               <p data-aos="zoom-in" data-aos-duration="1000">{ t('hero_p') }</p>
-              <Link to='/' data-aos="zoom-in" data-aos-duration="3000">
+              <Link to='/' data-aos="zoom-in" data-aos-duration="3000" className='i-block'>
                 <button className="btn-hero btn-primary bg-white mt-4">{ t('button_text') }</button>
               </Link>
             </div>

@@ -2,7 +2,7 @@ export const cvData = {
     section: true,
     id: "cv",
     titleSection: "Call & Video Call",
-    imgContent: "/images/project-management.svg",
+    imgContent: "/images/call-vidcal.svg",
     reverse: true,
     light: false,
     purple: false,
