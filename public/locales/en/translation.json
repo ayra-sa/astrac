@@ -17,6 +17,7 @@
             "title": "Project Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
+            "box": true,
             "btn_text": "Learn More"
         },
         {
@@ -24,6 +25,7 @@
             "title": "Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
+            "box": true,
             "btn_text": "Learn More"
         },
         {
@@ -31,6 +33,7 @@
             "title": "Data Management",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
+            "box": true,
             "btn_text": "Learn More"
         },
         {
@@ -38,6 +41,7 @@
             "title": "Project",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
+            "box": true,
             "btn_text": "Learn More"
         },
         {
@@ -45,6 +49,7 @@
             "title": "Product",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
+            "box": true,
             "btn_text": "Learn More"
         },
         {
@@ -52,6 +57,7 @@
             "title": "Data",
             "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
             "button": true,
+            "box": true,
             "btn_text": "Learn More"
         }
     ]

@@ -1,13 +1,10 @@
 export const fmData = {
-    section: false,
     id: "fm",
     titleSection: "File Manager",
     imgContent: "/images/file-manager.svg",
-    reverse: false,
     light: false,
     purple: true,
     rightImg: true,
-    left: false,
     contentList: [
       {
           icon: '/images/fm/profile-tick.svg',
@@ -15,12 +12,12 @@ export const fmData = {
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: '/images/fm/profile-tick.svg',
+          icon: '/images/fm/card.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: '/images/fm/profile-tick.svg',
+          icon: '/images/fm/video.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },

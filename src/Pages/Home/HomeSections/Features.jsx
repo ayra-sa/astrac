@@ -5,16 +5,6 @@ import Grid from '../../../Components/Section/Grid'
 const Features = () => {
 
     const mdata = t(`dataFeatures`, {returnObjects: true})
-    // const [data, setData] = useState(mdata)
-
-    // console.log(data)
-
-    // useEffect(() => {
-    //   setData(mdata)
-    
-    // }, [])
-    
-    // console.log(data, mdata)
 
     return (
         <section id="features" className="section">

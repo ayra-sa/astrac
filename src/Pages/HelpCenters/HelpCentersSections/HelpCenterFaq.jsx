@@ -29,6 +29,12 @@ const HelpCenterFaq = () => {
 
   return (
       <section className="section">
+        <div className="decor" style={{ left: 0 }}>
+          <img src="/images/faq-decor.svg" alt="decor" />
+        </div>
+        <div className="decor">
+          <img src="/images/faq-decor2.svg" alt="decor" />
+        </div>
           <div className="container">
             <div className="faq-wrap center">
                 <p className="top-menu">FAQs</p>

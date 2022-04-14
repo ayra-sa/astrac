@@ -5,37 +5,37 @@ import { RiSearch2Line } from "react-icons/ri";
 const HelpCenterList = () => {
   const dataList = [
     {
-      icon: "/images/icon/task-square.svg",
+      icon: "/images/icon/crown.svg",
       title: "Start Guid",
       info: "dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: "/images/icon/task-square.svg",
+      icon: "/images/icon/hierarchy-2.svg",
       title: "Features",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: "/images/icon/task-square.svg",
+      icon: "/images/icon/setting-2.svg",
       title: "Settings",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: "/images/icon/task-square.svg",
+      icon: "/images/icon/empty-wallet.svg",
       title: "Contract and Payment",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: "/images/icon/task-square.svg",
+      icon: "/images/icon/call-calling-fill.svg",
       title: "FAQ",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
     },
     {
-      icon: "/images/icon/task-square.svg",
+      icon: "/images/icon/video-play.svg",
       title: "Tutorial",
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
       button: true,
@@ -61,6 +61,12 @@ const HelpCenterList = () => {
       </div>
 
       <section className="section" id="hc-list">
+      <div className="decor" style={{ left: 20}}>
+          <img src="/images/list-decor.svg" alt="decor" />
+        </div>
+        <div className="decor" style={{ right: 20 }}>
+          <img src="/images/list-decor.svg" alt="decor" />
+        </div>
         <div className="container">
           <div className="row-3">
             {dataList

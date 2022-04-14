@@ -4,11 +4,8 @@ export const callVideo = {
         titleSection: 'Call & Video Call',
         imgContent: '/images/call-vidcal.svg',
         reverse: true,
-        light: false,
-        purple: false,
-        rightImg: false,
         left: true,
-        decor: true,
+        leftDecor: true,
         contentList: [
         {
             icon: '/images/icon/profile-tick.svg',
@@ -16,12 +13,12 @@ export const callVideo = {
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: '/images/icon/profile-tick.svg',
+            icon: '/images/icon/card.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: '/images/icon/profile-tick.svg',
+            icon: '/images/icon/video.svg',
             title: 'Find Better Leads',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },

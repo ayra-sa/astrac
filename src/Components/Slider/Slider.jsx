@@ -34,7 +34,9 @@ const Slider = () => {
       <Swiper
         cssMode={true}
         navigation={true}
-        pagination={true}
+        pagination={{
+          clickable: true
+        }}
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}

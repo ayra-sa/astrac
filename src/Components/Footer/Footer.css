@@ -1,15 +1,16 @@
 footer {
     /* margin-top: -5%; */
     padding-bottom: 2%;
+    background-color: #F7F5FF;
   }
-  
+
   .footer-wrap {
-    margin-top: 80px;
+    margin-top: -8%;
     display: grid;
     grid-template-columns: 0.75fr 1fr;
     justify-content: space-between;
     gap: 80px;
-    /* padding: 40px; */
+    padding-top: 15%;
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
   }
   
@@ -30,6 +31,7 @@ footer {
     bottom: 0;
     margin-left: 30px;
     box-shadow: 0px 0px 5px -3px hsl(0deg 0% 12% / 95%);
+    flex-direction: column-reverse;
   }
   
   .footer-right {
@@ -61,6 +63,26 @@ footer {
     display: flex;
     gap: 15px;
   }
+
+  .socmed-icon {
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    z-index: 8;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+  .socmed-icon:hover {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
   
   .copyright {
     display: flex;

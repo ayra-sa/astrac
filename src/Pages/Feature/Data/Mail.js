@@ -3,11 +3,9 @@ export const mailData = {
     id: "mail",
     titleSection: "Mail",
     imgContent: "/images/file-manager.svg",
-    reverse: false,
-    light: false,
     purple: true,
     rightImg: true,
-    left: false,
+    rightDecor: true,
     contentList: [
       {
           icon: '/images/fm/profile-tick.svg',
@@ -15,12 +13,12 @@ export const mailData = {
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: '/images/fm/profile-tick.svg',
+          icon: '/images/fm/card.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: '/images/fm/profile-tick.svg',
+          icon: '/images/fm/video.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },

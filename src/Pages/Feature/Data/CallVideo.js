@@ -4,10 +4,9 @@ export const cvData = {
     titleSection: "Call & Video Call",
     imgContent: "/images/call-vidcal.svg",
     reverse: true,
-    light: false,
-    purple: false,
-    rightImg: false,
+    purple: true,
     left: true,
+    leftDecor: true,
     contentList: [
       {
           icon: '/images/fm/profile-tick.svg',
@@ -15,12 +14,12 @@ export const cvData = {
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: '/images/fm/profile-tick.svg',
+          icon: '/images/fm/video.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },
       {
-          icon: '/images/fm/profile-tick.svg',
+          icon: '/images/fm/card.svg',
           title: 'Find Better Leads',
           description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
       },

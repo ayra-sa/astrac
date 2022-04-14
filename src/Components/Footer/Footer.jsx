@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import AllOfYour from "../AllOfYour/AllOfYour";
 import { useEffect, useRef, useState } from "react";
 import i18next, { t } from "i18next";
+import {FaFacebookF, FaTwitter, FaYoutube} from 'react-icons/fa'
+import {RiInstagramFill} from 'react-icons/ri'
 
 const Footer = ({langs, currentLanguageCode}) => {
 
@@ -27,8 +29,8 @@ const Footer = ({langs, currentLanguageCode}) => {
 
   return (
     <>
+      <AllOfYour />
       <footer>
-        <AllOfYour />
         <div className="container" ref={ref}>
           <div className="footer-wrap">
             <div className="footer-left">
@@ -142,15 +144,10 @@ const Footer = ({langs, currentLanguageCode}) => {
               <Link to="/">Terms</Link>
             </div>
             <div className="socmed">
-              <Link to="/">
-                <img src='/images/socmed/twitter.svg' alt="socmed" />
-              </Link>
-              <Link to="/">
-                <img src='/images/socmed/fb.svg' alt="socmed" />
-              </Link>
-              <Link to="/">
-                <img src='/images/socmed/linkedin.svg' alt="socmed" />
-              </Link>
+              <Link to='/' className="socmed-icon"><FaTwitter /></Link>
+              <Link to='/' className="socmed-icon"><FaFacebookF /></Link>
+              <Link to='/' className="socmed-icon"><FaYoutube /></Link>
+              <Link to='/' className="socmed-icon"><RiInstagramFill /></Link>
             </div>
           </div>
         </div>

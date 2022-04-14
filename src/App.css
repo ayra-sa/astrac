@@ -283,6 +283,10 @@ body {
   padding: 0 20px;
 }
 
+.mb-5 {
+  margin-bottom: 5%;
+}
+
 .mb-10 {
   margin-bottom: -8%;
 }
@@ -315,7 +319,7 @@ body {
 }
 
 .decor.left {
-  left: 0;
+  left: -50%;
 }
 
 .right {

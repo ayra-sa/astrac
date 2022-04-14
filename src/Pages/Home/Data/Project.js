@@ -3,19 +3,16 @@ export const project = {
         id: '',
         titleSection: 'Project Management',
         imgContent: '/images/project-management.svg',
-        reverse: false,
-        light: false,
-        purple: false,
         rightImg: true,
-        left: false,
+        rightDecor: true,
         contentList: [
         {
-            icon: '/images/icon/video.svg',
+            icon: '/images/icon/profile-tick.svg',
             title: 'Project',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },
         {
-            icon: '/images/icon/video.svg',
+            icon: '/images/icon/card.svg',
             title: 'Project',
             description: 'Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.'
         },

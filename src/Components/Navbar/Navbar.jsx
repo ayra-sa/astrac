@@ -50,7 +50,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
           <div className="navbar-wrap">
             <div className="navbar-left">
               <NavLink to='/' className='brand'>
-                <img src='/images/logo.svg' alt="brand" />
+                <img src='/images/logo-single.svg' alt="brand" /> Astrac
               </NavLink>
               <ul className="nav-menu" id={navOpen ? 'hidden-menu' : ''}>
                 <li className="link-item"><NavLink to='/product' className={({isActive}) => (isActive ? 'active-page' : '')} onClick={() => setNavOpen(false)}>Product</NavLink></li>
@@ -75,14 +75,11 @@ const Navbar = ({langs, currentLanguageCode}) => {
                 </li>
                 <li className="link-item"><NavLink to='/pricing' className={({isActive}) => (isActive ? 'active-page' : '' )} onClick={() => setNavOpen(false)}>Pricing</NavLink></li>
                 <li className="link-item"><NavLink to='/help-centers' className={({isActive}) => (isActive ? 'active-page' : '' )} onClick={() => setNavOpen(false)}>Help Centers</NavLink></li>
+                <li className="link-item"><NavLink to='/documentation' className={({isActive}) => (isActive ? 'active-page' : '' )} onClick={() => setNavOpen(false)}>Documentation</NavLink></li>
                 <li>
                   <NavLink to='/contact' className="btn btn-secondary on-mobo" onClick={() => setNavOpen(false)}>Contact</NavLink>
                 </li>
-                {/* <li>
-                  <NavLink to='/' className="language on-mobo">
-                    <img src='/images/world.svg' alt="icon" /> English
-                  </NavLink>
-                </li> */}
+                
               </ul>
             </div>
 

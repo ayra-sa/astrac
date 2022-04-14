@@ -6,6 +6,14 @@ nav {
   padding: 15px 0;
   z-index: 998;
 }
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 2.25em;
+  font-weight: 800;
+  color: #fff;
+  column-gap: 10px;
+}
 .navbar-wrap {
   display: flex;
   justify-content: space-between;
@@ -44,6 +52,7 @@ nav {
 .nav-menu .link-item {
   color: #fff;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-menu .link-item a {
@@ -143,7 +152,7 @@ nav {
   background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 24px;
+  padding: 24px 40px;
   margin-top: 10%;
   transform: translateZ(1000px);
   will-change: opacity, transform;
@@ -166,7 +175,7 @@ nav {
 
 .dropdown-content a {
   float: none;
-  padding: 12px 16px;
+  padding: 8px 0;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -210,6 +219,10 @@ nav {
   box-shadow: 5px -1px 12px -5px grey;
 }
 
+.navbar.active .brand {
+  color: #000;
+}
+
 .navbar.active .nav-menu .link-item a {
   color: #000;
 }
@@ -235,6 +248,15 @@ nav {
 .navbar.active .navbar-right .btn-secondary {
   color: var(--purple);
   border: 1px solid var(--purple);
+}
+
+.navbar.active .navbar-right .btn-secondary:hover {
+  color: #fff;
+  background: var(--purple);
+}
+
+.navbar.active .navbar-right .btn-secondary:hover::after {
+  background: var(--purple);
 }
 
 @media screen and (max-width: 990px) {
