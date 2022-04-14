@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Grid from "../../../Components/Section/Grid";
 import { RiSearch2Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
-const HelpCenterList = () => {
+const HelpCenterList = ({ data }) => {
+  console.log(data);
   const dataList = [
     {
       icon: "/images/icon/crown.svg",
@@ -45,6 +47,22 @@ const HelpCenterList = () => {
   // const [data, setData] = useState(dataList);
   const [value, setValue] = useState("");
 
+  const [filteredData, setFilteredData] = useState([]);
+
+  const handleFilter = (e) => {
+    const searchWord = e.target.value;
+    setValue(searchWord);
+    const newFilter = data.filter((dt) => {
+      return dt.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
+
   return (
     <>
       <div id="search-hero" className="p-20">
@@ -54,14 +72,26 @@ const HelpCenterList = () => {
           <input
             type="text"
             id="search"
-            onChange={(event) => setValue(event.target.value)}
+            onChange={handleFilter}
+            value={value}
             placeholder="Search for articles..."
           />
+        {filteredData.length !== 0 && (
+          <div className="result">
+            {filteredData.slice(0, 15).map((fdata, index) => {
+              return (
+                <Link to="/" key={index} className="dataItem">
+                  {fdata.title}
+                </Link>
+              );
+            })}
+          </div>
+        )}
         </div>
       </div>
 
       <section className="section" id="hc-list">
-      <div className="decor" style={{ left: 20}}>
+        <div className="decor" style={{ left: 20 }}>
           <img src="/images/list-decor.svg" alt="decor" />
         </div>
         <div className="decor" style={{ right: 20 }}>
@@ -70,17 +100,17 @@ const HelpCenterList = () => {
         <div className="container">
           <div className="row-3">
             {dataList
-              .filter((d) => {
-                if (value === "") {
-                  return d;
-                } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
-                  return d;
-                } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
-                  return d;
-                }
+              // .filter((d) => {
+              //   if (value === "") {
+              //     return d;
+              //   } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
+              //     return d;
+              //   } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
+              //     return d;
+              //   }
 
-                return false
-              })
+              //   return false
+              // })
               .map((item) => {
                 return <Grid key={item.title} {...item} />;
               })}

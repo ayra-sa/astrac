@@ -146,30 +146,6 @@
   
   /* Help Center */
   
-  .search {
-    background-color: #fff;
-    padding: 15px 24px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    display: flex;
-    margin: 40px auto;
-    column-gap: 10px;
-    width: 80%;
-  }
-  
-  .search input {
-    width: 100%;
-    border: none;
-  }
-  
-  .search input:focus {
-    border: none;
-    outline: none;
-  }
-  
   .hc-item {
     background-color: #F7F5FF;
     padding: 50px 29px;
