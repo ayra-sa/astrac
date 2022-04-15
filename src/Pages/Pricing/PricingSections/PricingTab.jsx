@@ -80,7 +80,7 @@ const PricingTab = () => {
                       <img src={img} alt="img" />
                     ) : (
                       <span className="price-text">
-                        {switchActive === 'Month' ? `${month}` : `${year}`}
+                        {switchActive === 'Month' ? `$${month}` : `$${year}`}
                       </span>
                     )}
                     {img ? <span></span> : <span>/mo</span>}

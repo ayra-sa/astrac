@@ -24,14 +24,14 @@ const Product = () => {
               data-aos="zoom-in"
               className="i-block"
             >
-              <button className="btn btn-secondary">Contact</button>
+              <button className="btn-hero btn-secondary">Contact</button>
             </Link>
             <Link
               to="/"
               data-aos="zoom-in"
               className="i-block"
             >
-              <button className="btn btn-primary">Start Free Trial</button>
+              <button className="btn-hero btn-primary">Start Free Trial</button>
             </Link>
           </div>
         </div>
