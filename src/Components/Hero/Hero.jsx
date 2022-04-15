@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Particle />
+      {/* <Particle /> */}
     </section>
   );
 };
