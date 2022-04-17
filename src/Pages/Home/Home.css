@@ -92,6 +92,7 @@
   
   #customize {
       margin-top: 15%;
+      margin-bottom: 20%;
   }
   /* Work */
   
@@ -100,7 +101,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin-top: 15%;
+      /* margin-top: 15%; */
       padding-bottom: 15%;
   }
   
