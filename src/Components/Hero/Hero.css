@@ -1,0 +1,73 @@
+.hero, .hero-home, .hero-2 {
+    background-image: url("../../../public/images/bg-hero.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    /* min-height: 90vh; */
+  }
+  
+  .hero {
+    padding: 8% 0 20% 0;
+  }
+
+  .hero-2 {
+    padding: 10% 0;
+  }
+
+  .hero-home {
+    padding-top: 5%;
+  }
+
+  .hero-home img {
+    position: relative;
+    margin-bottom: -18%;
+  }
+
+  .hero.scnd {
+    padding: 10% 0;
+  }
+
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-wrap {
+    text-align: center;
+  }
+  
+  .hero-wrap p {
+    font-weight: 500;
+  }
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 25%;
+  }
+
+  .hero-home {
+    padding-top: 25%;
+  }
+
+  .hero-wrapper {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .hero-2 {
+    padding-top: 20%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-home {
+    padding-bottom: 10%;
+  }
+}

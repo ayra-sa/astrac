@@ -1,0 +1,78 @@
+.form {
+    margin-top: 56px;
+}
+
+.form .input,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  /* margin-bottom: 20px; */
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.form p {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.form input[type="checkbox"] {
+    width: 24px;
+    height: 20px;
+    border: 1px solid red;
+    position: relative;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.form input[type="checkbox"]:checked::before {
+    background: url('../../../public/images/icon/tick.svg') center;
+    background-size: cover;
+    content: '';
+    inset: 0;
+    position: absolute;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.id-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.id-form .formInput {
+    width: 85%;
+}
+
+.id-form span {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .form input[type="checkbox"] {
+        width: unset;
+        height: unset;
+    }
+}

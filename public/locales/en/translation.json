@@ -1,0 +1,64 @@
+{
+    "language": "English",
+    "hero_title": "Introducing The Only Tool that You'll Ever Need",
+    "hero_p": "We've helped Over 25K+ Individuals and Companies to Grow Their Business Successfully",
+    "button_text": "Start free trial",
+    "product_home": {
+        "sub_title": "PRODUCT",
+        "title": "Great Teams Manage Their Time Effectively And Plan Their Projects Ahead of Time.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+        "reverse": false,
+        "img": "/images/product.svg"
+    },
+    "btn_text": "Learn More",
+    "dataFeatures": [
+        {
+            "icon": "/images/icon/task-square.svg",
+            "title": "Project Management",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true,
+            "box": true,
+            "btn_text": "Learn More"
+        },
+        {
+            "icon": "/images/icon/messages.svg",
+            "title": "Management",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true,
+            "box": true,
+            "btn_text": "Learn More"
+        },
+        {
+            "icon": "/images/icon/folder-open.svg",
+            "title": "Data Management",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true,
+            "box": true,
+            "btn_text": "Learn More"
+        },
+        {
+            "icon": "/images/icon/call-calling.svg",
+            "title": "Project",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true,
+            "box": true,
+            "btn_text": "Learn More"
+        },
+        {
+            "icon": "/images/icon/sms-tracking.svg",
+            "title": "Product",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true,
+            "box": true,
+            "btn_text": "Learn More"
+        },
+        {
+            "icon": "/images/icon/star.svg",
+            "title": "Data",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra mi. Ut tristique posuere.",
+            "button": true,
+            "box": true,
+            "btn_text": "Learn More"
+        }
+    ]
+}

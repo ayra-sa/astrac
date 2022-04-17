@@ -1,0 +1,242 @@
+  /* Product */
+  /* Features */
+  
+  #features,
+  #fm {
+      background-color: hsla(253, 90%, 96%, 0.5);
+      padding: 4% 0;
+  }
+  
+  .feature {
+      background-color: #fff;
+      padding: 32px;
+      text-align: left;
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+  }
+  
+  #features .subtitle,
+  #chat .subtitle {
+      font-weight: 300;
+      font-weight: 1em;
+  }
+  /* Project Management */
+  
+  #pm {
+      position: relative;
+      padding: 4% 0;
+  }
+  
+  .img {
+      /* position: absolute; */
+      position: relative;
+      /* right: -80px; */
+      /* top: 0; */
+  }
+  
+  .content-list {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      margin-top: 30px;
+  }
+  
+  .icon-box-large {
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+      background-color: #efebfe;
+      display: inline-flex;
+      padding: 20px;
+  }
+  /* .CookieConsent {
+    right: 10px !important;
+    left: 10px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    border-radius: 8px;
+    bottom: 10px !important;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+} */
+  /* Chat */
+  
+  #chat {
+      background-image: url("../../../public/images/chat-bg.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 5% 0;
+      color: #fff;
+  }
+  
+  .img.left {
+      /* left: -120px; */
+      top: 10%;
+  }
+  
+  .icon-box-large.purp {
+      background-color: var(--purple);
+  }
+  /* File Manager */
+  
+  #fm {
+      padding: 8% 0;
+  }
+  
+  #customize {
+      margin-top: 15%;
+  }
+  /* Work */
+  
+  #work {
+      background-image: url("../../../public/images/bg-slider.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 15%;
+      padding-bottom: 15%;
+  }
+  
+  .img-work {
+      position: relative;
+      margin-top: -25%;
+  }
+  /* .desc {
+    width: 50%;
+  } */
+  
+  .slider-content .desc::before {
+      content: url("../../../public/images/quotes.svg");
+      display: block;
+      margin-bottom: 30px;
+  }
+  
+  .name {
+      margin: 40px 0 60px 0;
+  }
+  
+  .name h2 {
+      position: relative;
+      margin-bottom: 10px;
+  }
+  
+  .name h2::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      background-color: var(--purple);
+      width: 80px;
+      height: 1px;
+      margin: auto 20px;
+  }
+  /* Help Center */
+  
+  .hc-item {
+      background-color: #F7F5FF;
+      padding: 50px 29px;
+      text-align: center;
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+  }
+  
+  .is-hidden {
+      display: none !important;
+  }
+  
+  .hc-item h2 {
+      margin: 10px 0;
+  }
+  /* faq */
+  
+  .accordion-block {
+      border-bottom: 1px solid #ededed;
+  }
+  
+  .accordion {
+      background-color: transparent;
+      cursor: pointer;
+      padding: 20px 28px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      font-weight: 500;
+  }
+  
+  .accordion img {
+      transition: .3s ease;
+      -webkit-transition: .3s ease;
+      -moz-transition: .3s ease;
+      -ms-transition: .3s ease;
+      -o-transition: .3s ease;
+  }
+  
+  .accordion.active {
+      background-color: #F7F7F7;
+  }
+  
+  .accordion.active img {
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+  }
+  
+  .panel {
+      text-align: left;
+      padding: 10px 28px;
+      display: none;
+      background: #F7F7F7;
+      overflow: hidden;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+  
+  .close {
+      background: #ddd;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border: none;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      margin-left: auto;
+  }
+  
+  @media screen and (max-width: 990px) {
+      .img {
+          position: relative;
+          width: unset !important;
+      }
+  }
+  
+  @media only screen and (max-width: 1199px) {
+      .img {
+          width: 50vw;
+      }
+  }
+  /* @media screen and (max-width: 1390px) {
+  .img {
+    width: 100%;
+  }
+} */

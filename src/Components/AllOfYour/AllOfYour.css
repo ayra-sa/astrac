@@ -1,0 +1,33 @@
+.all-of-your {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--purple);
+    padding: 70px 60px;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+    position: absolute;
+    inset: -15% 5% auto 5%;
+}
+
+.aoy-right {
+    display: flex;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .all-of-your {
+        justify-content: center;
+    }
+    .aoy-left {
+        text-align: center;
+    }
+    .aoy-right {
+        margin-top: 40px;
+    }
+}
