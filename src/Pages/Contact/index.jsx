@@ -101,7 +101,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <main>
+      <main className="mb-mobo">
         <section className="section" id="contactForm">
           <div className="container">
             {Object.keys(formErrors).length === 0 && isSubmit && isOpen ? (

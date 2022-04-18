@@ -50,7 +50,7 @@ const Navbar = ({langs, currentLanguageCode}) => {
           <div className="navbar-wrap">
             <div className="navbar-left">
               <NavLink to='/' className='brand'>
-                <img src='/images/logo-single.svg' alt="brand" /> Astrac
+                <img src='/images/logo-single.svg' alt="brand" /> <span>Astrac</span>
               </NavLink>
               <ul className="nav-menu" id={navOpen ? 'hidden-menu' : ''}>
                 <li className="link-item"><NavLink to='/product' className={({isActive}) => (isActive ? 'active-page' : '')} onClick={() => setNavOpen(false)}>Product</NavLink></li>

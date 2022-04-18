@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: space-between;
     font-weight: 500;
+    cursor: pointer;
     margin-bottom: 20px;
     transition: .3s ease;
     -webkit-transition: .3s ease;
@@ -54,4 +55,16 @@
     -moz-transform: translateY(5px);
     -ms-transform: translateY(5px);
     -o-transform: translateY(5px);
+}
+
+@media screen and (max-width: 767px) {
+    .faq-wrap {
+        margin-bottom: 65% !important;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .faq-wrap {
+        margin-bottom: 30%;
+    }
 }

@@ -12,7 +12,7 @@ const Faq = ({ title, content }) => {
         key={title}
       >
         <div className="accordion-title" onClick={() => setOpen(!open)}>
-          <div>{title}</div>
+          <p>{title}</p>
           <div>{open ? <IoIosArrowDown /> : <IoIosArrowForward />}</div>
         </div>
         {open && <div className="accordion-content mt-2">{content}</div>}

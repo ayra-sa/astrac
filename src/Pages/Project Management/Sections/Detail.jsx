@@ -60,27 +60,27 @@ export const Detail = () => {
           ))}
         </div>
 
-        <div style={{ position: 'relative' }}>
+        <div>
           <div className="text center" style={{ marginInline: "auto" }}>
-            <button
-              onClick={() => setValue(id - 1)}
-              disabled={value === 0 ? true : false}
-              className="btn-arrow btn-prev"
-            >
-              <IoIosArrowBack />
-            </button>
-
-            <button
-              onClick={() => setValue(id + 1)}
-              disabled={value === next ? true : false}
-              className="btn-arrow btn-next"
-            >
-              <IoIosArrowForward />
-            </button>
             <div className="mt-4">
               <p>{detail}</p>
-              <div className="center mt-4">
-                <img src={photo} alt="project" />
+              <div className="center mt-4" style={{ position: "relative" }}>
+                <img src={photo} alt="project" className='project-img' />
+                <button
+                  onClick={() => setValue(id - 1)}
+                  disabled={value === 0 ? true : false}
+                  className="btn-arrow btn-prev"
+                >
+                  <IoIosArrowBack />
+                </button>
+
+                <button
+                  onClick={() => setValue(id + 1)}
+                  disabled={value === next ? true : false}
+                  className="btn-arrow btn-next"
+                >
+                  <IoIosArrowForward />
+                </button>
               </div>
             </div>
           </div>

@@ -145,7 +145,7 @@ body {
 }
 
 .btn-hero {
-    padding: 20px 27px;
+    padding: 18px 32px;
 }
 
 .btn-primary {
@@ -437,6 +437,9 @@ body {
     .p-20 {
         padding-top: 20% !important;
     }
+    .mb-mobo {
+        margin-bottom: 65% !important;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -453,6 +456,12 @@ body {
         inset: auto 0 10px 0 !important;
         padding: 10px 30px;
         flex-wrap: nowrap !important;
+    }
+    .mb-mobo {
+        margin-bottom: 25%;
+    }
+    #pricing {
+        padding-top: 15%;
     }
 }
 

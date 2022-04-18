@@ -18,6 +18,7 @@
 .menu {
     padding: 16px;
     cursor: pointer;
+    white-space: nowrap;
     transition: .3s ease-in;
     border-bottom: 2px solid transparent;
     -webkit-transition: .3s ease-in;
@@ -66,4 +67,34 @@
 .btn-prev {
     left: 5%;
     top: 50%;
+}
+
+@media screen and (max-width: 767px) {
+    #detail {
+        padding-bottom: 65% !important;
+    }
+    .tab-menu {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #detail {
+        padding-bottom: 30%;
+    }
+    .tab-menu {
+        column-gap: 40px;
+    }
+    .project-img {
+        max-width: 80%;
+    }
+    .btn-next {
+        right: 0;
+    }
+    .btn-prev {
+        left: 0;
+    }
+    .btn-prev, .btn-next {
+        top: 40%;
+    }
 }

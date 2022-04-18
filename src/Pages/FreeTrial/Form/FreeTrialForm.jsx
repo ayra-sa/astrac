@@ -139,7 +139,7 @@ export const FreeTrialForm = () => {
           </div>
         </div>
       </div>
-      <main>
+      <main className="mb-mobo">
         <section className="section">
           <div className="container">
             <div className="contact-wrap">

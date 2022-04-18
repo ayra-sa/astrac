@@ -12,6 +12,7 @@ footer {
     justify-content: space-between;
     gap: 80px;
     padding-top: 20%;
+    padding-bottom: 20px;
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
 }
 
@@ -52,6 +53,9 @@ footer {
 .footer-menu a {
     color: #000;
     font-weight: 300;
+}
+
+.footer-left p, .footer-menu a {
     font-size: .9em;
 }
 
@@ -113,8 +117,23 @@ footer {
     }
 }
 
+@media screen and (max-width: 767px) {
+    /* footer {
+        margin-top: 65% !important;
+    } */
+    .footer-wrap {
+        padding-top: 60% !important;
+    }
+}
+
 @media screen and (max-width: 990px) {
+    /* footer {
+        margin-top: 25%;
+    } */
     .footer-right {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-wrap {
+        padding-top: 30%;
     }
 }

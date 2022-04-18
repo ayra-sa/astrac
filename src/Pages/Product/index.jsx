@@ -22,22 +22,20 @@ const Product = () => {
             <Link
               to="/"
               data-aos="zoom-in"
-              className="i-block"
             >
               <button className="btn-hero btn-secondary">Contact</button>
             </Link>
             <Link
               to="/"
               data-aos="zoom-in"
-              className="i-block"
             >
-              <button className="btn-hero btn-primary">Start Free Trial</button>
+              <button className="btn-hero btn-primary">Free Trial</button>
             </Link>
           </div>
         </div>
       </div>
 
-      <main className="main mb-5">
+      <main className="main mb-5 mb-mobo">
         <TopImg topImg="/images/product-topimg.svg" />
 
         <div className="container">

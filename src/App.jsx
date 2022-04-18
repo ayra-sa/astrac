@@ -5,7 +5,6 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import Feature from './Pages/Feature';
-import FreeTrial from './Pages/FreeTrial';
 import HelpCenter from './Pages/HelpCenters';
 import Home from './Pages/Home/Home';
 import Pricing from './Pages/Pricing';
@@ -60,7 +59,7 @@ function App() {
         <Route path='/' exact element={<Home />} />
         <Route path='product' element={<Product />} />
         <Route path='help-centers' element={<HelpCenter />} />
-        <Route path='free-trial' element={<FreeTrial />} />
+        {/* <Route path='free-trial' element={<FreeTrial />} /> */}
         <Route path='free-trial-form/:id' element={<FreeTrialForm />} />
         <Route path='pricing' element={<Pricing />} />
         <Route path='feature' element={<Feature />} />
