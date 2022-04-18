@@ -100,12 +100,11 @@ const PricingTab = () => {
                         </li>
                       ))}
                     </ul>
-                    <div className="btn-container">
+                    <div className="btn-container" style={{ justifyContent: 'center' }}>
                       <Link
                         data-aos="zoom-in"
                         to={`/free-trial-form/${index}`}
                         state={tabItem}
-                        style={{ justifyContent: 'center' }}
                         className={`btn ${
                           !recommended ? "btn-primary" : "btn-white"
                         }`}
