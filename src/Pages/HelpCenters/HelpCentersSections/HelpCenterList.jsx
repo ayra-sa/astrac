@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Grid from "../../../Components/Section/Grid";
-import { RiSearch2Line } from "react-icons/ri";
+import { RiCloseFill, RiSearch2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const HelpCenterList = ({ data }) => {
@@ -63,6 +63,11 @@ const HelpCenterList = ({ data }) => {
     }
   };
 
+  const clearInput = () => {
+    setFilteredData([]);
+    setValue("");
+  };
+
   return (
     <>
       <div id="search-hero" className="p-20">
@@ -76,17 +81,28 @@ const HelpCenterList = ({ data }) => {
             value={value}
             placeholder="Search for articles..."
           />
-        {filteredData.length !== 0 && (
-          <div className="result">
-            {filteredData.slice(0, 15).map((fdata, index) => {
-              return (
-                <Link to="/" key={index} className="dataItem">
-                  {fdata.title}
-                </Link>
-              );
-            })}
-          </div>
-        )}
+          {value.length !== 0 && (
+            <RiCloseFill
+              onClick={clearInput}
+              style={{
+                position: "absolute",
+                right: 10,
+                cursor: "pointer",
+                fontSize: "1.25em"
+              }}
+            />
+          )}
+          {filteredData.length !== 0 && (
+            <div className="result">
+              {filteredData.slice(0, 15).map((fdata, index) => {
+                return (
+                  <Link to="/article" key={index} className="dataItem">
+                    {fdata.title}
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 
