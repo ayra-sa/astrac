@@ -245,9 +245,9 @@ nav {
     color: #000;
 }
 
-.navbar.active .nav-menu .link-item a:hover {
-    /* color: var(--purple); */
-}
+/* .navbar.active .nav-menu .link-item a:hover {
+    color: var(--purple);
+} */
 
 .navbar.active .navbar-right .lang-icon {
     filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
