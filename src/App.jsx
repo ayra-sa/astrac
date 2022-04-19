@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
@@ -18,6 +18,7 @@ import cookie from 'js-cookie'
 // import Cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
+import Privacy from './Pages/Privacy';
 
 
 const langs = [
@@ -65,6 +66,7 @@ function App() {
         <Route path='feature' element={<Feature />} />
         <Route path='project-management' element={<ProjectManagement />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='privacy-policy' element={<Privacy />} />
       </Routes>
       <CookieConsent
           location="bottom"
@@ -74,7 +76,7 @@ function App() {
           containerClasses="cookie-wrap"
           cookieName='AstracCookie'
         >
-          We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our <a href="#" style={{ color: '#856bfa' }}>Cookie Policy</a>
+          We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our <Link to='/privacy-policy' style={{ color: '#856bfa' }}>Cookie Policy</Link>
         </CookieConsent>
       <Footer langs={langs} currentLanguageCode={currentLanguageCode} />
     </Router>
