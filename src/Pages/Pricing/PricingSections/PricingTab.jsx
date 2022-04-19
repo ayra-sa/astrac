@@ -43,7 +43,7 @@ const PricingTab = () => {
   const [switchActive, setSwitchActive] = useState(types[0]);
 
   return (
-    <section className="p-20" id="pricing">
+    <section className="p-20 hero center">
       <div className="container">
         <span>Pricing</span>
         <h2 className="hero-title">The best plan and cost to transform your business communication</h2>

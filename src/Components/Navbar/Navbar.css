@@ -5,7 +5,7 @@ nav {
     right: 0;
     padding: 15px 0;
     z-index: 998;
-    background: hsla(0, 0%, 0%, 0.2);
+    /* background: hsla(0, 0%, 0%, 0.2); */
 }
 
 .brand {

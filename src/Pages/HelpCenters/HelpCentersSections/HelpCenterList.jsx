@@ -70,7 +70,7 @@ const HelpCenterList = ({ data }) => {
 
   return (
     <>
-      <div id="search-hero" className="p-20">
+      <div className="p-20 hero-2">
         <h2 className="center">Help Center</h2>
         <div className="search">
           <RiSearch2Line />

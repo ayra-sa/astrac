@@ -1,13 +1,28 @@
 .hero,
 .hero-home,
 .hero-2 {
+    color: #fff;
+    position: relative;
+    /* min-height: 90vh; */
+}
+
+.hero-home::before, .hero::before, .hero-2::before, .hero.scnd::before {
+    content: '';
     background-image: url("../../../public/images/bg-hero.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
-    position: relative;
-    /* min-height: 90vh; */
+    inset: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.hero-home::after, .hero::after, .hero-2::after, .hero.scnd::after {
+    content: '';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 }
 
 .hero {
@@ -36,7 +51,6 @@
     align-items: center;
     column-gap: 30px;
     position: relative;
-    z-index: 2;
 }
 
 .hero-wrap {

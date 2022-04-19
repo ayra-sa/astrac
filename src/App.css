@@ -364,17 +364,6 @@ body {
 
 /* Tab */
 
-#free-trial,
-#pricing {
-    background-image: url('../public/images/bg-hero.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 8% 0;
-    text-align: center;
-    color: #fff;
-}
-
 .tab-switch {
     display: inline-flex;
     justify-content: center;

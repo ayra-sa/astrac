@@ -8,15 +8,6 @@
     justify-content: center;
 }
 
-#search-hero {
-    background: url('../../../public/images/bg-hero.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 8% 0;
-    color: #fff;
-}
-
 .search {
     background-color: #fff;
     padding: 15px 24px;
