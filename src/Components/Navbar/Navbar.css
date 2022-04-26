@@ -91,6 +91,10 @@ nav {
     cursor: pointer;
 }
 
+.lang-dd img {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
@@ -116,6 +120,7 @@ nav {
     background: transparent;
     font-size: inherit;
     padding: 10px;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -270,6 +275,15 @@ nav {
 .navbar.active .dropdown span {
     filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
     -webkit-filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
+}
+
+.navbar.active .navbar-right .btn-primary:hover {
+    background: var(--gradient);
+    color: #fff;
+}
+
+.navbar.active .navbar-right .btn-primary::after {
+    background: var(--gradient);
 }
 
 .navbar.active .navbar-right .btn-secondary {

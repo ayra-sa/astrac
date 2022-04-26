@@ -5,6 +5,10 @@ footer {
     position: relative;
 }
 
+footer .container {
+    position: relative;
+}
+
 .footer-wrap {
     /* margin-top: -8%; */
     display: grid;
@@ -50,6 +54,10 @@ footer {
     margin-bottom: 8px;
 }
 
+.footer-menu h2 {
+    font-size: 1.25em;
+}
+
 .footer-menu a {
     color: #000;
     font-weight: 300;
@@ -82,7 +90,12 @@ footer {
     -o-transition: .3s ease;
 }
 
+.socmed-icon svg {
+    cursor: pointer;
+}
+
 .socmed-icon:hover {
+    color: #565659;
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);

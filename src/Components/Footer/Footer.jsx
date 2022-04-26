@@ -30,8 +30,8 @@ const Footer = ({langs, currentLanguageCode}) => {
   return (
     <>
       <footer>
-      <AllOfYour />
         <div className="container" ref={ref}>
+      <AllOfYour />
           <div className="footer-wrap">
             <div className="footer-left">
               <Link to="/" className="brand">

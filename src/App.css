@@ -137,6 +137,7 @@ body {
     font-weight: 600;
     color: #fff;
     border: none;
+    font-size: 1em;
 }
 
 .btn {
@@ -150,12 +151,17 @@ body {
 
 .btn-primary {
     background: var(--gradient);
-    transition: .3s ease;
+    transition: .3s ease-in;
     position: relative;
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    -ms-transition: .3s ease;
-    -o-transition: .3s ease;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: var(--purple);
 }
 
 .btn-primary::after,
@@ -181,7 +187,7 @@ body {
 }
 
 .btn-primary::after {
-    background: var(--gradient);
+    background: #fff;
 }
 
 .btn-secondary::after {
