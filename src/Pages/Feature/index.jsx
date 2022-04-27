@@ -9,11 +9,13 @@ import { mailData } from "./Data/Mail";
 import { pmData } from "./Data/ProjectManagement";
 import {Link} from 'react-router-dom'
 import "./Feature.css";
+import { Particle } from "../../Components/Particles/Particle";
 
 const Feature = () => {
   return (
     <>
       <div className="hero">
+        <Particle />
         <div className="container">
           <div className="center">
             <span>Features</span>

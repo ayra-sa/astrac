@@ -1,3 +1,4 @@
+import { Particle } from "../../Components/Particles/Particle"
 import TopImg from "../../Components/TopImg/TopImg"
 
 const Privacy = () => {
@@ -10,6 +11,7 @@ const Privacy = () => {
                         <h2 className="mt-2 hero-title">The best privacy and security policy that we provide for you</h2>
                     </div>
                 </div>
+                <Particle />
             </div>
 
             <main className="main mb-mobo" style={{ marginBottom: '20%' }}>

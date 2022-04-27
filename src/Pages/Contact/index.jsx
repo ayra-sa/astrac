@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 import { send } from "emailjs-com";
 import "./contact.css";
+import { Particle } from "../../Components/Particles/Particle";
 
 const Contact = () => {
   const initialValues = {
@@ -87,6 +88,7 @@ const Contact = () => {
   return (
     <>
       <div className="hero-2">
+        <Particle />
         <div className="container">
           <div className="center">
             <span>Contact</span>
@@ -101,7 +103,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <main className="mb-mobo">
+      <main className="mb-mobo form-bg">
         <section className="section" id="contactForm">
           <div className="container">
             {Object.keys(formErrors).length === 0 && isSubmit && isOpen ? (

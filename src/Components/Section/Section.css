@@ -13,6 +13,10 @@
     gap: 100px;
 }
 
+.pxy {
+    padding: 5% 0;
+}
+
 .reverse {
     flex-direction: row-reverse;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsCheck, BsCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { Particle } from "../../../Components/Particles/Particle";
 import '../../../Components/Tab/Tab.css'
 // import Tab from "../../../Components/Tab/Tab";
 
@@ -102,7 +103,7 @@ const PricingTab = () => {
                     </ul>
                     <div className="btn-container" style={{ justifyContent: 'center' }}>
                       <Link
-                        data-aos="zoom-in"
+                        // data-aos="zoom-in"
                         to={`/free-trial-form/${index}`}
                         state={tabItem}
                         className={`btn ${
@@ -120,6 +121,7 @@ const PricingTab = () => {
           </div>
         </div>
       </div>
+      <Particle />
     </section>
   );
 };

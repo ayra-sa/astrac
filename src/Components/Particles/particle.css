@@ -1,0 +1,9 @@
+#tsparticles {
+    position: absolute;
+    inset: 50% 0 0 0;
+    z-index: -1;
+}
+
+#tsparticles canvas {
+    position: unset !important;
+}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Particle } from "../../Components/Particles/Particle";
 import { Flex } from "../../Components/Section/Flex";
 import TopImg from "../../Components/TopImg/TopImg";
 import { Clarification } from "./SectionData/Clarification";
@@ -33,6 +34,7 @@ const Product = () => {
             </Link>
           </div>
         </div>
+        <Particle />
       </div>
 
       <main className="main mb-5 mb-mobo">

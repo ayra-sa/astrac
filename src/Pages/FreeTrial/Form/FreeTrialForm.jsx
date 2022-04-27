@@ -4,6 +4,7 @@ import '../../../Components/Form/form.css'
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import db from '../../../db/db.json'
 import { send } from "emailjs-com";
+import { Particle } from "../../../Components/Particles/Particle";
 
 export const FreeTrialForm = () => {
   const location = useLocation()
@@ -125,6 +126,7 @@ export const FreeTrialForm = () => {
         <Success setIsOpen={setIsOpen} />
       ) : null}
       <div className="hero-2">
+        <Particle />
         <div className="container">
           <div className="center">
             <span>Free Trial</span>
@@ -139,7 +141,7 @@ export const FreeTrialForm = () => {
           </div>
         </div>
       </div>
-      <main className="mb-mobo">
+      <main className="mb-mobo form-bg">
         <section className="section">
           <div className="container">
             <div className="contact-wrap">

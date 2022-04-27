@@ -5,7 +5,12 @@ nav {
     right: 0;
     padding: 15px 0;
     z-index: 998;
-    /* background: hsla(0, 0%, 0%, 0.2); */
+    background: transparent;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
 }
 
 .brand {
@@ -320,7 +325,9 @@ nav {
         display: flex;
         row-gap: 20px;
         z-index: 2;
+        max-height: 100vh;
         padding: 10% 20px;
+        overflow: auto;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
@@ -348,6 +355,16 @@ nav {
     }
     .dropdown span {
         display: none;
+    }
+    .lang-dd {
+        display: none;
+    }
+    .lang-dd.on-mobo {
+        display: inline-flex;
+    }
+    .lang-dd.on-mobo .language {
+        margin-top: unset;
+        margin-left: 50px;
     }
     .ddown {
         position: relative;

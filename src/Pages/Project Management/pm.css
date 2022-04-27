@@ -74,7 +74,9 @@
         padding-bottom: 65% !important;
     }
     .tab-menu {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        justify-content: unset;
+        overflow: scroll;
     }
 }
 

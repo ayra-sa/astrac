@@ -4,7 +4,7 @@
   #features,
   #fm {
       background-color: hsla(253, 90%, 96%, 0.5);
-      padding: 4% 0;
+      /* padding: 4% 0; */
   }
   
   .feature {
@@ -27,7 +27,7 @@
   
   #pm {
       position: relative;
-      padding: 4% 0;
+      /* padding: 4% 0; */
   }
   
   .img {
@@ -72,7 +72,7 @@
       background-image: url("../../../public/images/chat-bg.svg");
       background-repeat: no-repeat;
       background-size: cover;
-      padding: 5% 0;
+      /* padding: 5% 0; */
       color: #fff;
   }
   
@@ -87,7 +87,7 @@
   /* File Manager */
   
   #fm {
-      padding: 8% 0;
+      /* padding: 8% 0; */
   }
   
   #customize {

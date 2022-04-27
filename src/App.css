@@ -293,11 +293,11 @@ body {
 }
 
 .section {
-    margin-top: 100px;
+    padding: 100px 0;
 }
 
 .section-2 {
-    margin-top: 200px;
+    padding: 150px 0 100px 0;
 }
 
 .container {
@@ -342,6 +342,11 @@ body {
 
 .decor.left {
     left: -50%;
+}
+
+.form-bg {
+    background: url('../public/images/form-bg.svg') no-repeat center;
+    background-size: cover;
 }
 
 .right {

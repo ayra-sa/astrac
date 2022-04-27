@@ -16,7 +16,7 @@ const Section = ({
   rightDecor,
 }) => {
   return (
-    <section className={section ? "section" : ""} id={id}>
+    <section className="section" id={id}>
       <div className="container">
         <div className={`col-wrap ${reverse ? "reverse" : ""}`}>
           <div className="left-content">

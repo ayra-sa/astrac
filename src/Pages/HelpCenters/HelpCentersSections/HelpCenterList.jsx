@@ -2,6 +2,7 @@ import { useState } from "react";
 import Grid from "../../../Components/Section/Grid";
 import { RiCloseFill, RiSearch2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { Particle } from "../../../Components/Particles/Particle";
 
 const HelpCenterList = ({ data }) => {
   console.log(data);
@@ -71,6 +72,7 @@ const HelpCenterList = ({ data }) => {
   return (
     <>
       <div className="p-20 hero-2">
+        <Particle />
         <h2 className="center">Help Center</h2>
         <div className="search">
           <RiSearch2Line />

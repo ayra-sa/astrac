@@ -1,4 +1,5 @@
 import Particles from "react-tsparticles";
+import './particle.css'
 
 export const Particle = () => {
     const particlesInit = (main) => {
@@ -19,6 +20,7 @@ export const Particle = () => {
                 value: "transparent",
               },
             },
+            style:{position: 'unset'},
             fpsLimit: 120,
             interactivity: {
               events: {
@@ -42,10 +44,10 @@ export const Particle = () => {
                 push: {
                   quantity: 4,
                 },
-                repulse: {
-                  distance: 200,
-                  duration: 0.4,
-                },
+                // repulse: {
+                //   distance: 200,
+                //   duration: 0.4,
+                // },
               },
             },
             particles: {
@@ -68,7 +70,7 @@ export const Particle = () => {
                 outMode: "bounce",
                 random: false,
                 speed: 6,
-                straight: false,
+                straight: true,
               },
               number: {
                 density: {

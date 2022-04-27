@@ -1,6 +1,6 @@
 import { t } from "i18next";
 import { Link } from "react-router-dom";
-// import { Particle } from "../Particles/Particle";
+import { Particle } from "../Particles/Particle";
 import "./Hero.css";
 
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <Particle /> */}
+      <Particle />
     </section>
   );
 };
