@@ -33,7 +33,7 @@ const HelpCenterFaq = () => {
         <div className="decor" style={{ left: 0 }}>
           <img src="/images/faq-decor.svg" alt="decor" />
         </div>
-        <div className="decor">
+        <div className="decor right-faq">
           <img src="/images/faq-decor2.svg" alt="decor" />
         </div>
           <div className="container">

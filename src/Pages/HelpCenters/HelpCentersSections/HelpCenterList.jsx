@@ -112,7 +112,7 @@ const HelpCenterList = ({ data }) => {
         <div className="decor" style={{ left: 20 }}>
           <img src="/images/list-decor.svg" alt="decor" />
         </div>
-        <div className="decor" style={{ right: 20 }}>
+        <div className="decor right-hc">
           <img src="/images/list-decor.svg" alt="decor" />
         </div>
         <div className="container">

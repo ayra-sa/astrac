@@ -143,6 +143,7 @@ body {
 .btn {
     padding: 12px 27px;
     white-space: nowrap;
+    position: relative;
 }
 
 .btn-hero {
@@ -373,6 +374,11 @@ body {
     -o-border-radius: 1000px;
 }
 
+.cookie-content {
+    font-size: 1em;
+    line-height: 27px;
+}
+
 
 /* Tab */
 
@@ -425,6 +431,13 @@ body {
     -moz-transition: .3s ease;
     -ms-transition: .3s ease;
     -o-transition: .3s ease;
+}
+
+@media screen and (max-width: 400px) {
+    .cookie-content {
+        line-height: 20px;
+        flex: auto;
+    }
 }
 
 @media screen and (max-width: 767px) {

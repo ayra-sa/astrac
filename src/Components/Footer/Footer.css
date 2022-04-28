@@ -107,6 +107,8 @@ footer .container {
     display: flex;
     column-gap: 20px;
     color: #565659;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 .copyright a {

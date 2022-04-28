@@ -103,12 +103,13 @@ const PricingTab = () => {
                     </ul>
                     <div className="btn-container" style={{ justifyContent: 'center' }}>
                       <Link
-                        // data-aos="zoom-in"
+                        data-aos="zoom-in"
                         to={`/free-trial-form/${index}`}
                         state={tabItem}
-                        className={`btn ${
-                          !recommended ? "btn-primary" : "btn-white"
-                        }`}
+                        // className={`btn ${
+                        //   !recommended ? "btn-primary" : "btn-white"
+                        // }`}
+                        className="btn btn-primary"
                       >
                         Subscribe now
                       </Link>

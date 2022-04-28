@@ -37,7 +37,8 @@ const Tab = (item) => {
               pathname: `/free-trial-form/${name}`,
               state: { tabItem: item }
             }}
-            className={ `btn ${!recommended ? "btn-primary" : "btn-white"}`}
+            // className={ `btn ${!recommended ? "btn-primary" : "btn-white"}`}
+            className="btn btn-primary"
         >
             Subscribe now
         </Link>

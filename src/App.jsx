@@ -74,6 +74,7 @@ function App() {
           expires={150}
           buttonStyle={{ background: '#F0EEFC', color: '#856bfa', borderRadius: '50px', fontWeight: '500' }}
           containerClasses="cookie-wrap"
+          contentClasses='cookie-content'
           cookieName='AstracCookie'
         >
           We use cookies to provide our services. By accessing our website, you agree to the use of cookies as described in our <Link to='/privacy-policy' style={{ color: '#856bfa' }}>Cookie Policy</Link>
