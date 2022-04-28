@@ -282,14 +282,14 @@ nav {
     -webkit-filter: invert(0%) sepia(3%) saturate(100%) hue-rotate(142deg) brightness(0) contrast(99%);
 }
 
-.navbar.active .navbar-right .btn-primary:hover {
+/* .navbar.active .navbar-right .btn-primary:hover {
     background: var(--gradient);
     color: #fff;
 }
 
 .navbar.active .navbar-right .btn-primary::after {
     background: var(--gradient);
-}
+} */
 
 .navbar.active .navbar-right .btn-secondary {
     color: var(--purple);
@@ -320,7 +320,8 @@ nav {
         inset: 0 auto auto 0;
         width: 100%;
         flex-direction: column;
-        background-color: #51429b;
+        background: url('../../../public/images/bg-hero.svg') no-repeat center;
+        background-size: cover;
         border-radius: 5px;
         display: flex;
         row-gap: 20px;
@@ -338,6 +339,8 @@ nav {
     }
     .nav-menu .link-item {
         width: fit-content;
+        font-weight: 500;
+        font-size: 20px;
     }
     .navbar-right .hmb {
         display: flex;
@@ -356,15 +359,27 @@ nav {
     .dropdown span {
         display: none;
     }
+    .btn-nav-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0;
+    }
     .lang-dd {
         display: none;
     }
+    .lang-dd span {
+        color: #fff;
+    }
     .lang-dd.on-mobo {
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
     }
     .lang-dd.on-mobo .language {
         margin-top: unset;
-        margin-left: 50px;
+        margin-left: 100px;
     }
     .ddown {
         position: relative;

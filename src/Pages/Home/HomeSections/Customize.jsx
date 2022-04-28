@@ -19,9 +19,9 @@ const Customize = () => {
               </Link>
             </div>
           </div>
-          {/* <div className="decor">
-          <img src="assets/images/blur-gradient3.svg" alt="decor">
-        </div> */}
+          <div className="decor">
+            <img src="/images/blur-gradient3.svg" alt="decor" />
+          </div>
         </section>
     )
 }

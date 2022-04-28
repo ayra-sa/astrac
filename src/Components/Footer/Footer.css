@@ -88,6 +88,7 @@ footer .container {
     -moz-transition: .3s ease;
     -ms-transition: .3s ease;
     -o-transition: .3s ease;
+    color: #565659;
 }
 
 .socmed-icon svg {
@@ -95,7 +96,6 @@ footer .container {
 }
 
 .socmed-icon:hover {
-    color: #565659;
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);

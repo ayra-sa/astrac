@@ -77,6 +77,11 @@
         /* flex-wrap: wrap; */
         justify-content: unset;
         overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .tab-menu::-webkit-scrollbar {
+        display: none;
     }
 }
 

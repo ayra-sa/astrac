@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { CgClose, CgMenuLeft } from "react-icons/cg";
 import { useEffect, useState, useRef } from "react";
-import i18next from "i18next";
+import i18next, { t } from "i18next";
 
 const Navbar = ({ langs, currentLanguageCode }) => {
   const [navbar, setNavbar] = useState(false);
@@ -152,21 +152,32 @@ const Navbar = ({ langs, currentLanguageCode }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/contact"
-                  className="btn btn-secondary on-mobo"
-                  onClick={() => setNavOpen(false)}
-                >
-                  Contact
-                </NavLink>
+                <div className="btn-nav-container">
+                  <NavLink
+                    to="/contact"
+                    className="btn btn-secondary on-mobo"
+                    onClick={() => setNavOpen(false)}
+                  >
+                    Contact
+                  </NavLink>
+
+                  <NavLink to="/pricing" className="btn btn-primary on-mobo"
+                    onClick={() => setNavOpen(false)}>
+                    Free Trial
+                  </NavLink>
+                </div>
               </li>
               <li>
-                <div className="lang-dd on-mobo" onClick={() => setLangOpen(!langOpen)}>
+                <div
+                  className="lang-dd on-mobo"
+                  onClick={() => setLangOpen(!langOpen)}
+                >
                   <img
                     src="/images/world.svg"
                     alt="icon"
                     className="lang-icon"
                   />
+                  <span>{t("language")}</span>
                   <div className={langOpen ? "language" : "hide"}>
                     {langs.map(({ code, name }) => (
                       <button

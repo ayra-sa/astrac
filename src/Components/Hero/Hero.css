@@ -49,8 +49,20 @@
 .hero-wrapper {
     display: flex;
     align-items: center;
-    column-gap: 30px;
+    column-gap: 20px;
     position: relative;
+}
+
+.hero-content {
+    width: 40%;
+}
+
+.hero-image {
+    width: 60%;
+}
+
+.hero-image img {
+    max-width: unset;
 }
 
 .hero-wrap {
@@ -77,6 +89,15 @@
 @media screen and (max-width: 990px) {
     .hero-2 {
         padding-top: 20%;
+    }
+    .hero-wrapper {
+        flex-wrap: wrap;
+    }
+    .hero-content, .hero-image {
+        width: 100%;
+    }
+    .hero-image img {
+        max-width: 100%;
     }
 }
 

@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="hero-home">
       <div className="container">
         <div className="hero-wrapper">
-          <div style={{ flex: "40%" }}>
+          <div className="hero-content">
             <h1
               className="hero-title"
               data-aos="zoom-in"
@@ -31,7 +31,7 @@ const Hero = () => {
             </Link>
           </div>
           <div
-            style={{ flex: "60%" }}
+            className="hero-image"
             data-aos="zoom-in"
             data-aos-duration="2000"
           >

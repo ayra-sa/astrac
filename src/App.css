@@ -159,10 +159,10 @@ body {
     -o-transition: .3s ease-in;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background: #fff;
     color: var(--purple);
-}
+} */
 
 .btn-primary::after,
 .btn-secondary::after,
@@ -187,7 +187,8 @@ body {
 }
 
 .btn-primary::after {
-    background: #fff;
+    /* background: #fff; */
+    background: var(--gradient);
 }
 
 .btn-secondary::after {
@@ -297,7 +298,7 @@ body {
 }
 
 .section-2 {
-    padding: 150px 0 100px 0;
+    padding: 100px 0;
 }
 
 .container {
