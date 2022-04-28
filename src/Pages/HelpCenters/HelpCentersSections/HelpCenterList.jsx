@@ -3,6 +3,8 @@ import Grid from "../../../Components/Section/Grid";
 import { RiCloseFill, RiSearch2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { Particle } from "../../../Components/Particles/Particle";
+// import Privacy from "../../Privacy";
+// import { getSearchResults } from "./search.util";
 
 const HelpCenterList = ({ data }) => {
   console.log(data);
@@ -69,6 +71,16 @@ const HelpCenterList = ({ data }) => {
     setValue("");
   };
 
+  // const enter = event => {
+  //   if (event.key === 'Enter') {
+  //     // console.log('enter')
+  //     // (<Privacy />)
+  //     let term = event.target.value
+  //     setValue(term)
+  //     setFilteredData(getSearchResults(term))
+  //   }
+  // }
+
   return (
     <>
       <div className="p-20 hero-2">
@@ -80,6 +92,7 @@ const HelpCenterList = ({ data }) => {
             type="text"
             id="search"
             onChange={handleFilter}
+            // onKeyUp={enter}
             value={value}
             placeholder="Search for articles..."
           />
@@ -107,6 +120,15 @@ const HelpCenterList = ({ data }) => {
           )}
         </div>
       </div>
+      {/* {value && (
+          <p>Search results for {value}</p>
+        )}
+        <div className={"searchResultsList"} ref={this.searchResultsListRef}>
+          {this.state.searchTerm &&
+            this.state.searchResults.map((post, index) => (
+              <Post key={post.id} content={post.content} index={index} />
+            ))}
+        </div> */}
 
       <section className="section" id="hc-list">
         <div className="decor" style={{ left: 20 }}>
@@ -118,17 +140,17 @@ const HelpCenterList = ({ data }) => {
         <div className="container">
           <div className="row-3">
             {dataList
-              // .filter((d) => {
-              //   if (value === "") {
-              //     return d;
-              //   } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
-              //     return d;
-              //   } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
-              //     return d;
-              //   }
+              .filter((d) => {
+                if (value === "") {
+                  return d;
+                } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
+                  return d;
+                } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
+                  return d;
+                }
 
-              //   return false
-              // })
+                return false
+              })
               .map((item) => {
                 return <Grid key={item.title} {...item} />;
               })}
