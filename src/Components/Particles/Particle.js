@@ -3,11 +3,11 @@ import "./particle.css";
 
 export const Particle = () => {
   const particlesInit = (main) => {
-    console.log(main);
+    // console.log(main);
   };
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
   return (
     <Particles

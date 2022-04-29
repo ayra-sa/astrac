@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Grid from "../../../Components/Section/Grid";
 import { RiCloseFill, RiSearch2Line } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Particle } from "../../../Components/Particles/Particle";
 // import Privacy from "../../Privacy";
 // import { getSearchResults } from "./search.util";
 
 const HelpCenterList = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const dataList = [
     {
       icon: "/images/icon/crown.svg",
@@ -49,6 +49,7 @@ const HelpCenterList = ({ data }) => {
 
   // const [data, setData] = useState(dataList);
   const [value, setValue] = useState("");
+  const [search, setSearch] = useState(null)
 
   const [filteredData, setFilteredData] = useState([]);
 
@@ -71,15 +72,20 @@ const HelpCenterList = ({ data }) => {
     setValue("");
   };
 
-  // const enter = event => {
-  //   if (event.key === 'Enter') {
-  //     // console.log('enter')
-  //     // (<Privacy />)
-  //     let term = event.target.value
-  //     setValue(term)
-  //     setFilteredData(getSearchResults(term))
-  //   }
-  // }
+  const navigate = useNavigate()
+
+  const queryRef = useRef(null)
+
+  const enter = event => {
+    if (event.key === 'Enter') {
+      navigate(`/results/${queryRef.current.value}`, { replace: true, state: data })
+      // console.log('enter')
+      // (<Privacy />)
+      // let term = event.target.value
+      setSearch(value)
+      // setFilteredData(getSearchResults(term))
+    }
+  }
 
   return (
     <>
@@ -92,9 +98,10 @@ const HelpCenterList = ({ data }) => {
             type="text"
             id="search"
             onChange={handleFilter}
-            // onKeyUp={enter}
+            onKeyUp={enter}
             value={value}
             placeholder="Search for articles..."
+            ref={queryRef}
           />
           {value.length !== 0 && (
             <RiCloseFill
@@ -107,7 +114,7 @@ const HelpCenterList = ({ data }) => {
               }}
             />
           )}
-          {filteredData.length !== 0 && (
+          {/* {filteredData.length !== 0 && (
             <div className="result">
               {filteredData.slice(0, 15).map((fdata, index) => {
                 return (
@@ -117,7 +124,7 @@ const HelpCenterList = ({ data }) => {
                 );
               })}
             </div>
-          )}
+          )} */}
         </div>
       </div>
       {/* {value && (
@@ -130,6 +137,8 @@ const HelpCenterList = ({ data }) => {
             ))}
         </div> */}
 
+
+
       <section className="section" id="hc-list">
         <div className="decor" style={{ left: 20 }}>
           <img src="/images/list-decor.svg" alt="decor" />
@@ -140,17 +149,17 @@ const HelpCenterList = ({ data }) => {
         <div className="container">
           <div className="row-3">
             {dataList
-              .filter((d) => {
-                if (value === "") {
-                  return d;
-                } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
-                  return d;
-                } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
-                  return d;
-                }
+              // .filter((d) => {
+              //   if (value === "") {
+              //     return d;
+              //   } else if (d.info.toLowerCase().includes(value.toLowerCase())) {
+              //     return d;
+              //   } else if (d.title.toLowerCase().includes(value.toLowerCase())) {
+              //     return d;
+              //   }
 
-                return false
-              })
+              //   return false
+              // })
               .map((item) => {
                 return <Grid key={item.title} {...item} />;
               })}

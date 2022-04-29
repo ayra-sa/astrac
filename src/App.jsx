@@ -19,6 +19,7 @@ import cookie from 'js-cookie'
 import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
 import Privacy from './Pages/Privacy';
+import Results from './Pages/Results/Results';
 
 
 const langs = [
@@ -67,6 +68,7 @@ function App() {
         <Route path='project-management' element={<ProjectManagement />} />
         <Route path='contact' element={<Contact />} />
         <Route path='privacy-policy' element={<Privacy />} />
+        <Route path='/results/:query' element={<Results />} />
       </Routes>
       <CookieConsent
           location="bottom"

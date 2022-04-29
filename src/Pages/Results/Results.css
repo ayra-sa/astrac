@@ -1,0 +1,13 @@
+.result-sec {
+    margin: 100px 0 400px 0;
+}
+
+.result-top {
+    max-width: 60%;
+    display: flex;
+    margin: 0 auto;
+}
+.highlight {
+    font-weight: 700;
+    background-color: yellow;
+  }
