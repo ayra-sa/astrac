@@ -83,6 +83,15 @@
     .tab-menu::-webkit-scrollbar {
         display: none;
     }
+    .menu {
+        width: 0;
+        display: none;
+    }
+    .menu.active {
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 990px) {
