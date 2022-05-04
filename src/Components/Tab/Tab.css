@@ -36,10 +36,11 @@
 
 .r-tag {
     background-color: #10B981;
-    position: relative;
+    position: absolute;
+    inset: -5% 0 auto 0;
+    width: fit-content;
     /* top: -5%; */
     /* left: 70px; */
-    margin-top: -25%;
     margin-inline: auto;
     padding: 8px 15px;
     font-weight: 500;
