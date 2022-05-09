@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { ParticleSection } from "../../../Components/Particles/particle-section";
 import "../pm.css";
 
 export const Detail = () => {
@@ -86,6 +87,9 @@ export const Detail = () => {
           </div>
         </div>
       </div>
+
+      <ParticleSection id='particle-work' />
+      <ParticleSection id='particle-work2' />
     </section>
   );
 };

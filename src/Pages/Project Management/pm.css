@@ -13,6 +13,8 @@
     display: flex;
     column-gap: 80px;
     justify-content: center;
+    position: relative;
+    z-index: 3;
 }
 
 .menu {

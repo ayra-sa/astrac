@@ -7,3 +7,27 @@
 #tsparticles canvas {
     position: unset !important;
 }
+
+#particlesec {
+    position: absolute;
+    inset: auto 0 0 auto;
+    width: 40%;
+    height: 300px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+
+#particle-work {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 200px;
+}
+
+#particle-work2 {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 200px;
+}

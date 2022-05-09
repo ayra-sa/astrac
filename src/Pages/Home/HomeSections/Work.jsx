@@ -1,3 +1,4 @@
+import { ParticleSection } from "../../../Components/Particles/particle-section"
 import Slider from "../../../Components/Slider/Slider"
 
 const WorkSec = () => {
@@ -12,6 +13,8 @@ const WorkSec = () => {
             />
             <Slider />
           </div>
+          <ParticleSection id='particle-work' />
+          <ParticleSection id='particle-work2' />
         </section>
     )
 }

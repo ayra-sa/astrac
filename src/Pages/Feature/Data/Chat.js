@@ -7,6 +7,7 @@ export const chatData = {
     light: true,
     purple: true,
     left: true,
+    particle: true,
     contentList: [
       {
           icon: '/images/fm/profile-tick.svg',

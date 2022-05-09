@@ -54,18 +54,7 @@
       display: inline-flex;
       padding: 20px;
   }
-  /* .CookieConsent {
-    right: 10px !important;
-    left: 10px !important;
-    width: 90% !important;
-    margin: 0 auto !important;
-    border-radius: 8px;
-    bottom: 10px !important;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-} */
+
   /* Chat */
   
   #chat {
@@ -109,6 +98,7 @@
   .img-work {
       position: relative;
       margin-top: -25%;
+      z-index: 4;
   }
   /* .desc {
     width: 50%;

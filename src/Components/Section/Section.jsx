@@ -1,5 +1,6 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ParticleSection } from "../Particles/particle-section";
 
 const Section = ({
   section,
@@ -14,6 +15,7 @@ const Section = ({
   left,
   leftDecor,
   rightDecor,
+  particle
 }) => {
   return (
     <section className="section" id={id}>
@@ -65,6 +67,7 @@ const Section = ({
           </div>
         </div>
       </div>
+      {particle && (<ParticleSection id="particlesec" />)}
     </section>
   );
 };

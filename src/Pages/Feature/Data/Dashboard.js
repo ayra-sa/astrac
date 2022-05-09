@@ -6,6 +6,7 @@ export const dbData = {
     light: true,
     purple: true,
     rightImg: true,
+    particle: true,
     contentList: [
       {
           icon: '/images/fm/profile-tick.svg',
