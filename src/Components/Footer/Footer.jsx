@@ -140,7 +140,7 @@ const Footer = ({langs, currentLanguageCode}) => {
             <div className="copyright">
               <span>© Astrac 2021</span>
               <Link to="/">Security</Link>
-              <Link to="/">Privacy</Link>
+              <Link to="/privacy">Privacy</Link>
               <Link to="/">Terms</Link>
             </div>
             <div className="socmed">
