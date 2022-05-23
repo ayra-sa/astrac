@@ -14,10 +14,12 @@ const Hero = () => {
               data-aos="zoom-in"
               data-aos-duration="1000"
             >
-              {t("hero_title")}
+              {/* {t("hero_title")} */}
+              Introducing The Only Tool that You'll Ever Need
             </h1>
             <p data-aos="zoom-in" data-aos-duration="1000">
-              {t("hero_p")}
+              {/* {t("hero_p")} */}
+              We've helped Over 25K+ Individuals and Companies to Grow Their Business Successfully
             </p>
             <Link
               to="/"
@@ -26,7 +28,8 @@ const Hero = () => {
               className="i-block"
             >
               <button className="btn-hero btn-primary bg-white mt-4">
-                {t("button_text")}
+                {/* {t("button_text")} */}
+                Start free trial
               </button>
             </Link>
           </div>

@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { CgClose, CgMenuLeft } from "react-icons/cg";
 import { useEffect, useState, useRef } from "react";
@@ -10,6 +10,7 @@ const Navbar = ({ langs, currentLanguageCode }) => {
   const [navOpen, setNavOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [dropdownMobo, setDropdownMobo] = useState(false)
 
   const ref = useRef();
 
@@ -72,56 +73,58 @@ const Navbar = ({ langs, currentLanguageCode }) => {
                       Features
                     </NavLink>
                   </div>
-                  <span>
+                  <span onClick={() => setDropdownMobo(!dropdownMobo)}>
                     <IoIosArrowDown />
                   </span>
                   {/* <span onClick={() => setDropdown(!dropdown)}>{ dropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}</span> */}
-                  <div className="ddown">
-                    <div className="dropdown-content">
-                      <NavLink
-                        to="/project-management"
-                        className="link-item"
-                        onClick={() => setNavOpen(false)}
-                      >
-                        Project Management
-                      </NavLink>
-                      <NavLink
-                        to="/chat"
-                        className="link-item"
-                        onClick={() => setNavOpen(false)}
-                      >
-                        Chat
-                      </NavLink>
-                      <NavLink
-                        to="/file-manager"
-                        className="link-item"
-                        onClick={() => setNavOpen(false)}
-                      >
-                        File Manager
-                      </NavLink>
-                      <NavLink
-                        to="/video-call"
-                        className="link-item"
-                        onClick={() => setNavOpen(false)}
-                      >
-                        Call & Video Call
-                      </NavLink>
-                      <NavLink
-                        to="/mail"
-                        className="link-item"
-                        onClick={() => setNavOpen(false)}
-                      >
-                        Mail
-                      </NavLink>
-                      <NavLink
-                        to="/event"
-                        className="link-item"
-                        onClick={() => setNavOpen(false)}
-                      >
-                        Event
-                      </NavLink>
+                  {dropdownMobo && 
+                    <div className="ddown">
+                      <div className="dropdown-content">
+                        <NavLink
+                          to="/project-management"
+                          className="link-item"
+                          onClick={() => setNavOpen(false)}
+                        >
+                          Project Management
+                        </NavLink>
+                        <NavLink
+                          to="/chat"
+                          className="link-item"
+                          onClick={() => setNavOpen(false)}
+                        >
+                          Chat
+                        </NavLink>
+                        <NavLink
+                          to="/file-manager"
+                          className="link-item"
+                          onClick={() => setNavOpen(false)}
+                        >
+                          File Manager
+                        </NavLink>
+                        <NavLink
+                          to="/video-call"
+                          className="link-item"
+                          onClick={() => setNavOpen(false)}
+                        >
+                          Call & Video Call
+                        </NavLink>
+                        <NavLink
+                          to="/mail"
+                          className="link-item"
+                          onClick={() => setNavOpen(false)}
+                        >
+                          Mail
+                        </NavLink>
+                        <NavLink
+                          to="/event"
+                          className="link-item"
+                          onClick={() => setNavOpen(false)}
+                        >
+                          Event
+                        </NavLink>
+                      </div>
                     </div>
-                  </div>
+                  }
                 </div>
               </li>
               <li className="link-item">
@@ -161,8 +164,11 @@ const Navbar = ({ langs, currentLanguageCode }) => {
                     Contact
                   </NavLink>
 
-                  <NavLink to="/pricing" className="btn btn-primary on-mobo"
-                    onClick={() => setNavOpen(false)}>
+                  <NavLink
+                    to="/pricing"
+                    className="btn btn-primary on-mobo"
+                    onClick={() => setNavOpen(false)}
+                  >
                     Free Trial
                   </NavLink>
                 </div>
@@ -177,9 +183,9 @@ const Navbar = ({ langs, currentLanguageCode }) => {
                     alt="icon"
                     className="lang-icon"
                   />
-                  <span>{t("language")}</span>
+                  {/* <span>{t("language")}</span> */}
                   <div className={langOpen ? "language" : "hide"}>
-                    {langs.map(({ code, name }) => (
+                    {/* {langs.map(({ code, name }) => (
                       <button
                         onClick={() => i18next.changeLanguage(code)}
                         disabled={code === currentLanguageCode}
@@ -188,7 +194,9 @@ const Navbar = ({ langs, currentLanguageCode }) => {
                       >
                         {name}
                       </button>
-                    ))}
+                    ))} */}
+                    <Link to='/ja'>日本語</Link>
+                    <Link to='/en'>English</Link>
                   </div>
                 </div>
               </li>
@@ -199,7 +207,7 @@ const Navbar = ({ langs, currentLanguageCode }) => {
             <div className="lang-dd" onClick={() => setLangOpen(!langOpen)}>
               <img src="/images/world.svg" alt="icon" className="lang-icon" />
               <div className={langOpen ? "language" : "hide"}>
-                {langs.map(({ code, name }) => (
+                {/* {langs.map(({ code, name }) => (
                   <button
                     onClick={() => i18next.changeLanguage(code)}
                     disabled={code === currentLanguageCode}
@@ -208,7 +216,9 @@ const Navbar = ({ langs, currentLanguageCode }) => {
                   >
                     {name}
                   </button>
-                ))}
+                ))} */}
+                <Link to='/ja'>日本語</Link>
+                <Link to='/en'>English</Link>
               </div>
             </div>
             <NavLink to="/contact">

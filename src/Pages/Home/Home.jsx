@@ -10,10 +10,11 @@ import Customize from "./HomeSections/Customize";
 import WorkSec from "./HomeSections/Work";
 import { t } from "i18next";
 import ProductSec from "./HomeSections/Product";
+import { productData } from "./Data/Product";
 
 const Home = () => {
 
-  const productData = t('product_home', {returnObjects: true})
+  // const productData = t('product_home', {returnObjects: true})
   // console.log(productData)
   
   return (

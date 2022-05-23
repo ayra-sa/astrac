@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 import Success from "../../../Components/Modal/Success";
-import '../../../Components/Form/form.css'
+import "../../../Components/Form/form.css";
 import { Outlet, useLocation, useParams } from "react-router-dom";
-import db from '../../../db/db.json'
+import db from "../../../db/db.json";
 import { send } from "emailjs-com";
 import { Particle } from "../../../Components/Particles/Particle";
 
 export const FreeTrialForm = () => {
-  const location = useLocation()
-  const {id} = useParams()
-  const plan = location.state
-  
-  const idd = db.map(d => {
-    return d.id
-  })
-   
+  const location = useLocation();
+  const { id } = useParams();
+  const plan = location.state;
+
+  const idd = db.map((d) => {
+    return d.id;
+  });
+
   const initialValues = {
     fid: "",
     company: "",
@@ -29,42 +29,58 @@ export const FreeTrialForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toSend, setToSend] = useState({
     plan: plan[id].name,
-    fid: '',
-    fname: '',
-    lname: '',
-    company: '',
-    email: '',
-    message: ''
-  })
+    fid: "",
+    fname: "",
+    lname: "",
+    company: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    setToSend({ ...toSend, [e.target.name]: e.target.value })
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formValues.company.trim() === '' || formValues.email.trim() === '' || formValues.fname.trim() === '' || formValues.lname.trim() === '' || formValues.password.trim() === '') {
-      setFormErrors(validate(formValues))
-      // console.log(formErrors.fid)
-    }
-    else {
-      send(
-        'service_hsga08l',
-        'template_9276jrj',
-        toSend,
-        '-ih-AP-Hbrl5XOh1S'
-      )
-      .then((response) => {
-        console.log(response.status, response.text)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    setFormErrors(validate(formValues));
+    console.log(Object.keys(formErrors), formErrors)
+    
+    if (Object.keys(formErrors).length === 0) {
       setIsSubmit(true);
-      setFormErrors({})
+      setFormValues(initialValues)
+      send("service_hsga08l", "template_9276jrj", toSend, "-ih-AP-Hbrl5XOh1S")
+        .then((response) => {
+          console.log(response.status, response.text);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
+    // setFormErrors({});
+
+    // if (formValues.company.trim() === '' || formValues.email.trim() === '' || formValues.fname.trim() === '' || formValues.lname.trim() === '' || formValues.password.trim() === '') {
+    //   setFormErrors(validate(formValues))
+    //   // console.log(formErrors.fid)
+    // }
+    // else {
+    //   send(
+    //     'service_hsga08l',
+    //     'template_9276jrj',
+    //     toSend,
+    //     '-ih-AP-Hbrl5XOh1S'
+    //   )
+    //   .then((response) => {
+    //     console.log(response.status, response.text)
+    //   })
+    //   .catch(err => {
+    //     console.log(err)
+    //   })
+    //   setIsSubmit(true);
+    //   setFormErrors({})
+    // }
   };
 
   useEffect(() => {
@@ -74,7 +90,6 @@ export const FreeTrialForm = () => {
     }
     // eslint-disable-next-line
   }, [formErrors]);
-  
 
   useEffect(() => {
     if (!isOpen) {
@@ -90,11 +105,11 @@ export const FreeTrialForm = () => {
 
     for (let i = 0; i < idd.length; i++) {
       const element = idd[i];
-      console.log(element.toLocaleLowerCase())
+      console.log(element.toLocaleLowerCase());
       if (!values.fid) {
         errors.fid = "ID is required, try 'exampleA'";
       } else if (values.fid === element.toLocaleLowerCase()) {
-        errors.fid = "ID already used"
+        errors.fid = "ID already used";
       }
     }
 
@@ -110,12 +125,12 @@ export const FreeTrialForm = () => {
     if (!values.email) {
       errors.email = "Email is required";
     } else if (!regex.test(values.email)) {
-        errors.email = "This is not a valid email format!"
+      errors.email = "This is not a valid email format!";
     }
     if (!values.password) {
-      errors.password = "Password is reequired";
-    } else if (values.password.length < 4) {
-        errors.password = "Password must be more than 4 characters"
+      errors.password = "Password is required";
+    } else if (values.password.length < 8) {
+      errors.password = "Password must be more than 8 characters";
     }
     return errors;
   };
@@ -257,7 +272,12 @@ export const FreeTrialForm = () => {
                     newsletters and promotions...etc
                   </span>
                 </div>
-                  <span style={{ marginTop: '20px', fontSize: '14px', opacity: '.5' }}>By signing up for a free trial, you agree to Astrac Terms of Service and Privacy Policy.</span>
+                <span
+                  style={{ marginTop: "20px", fontSize: "14px", opacity: ".5" }}
+                >
+                  By signing up for a free trial, you agree to Astrac Terms of
+                  Service and Privacy Policy.
+                </span>
 
                 <div className="mt-4 center">
                   <button type="submit" className="btn btn-primary">

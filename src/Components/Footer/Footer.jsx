@@ -47,9 +47,10 @@ const Footer = ({langs, currentLanguageCode}) => {
                 English
               </div> */}
               <div className="lang-dd mt-4" onClick={() => setLangBtm(!langBtm)}>
-                <img src="/images/world-black.svg" alt="icon" /> <span>{ t('language') }</span>
+                {/* <img src="/images/world-black.svg" alt="icon" /> <span>{ t('language') }</span> */}
+                <img src="/images/world-black.svg" alt="icon" />
                 <div className={ langBtm ? 'language btm' : 'hide' }>
-                  {langs.map(({code, name}) => (
+                  {/* {langs.map(({code, name}) => (
                     <button 
                       onClick={() => i18next.changeLanguage(code) }
                       disabled={code === currentLanguageCode}
@@ -58,7 +59,9 @@ const Footer = ({langs, currentLanguageCode}) => {
                     >
                       {name}
                     </button>
-                  ))}
+                  ))} */}
+                  <Link to='/ja'>日本語</Link>
+                  <Link to='/en'>English</Link>
                 </div>
               </div>
             </div>

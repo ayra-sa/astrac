@@ -64,4 +64,12 @@
     .slider-content .desc {
       margin-top: 140px;
     }
+
+    .swiper-button-prev {
+      left: -10px;
+    }
+
+    .swiper-button-next {
+      right: -10px;
+    }
   }

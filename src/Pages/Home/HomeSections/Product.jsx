@@ -13,7 +13,7 @@ const ProductSec = ({ reverse, sub_title, title, description, img }) => {
                         <p className="subtitle">{description}</p>
                     </div>
                     <Link to='/' className='btn-transparent mt-4'>
-                        {t('btn_text')} <MdKeyboardArrowRight />
+                        Learn more <MdKeyboardArrowRight />
                     </Link>
                 </div>
 

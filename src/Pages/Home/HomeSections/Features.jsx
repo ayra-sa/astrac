@@ -1,6 +1,7 @@
 import { t } from 'i18next'
 // import { useEffect, useState } from 'react'
 import Grid from '../../../Components/Section/Grid'
+import { feature } from '../Data/FeatureData'
 
 const Features = () => {
 
@@ -15,8 +16,12 @@ const Features = () => {
             <p className="subtitle">Features are highlighted here</p>
 
             <div className="row-3 mt-4">
-                { Array.isArray(mdata) && mdata.map(item => (
+                {/* { Array.isArray(mdata) && mdata.map(item => (
                     <Grid key={item.title} {...item} />
+                ))} */}
+
+                {feature.map(f => (
+                  <Grid key={f.title} {...f} />
                 ))}
             </div>
           </div>

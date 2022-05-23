@@ -436,7 +436,8 @@ body {
 @media screen and (max-width: 400px) {
     .cookie-content {
         line-height: 20px;
-        flex: auto;
+        flex: auto !important;
+        margin: 0 !important;
     }
 }
 

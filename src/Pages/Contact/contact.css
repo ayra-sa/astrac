@@ -15,11 +15,10 @@
     display: flex;
     width: fit-content;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto auto auto;
     padding: 20px;
     background-color: aquamarine;
     position: relative;
-    margin-bottom: 20px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;

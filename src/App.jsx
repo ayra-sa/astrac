@@ -20,6 +20,9 @@ import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
 import Privacy from './Pages/Privacy';
 import Results from './Pages/Results/Results';
+import ScrollToTop from './Components/ScrollToTop';
+// ja
+
 
 
 const langs = [
@@ -57,6 +60,7 @@ function App() {
   return (
     <Router>
       <Navbar langs={langs} currentLanguageCode={currentLanguageCode} />
+      <ScrollToTop />
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='product' element={<Product />} />
@@ -69,6 +73,10 @@ function App() {
         <Route path='contact' element={<Contact />} />
         <Route path='privacy-policy' element={<Privacy />} />
         <Route path='/results/:query' element={<Results />} />
+        {/* <Route path='/ja' element={<Home />}>
+
+        </Route> */}
+
       </Routes>
       <CookieConsent
           location="bottom"

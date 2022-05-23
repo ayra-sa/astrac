@@ -18,39 +18,52 @@ const Contact = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [toSend, setToSend] = useState({
-    fname: '',
-    lname: '',
-    company: '',
-    email: '',
-    message: '',
-  })
+    fname: "",
+    lname: "",
+    company: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    setToSend({ ...toSend, [e.target.name]: e.target.value })
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formValues.company.trim() === '' || formValues.email.trim() === '' || formValues.fname.trim() === '' || formValues.lname.trim() === '') {
-      setFormErrors(validate(formValues))
-    } else {
-      send(
-        'service_hsga08l',
-        'template_felt79m',
-        toSend,
-        '-ih-AP-Hbrl5XOh1S'
-      )
-      .then((response) => {
-        console.log(response.status, response.text)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    setFormErrors(validate(formValues));
+
+    if (Object.keys(formErrors).length === 0) {
       setIsSubmit(true);
-      setFormErrors({})
+      setFormValues(initialValues)
+      send("service_hsga08l", "template_felt79m", toSend, "-ih-AP-Hbrl5XOh1S")
+        .then((response) => {
+          console.log(response.status, response.text);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
+    // if (
+    //   formValues.company.trim() === "" ||
+    //   formValues.email.trim() === "" ||
+    //   formValues.fname.trim() === "" ||
+    //   formValues.lname.trim() === ""
+    // ) {
+    //   setFormErrors(validate(formValues));
+    // } else {
+    //   send("service_hsga08l", "template_felt79m", toSend, "-ih-AP-Hbrl5XOh1S")
+    //     .then((response) => {
+    //       console.log(response.status, response.text);
+    //     })
+    //     .catch((err) => {
+    //       console.log(err);
+    //     });
+    //   setIsSubmit(true);
+    //   setFormErrors({});
+    // }
   };
 
   useEffect(() => {
@@ -80,7 +93,7 @@ const Contact = () => {
       errors.email = "This is not a valid email format!";
     }
     if (!values.message) {
-      errors.message = "Message is required"
+      errors.message = "Message is required";
     }
     return errors;
   };
@@ -106,14 +119,6 @@ const Contact = () => {
       <main className="mb-mobo form-bg">
         <section className="section" id="contactForm">
           <div className="container">
-            {Object.keys(formErrors).length === 0 && isSubmit && isOpen ? (
-              <div className="success">
-                Thank you, your message has been sent
-                <span onClick={() => setIsOpen(false)}>
-                  <IoIosClose />
-                </span>
-              </div>
-            ) : null}
             <div className="contact-wrap">
               <div className="center">
                 <h1 className="title">Contact Us</h1>
@@ -202,6 +207,15 @@ const Contact = () => {
                     Submit Now
                   </button>
                 </div>
+
+                {Object.keys(formErrors).length === 0 && isSubmit && isOpen && (
+                  <div className="success">
+                    Thank you, your message has been sent
+                    <span onClick={() => setIsOpen(false)}>
+                      <IoIosClose />
+                    </span>
+                  </div>
+                )}
               </form>
             </div>
           </div>
